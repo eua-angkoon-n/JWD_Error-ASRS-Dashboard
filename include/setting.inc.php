@@ -24,13 +24,30 @@ class Setting
     public static $DFWebhookTimeOutSec = 5;
 
     public static $BG_Command = 'bg';
-
-    public static $title_site = "หน้าหลัก E-Service | Dashboard";
-
-    public static $title_site_1 = "PCS E-Service | ระบบแจ้งซ่อมออนไลน์";
-    public static $title_site_2 = "ระบบ แจ้งซ่อมออนไลน์ | E-Service";
-    public static $title_site_3 = "PCS E-Service";
-    public static $title_site_4 = "E-Service";
+    public static $title_site = array
+    (
+        0 => "หน้าหลัก E-Service | Dashboard", 
+        1 => "PCS E-Service | ระบบแจ้งซ่อมออนไลน์", 
+        2 => "ระบบ แจ้งซ่อมออนไลน์ | E-Service",
+        3 => "PCS E-Service",
+        4 => "E-Service"
+    );
+    public static $breadcrumb_txt = array
+    (
+        0 => "หน้าหลัก E-Service | Dashboard", 
+        1 => "PCS E-Service | ระบบแจ้งซ่อมออนไลน์", 
+        2 => "ระบบ แจ้งซ่อมออนไลน์ | E-Service",
+        3 => "PCS E-Service",
+        4 => "E-Service"
+    );
+    public static $title_act = array
+    (
+        0 => "หน้าหลัก E-Service | Dashboard", 
+        1 => "PCS E-Service | ระบบแจ้งซ่อมออนไลน์", 
+        2 => "ระบบ แจ้งซ่อมออนไลน์ | E-Service",
+        3 => "PCS E-Service",
+        4 => "E-Service"
+    );
 
     public static $noreply_mail = "no-reply@cc.pcs-plp.com";
     public static $pass_mail = "Pcs@1234";
