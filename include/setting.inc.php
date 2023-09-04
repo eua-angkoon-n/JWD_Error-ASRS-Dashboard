@@ -248,6 +248,20 @@ class Setting
         '11' => 'พฤศจิกายน',
         '12' => 'ธันวาคม'
     );
+    public static $arr_newMonthsEN = array(
+        '01' => 'January',
+        '02' => 'February',
+        '03' => 'March',
+        '04' => 'April',
+        '05' => 'May',
+        '06' => 'June',
+        '07' => 'July',
+        '08' => 'August',
+        '09' => 'September',
+        '10' => 'October',
+        '11' => 'November',
+        '12' => 'December'
+    );
 
     public static $pathFile = "upload/";
     public static $pathImg = "uploads/";
@@ -276,5 +290,18 @@ class Setting
         15 => 'ค้างคืน',
         16 => 'วันหยุด',
         17 => 'TOTAL'
+    );
+    public static $ColumnBarColor = array(
+        "#3459B8", // Dark Blue
+        "#5077C6",
+        "#6D94D4",
+        "#89B2E2",
+        "#A6CFF0", // Pale Blue
+        "#C4ECFF", // Lighter Blue
+        "#7BA3CC", // Medium Blue
+        "#5389B4",
+        "#306FA0",
+        "#0D559C", // Deep Blue
+        "#003C87"  // Navy Blue
     );
 }

@@ -19,7 +19,8 @@ isset($_REQUEST['module']) ? $module = $_REQUEST['module'] : $module = '';
 switch ($module) {
     default:
         // $include_module = "dashboard.inc.php";
-        $include_module = __DIR__ . "/module/error_log.php";
+        $include_module = __DIR__ . "/module/dashboard.inc.php";
+        $action = "errorLog";
         $module == "dashboard" || $module == "" ? $active_dashbord = "active" : $active_dashbord = ""; #ไฮไลท์เมนูด้านซ้าย
         $title_act = Setting::$title_site[0];
         $breadcrumb_txt = Setting::$title_site[0];
