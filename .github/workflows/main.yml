@@ -15,6 +15,6 @@ jobs:
         username: itpcs
         password: ${{ secrets.ftp_password }}
         protocol: ftps
-        port: 3306
+        port: 22
         server-dir: /var/www/ebooking/euaangkoon_test/error_asrs_dashboard/
         
