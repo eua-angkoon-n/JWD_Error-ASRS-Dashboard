@@ -12,12 +12,11 @@ if (isset($_POST['action'])) {
     );
     switch ($action){
         case 'errorLog':
-            $CtResult = new ErrorLog_WH(
-                $wh,
-                $month,
-                $year
-            );
-            $result = $CtResult->getChart();
+            $CtResult = new ErrorLog_WH($wh,$month,$year);
+            $getAction->getCompare($date,$WH);
+            $Ct2Result = new ErrorLog_WHCompare($WH,$date);
+            $result  = $CtResult->getChart();
+            $result .= $Ct2Result->getChart(); 
             print_r($result);
             break;
         default:
@@ -106,6 +105,22 @@ Class getAction
         count($year) == 1 ? $year_query = str_replace('OR', '', $year_query) : $year_query;
         
         return $year_query;
+    }
+
+    public function getCompare(&$mt_date, &$WH){
+        $Year = $this->year;
+        $Month = $this->month;
+        if($Year == NULL || $Month == NULL)
+            return NULL;
+
+        foreach ($Year as $key => $value) {
+            $Year = $value;
+            foreach ($Month as $key => $values) {
+                $dateReq = $Year . '-' . $values;
+                $mt_date[] = $dateReq;
+            }
+        }
+        $WH = $this->wh;
     }
    
 }

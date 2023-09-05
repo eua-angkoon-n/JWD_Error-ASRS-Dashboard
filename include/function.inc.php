@@ -712,9 +712,17 @@ function tableImage($fetchRow){
     }
     }
     
-    function IsNullOrEmptyString($str)
-{
+function IsNullOrEmptyString($str) {
     return (!isset($str) || trim($str) === '');
+}
+
+function formatColorChart($color) {
+    $row  = "[";
+    foreach ($color as $BarColor){
+        $row .= "'$BarColor', ";
+    }
+    $row .= "]";
+    return $row;
 }
 
 ?>

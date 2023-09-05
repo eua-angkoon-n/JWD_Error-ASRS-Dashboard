@@ -115,21 +115,6 @@
       background-color: #f5f5f5;
   }
 
-.dataTable tr td {
-    padding: 0.55rem 0.50rem;
-    margin: 0;
-}
-
-.dataTables_length,
-.form-control-sm {
-    font-size: 0.85rem;
-    /* 40px/16=2.5em */
-}
-
-.dataTables_scrollBody {
-    margin-bottom: 5px;
-}
-
 .dropdown-menu {
     /*left:-70px;*/
 }
@@ -139,8 +124,8 @@
     /* 40px/16=2.5em */
 }
 
-.divloading {
-    height: 600px;
+.ChartSize {
+    height: 340px;
     width: 100%;
 }
 
@@ -161,30 +146,6 @@
     display: inline-block;
     margin-bottom: 10px;
     margin-right: 10px;
-}
-
-.table {
-    padding: 0.55rem 0.50rem;
-    margin: 0;
-}
-
-.table-title {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 10px;
-    padding-top: 1%;
-    margin-bottom: 0%;
-    background-color: #F1F3F4;
-}
-
-#table1chart tbody tr td:nth-child(5),
-#table2chart tbody tr td:nth-child(5) {
-    text-align: center;
-}
-
-#table2chart tbody tr td:nth-child(n+3):nth-child(-n+5) {
-    text-align: center;
 }
 
 @media screen and (max-width: 767px) {

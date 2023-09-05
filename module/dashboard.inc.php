@@ -1,17 +1,15 @@
 <?php 
 include( __DIR__ . "/include.php" );
 
+$con = connect_database();
+$obj = new CRUD($con);
 try {
-    $con = connect_database();
-    $obj = new CRUD($con);
-    
     $fetchSite = $obj -> fetchRows("SELECT * FROM asrs_error_wh WHERE 1=1 ORDER BY site_name ASC");
     $siteSelect = '';
     foreach($fetchSite as $key => $value){
         $siteSelect.= '<li><label><input type="checkbox" name="dropdownWH[]" value="' . $value['site_name'] . '" checked> ' . $value['site_name'] . '</label></li>';
         
     }
-    
 } catch( Exception $e ) {     
     echo "Caught exception : <b>".$e->getMessage()."</b><br/>";
 } finally {
@@ -107,7 +105,8 @@ for ($year = 2023; $year <= $currentYear; $year++) {
 
             <div class="row">
                 <div class="col p-0 pt-3">
-                <div id="errorLogChart"></div>
+                <div class="ChartSize" id="Chart1"></div>
+                <div class="ChartSize" id="Chart2"></div>
                 </div>
                 <!-- /.col -->
             </div>

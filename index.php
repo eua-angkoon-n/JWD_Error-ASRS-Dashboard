@@ -13,7 +13,6 @@ date_default_timezone_set(Setting::$AppTimeZone);
 $Time = new Processing;
 $start = $Time->Start_Time();
 
-
 isset($_REQUEST['module']) ? $module = $_REQUEST['module'] : $module = '';
 
 switch ($module) {
@@ -21,7 +20,7 @@ switch ($module) {
         // $include_module = "dashboard.inc.php";
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorLog";
-        $module == "dashboard" || $module == "" ? $active_dashbord = "active" : $active_dashbord = ""; #ไฮไลท์เมนูด้านซ้าย
+        $module == "dashboard" || $module == "" ? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
         $title_act = Setting::$title_site[0];
         $breadcrumb_txt = Setting::$title_site[0];
         $title_site = "E-IOC | Dashboard";
@@ -79,9 +78,9 @@ switch ($module) {
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        <li class="nav-item"><a href="./" class="nav-link <?PHP echo $active_dashbord; ?>"><i
+                        <li class="nav-item"><a href="./" class="nav-link <?PHP echo $active_errorlog; ?>"><i
                                     class="nav-icon fa fa-solid fa-chalkboard"></i>
-                                <p>Dashboard</p>
+                                <p>Error Log</p>
                             </a></li>
 
 
