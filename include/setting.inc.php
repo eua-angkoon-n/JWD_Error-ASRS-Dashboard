@@ -26,29 +26,35 @@ class Setting
     public static $BG_Command = 'bg';
     public static $title_site = array
     (
-        0 => "หน้าหลัก E-Service | Dashboard", 
-        1 => "PCS E-Service | ระบบแจ้งซ่อมออนไลน์", 
-        2 => "ระบบ แจ้งซ่อมออนไลน์ | E-Service",
-        3 => "PCS E-Service",
-        4 => "E-Service"
-    );
-    public static $breadcrumb_txt = array
-    (
-        0 => "หน้าหลัก E-Service | Dashboard", 
-        1 => "PCS E-Service | ระบบแจ้งซ่อมออนไลน์", 
+        "errorLog" => "Error ASRS", 
+        "errorCode" => "Error ASRS | Error Code",
+        "errorMachine" => "Error ASRS | Error Machine",
+        "MachineDetails" => "Error ASRS | Machine Details",
         2 => "ระบบ แจ้งซ่อมออนไลน์ | E-Service",
         3 => "PCS E-Service",
         4 => "E-Service"
     );
     public static $title_act = array
     (
-        0 => "หน้าหลัก E-Service | Dashboard", 
-        1 => "PCS E-Service | ระบบแจ้งซ่อมออนไลน์", 
+        "errorLog" => "Error ASRS Log", 
+        "errorCode" => "ASRS Error Code",
+        "errorMachine" => "ASRS Error Machine",
+        "MachineDetails" => "ASRS Machine Details",
         2 => "ระบบ แจ้งซ่อมออนไลน์ | E-Service",
         3 => "PCS E-Service",
         4 => "E-Service"
     );
-
+    public static $breadcrumb_txt = array
+    (
+        "errorLog" => "Error ASRS Log", 
+        "errorCode" => "ASRS Error Code", 
+        "errorMachine" => "ASRS Error Machine",
+        "MachineDetails" => "ASRS Machine Details",
+        2 => "ระบบ แจ้งซ่อมออนไลน์ | E-Service",
+        3 => "PCS E-Service",
+        4 => "E-Service"
+    );
+    
     public static $noreply_mail = "no-reply@cc.pcs-plp.com";
     public static $pass_mail = "Pcs@1234";
 
@@ -304,4 +310,5 @@ class Setting
         "#0D559C", // Deep Blue
         "#003C87"  // Navy Blue
     );
+    public static $SQLSET = "SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));";
 }

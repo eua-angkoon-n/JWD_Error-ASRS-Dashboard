@@ -16,14 +16,37 @@ $start = $Time->Start_Time();
 isset($_REQUEST['module']) ? $module = $_REQUEST['module'] : $module = '';
 
 switch ($module) {
+    case "errorCode" :
+        $include_module = __DIR__ . "/module/dashboard.inc.php";
+        $action = "errorCode";
+        $module == "errorCode" ? $active_errorCode = "active" : $active_errorCode = ""; #ไฮไลท์เมนูด้านซ้าย
+        $title_site = Setting::$title_site[$action];
+        $title_act = Setting::$title_act[$action];
+        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
+        break;
+    case "errorMachine" :
+        $include_module = __DIR__ . "/module/dashboard.inc.php";
+        $action = "errorMachine";
+        $module == "errorMachine" ? $active_errorMachine = "active" : $active_errorMachine = ""; #ไฮไลท์เมนูด้านซ้าย
+        $title_site = Setting::$title_site[$action];
+        $title_act = Setting::$title_act[$action];
+        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
+        break;
+    case "MachineDetails" :
+        $include_module = __DIR__ . "/module/dashboard.inc.php";
+        $action = "MachineDetails";
+        $module == "MachineDetails" ? $active_MachineDetails = "active" : $active_MachineDetails = ""; #ไฮไลท์เมนูด้านซ้าย
+        $title_site = Setting::$title_site[$action];
+        $title_act = Setting::$title_act[$action];
+        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
+        break;
     default:
-        // $include_module = "dashboard.inc.php";
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorLog";
         $module == "dashboard" || $module == "" ? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
-        $title_act = Setting::$title_site[0];
-        $breadcrumb_txt = Setting::$title_site[0];
-        $title_site = "E-IOC | Dashboard";
+        $title_site = Setting::$title_site[$action];
+        $title_act = Setting::$title_act[$action];
+        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
       break;
 }
 
@@ -66,10 +89,10 @@ switch ($module) {
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">
-                            <?PHP echo "_SESSION['sess_fullname']"; ?></a>
+                            <?PHP echo "ยังไม่เสร็จ _SESSION['sess_fullname']"; ?></a>
                         <span class="text-white">ระดับ:
-                            <?PHP echo "classArr[_SESSION['sess_class_user']];" ?> /
-                            <?PHP echo "_SESSION['sess_dept_initialname'];" ?></span>
+                            <?PHP echo "ยังไม่เสร็จ classArr[_SESSION['sess_class_user']];" ?> /
+                            <?PHP echo "ยังไม่เสร็จ _SESSION['sess_dept_initialname'];" ?></span>
                         <a href="?module=profile" class="d-block text-yellow">[แก้ไขข้อมูลส่วนตัว]</a>
                     </div>
                 </div>
@@ -78,15 +101,34 @@ switch ($module) {
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
-                        <li class="nav-item"><a href="./" class="nav-link <?PHP echo $active_errorlog; ?>"><i
-                                    class="nav-icon fa fa-solid fa-chalkboard"></i>
+                        <li class="nav-item">
+                            <a href="./" class="nav-link <?PHP echo $active_errorlog; ?>">
+                                <i class="nav-icon fa fa-solid fa-chalkboard"></i>
                                 <p>Error Log</p>
-                            </a></li>
-
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?module=errorCode" class="nav-link <?PHP echo $active_errorCode;?>">
+                                <i class="nav-icon fas fa-tools"></i> 
+                                <p>Error Code</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?module=errorMachine" class="nav-link <?PHP echo $active_errorMachine;?>">
+                                <i class="nav-icon fas fa-tools"></i> 
+                                <p>Error Machine</p>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="?module=MachineDetails" class="nav-link <?PHP echo $active_MachineDetails;?>">
+                                <i class="nav-icon fas fa-tools"></i> 
+                                <p>Machine Details</p>
+                            </a>
+                        </li> -->
 
                         <li class="nav-item"><a href="?module=logout" class="nav-link"><i
                                     class="nav-icon fas fa-sign-out-alt"></i>
-                                <p> Logout</p>
+                                <p>Logout</p>
                             </a></li>
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>

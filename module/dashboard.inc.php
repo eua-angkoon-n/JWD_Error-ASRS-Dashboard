@@ -7,25 +7,16 @@ try {
     $fetchSite = $obj -> fetchRows("SELECT * FROM asrs_error_wh WHERE 1=1 ORDER BY site_name ASC");
     $siteSelect = '';
     foreach($fetchSite as $key => $value){
-        $siteSelect.= '<li><label><input type="checkbox" name="dropdownWH[]" value="' . $value['site_name'] . '" checked> ' . $value['site_name'] . '</label></li>';
-        
+        if($action == "errorLog"){
+            $siteSelect.= '<li><label><input type="checkbox" name="dropdownWH[]" value="' . $value['site_name'] . '" checked> ' . $value['site_name'] . '</label></li>';
+            continue;
+        }
+        $siteSelect.= "<option value='".$value['site_name']."' ".($value['id']== 1 ? 'selected' : '').">".$value['site_name']."</option>";
     }
 } catch( Exception $e ) {     
     echo "Caught exception : <b>".$e->getMessage()."</b><br/>";
 } finally {
     $con = null;
-}
-
-$currentMonth = date('m');
-$previousMonth = date("m", strtotime("-1 months"));
-$monthSelect ='';
-for ($i = 1; $i <= 12; $i++) {
-    $monthSelect.='<li><label><input type="checkbox" name="dropdownMonth[]" value="'.str_pad($i, 2, "0", STR_PAD_LEFT).'" '.(($i==$currentMonth) || ($i==$previousMonth) ? 'checked':'').' > ' . Setting::$arr_newMonthsEN[str_pad($i, 2, "0", STR_PAD_LEFT)] . '</label></li>';
-}
-$currentYear = date('Y');
-$yearSelect = '';
-for ($year = 2023; $year <= $currentYear; $year++) {
-    $yearSelect.='<li><label><input type="checkbox" name="dropdownYear[]" value="' . $year . '" '.($year==$currentYear ? 'checked':'').'> ' . $year . '</label></li>';
 }
 
 ?>
@@ -50,22 +41,29 @@ for ($year = 2023; $year <= $currentYear; $year++) {
         <form id="needs-validation" class="addform " name="addform" method="POST" enctype="multipart/form-data"
                 autocomplete="off" novalidate="">
 
-                <div class="card p-0">
+                <!-- <div class="card p-0">
                     <div class="card-body p-1">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-xs-12 ml-1">
-                                <label>Warehouse:</label>
+                      <div class="row">
+                        <div class="col-sm-12 col-md-12 col-xs-12 ml-1">
+                          <label>Warehouse:</label>
+                                <?php if ($action == "errorCode") { ?>
+                                    <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3" name="dropdownWH" id="dropdownWH"
+                                        style="width:100%; font-size:0.85rem;" required="">
+                                        <?php echo $siteSelect ?>
+                                    </select>
+                                <?php } else { ?>
                                 <div class="d-inline">
                                     <button
                                         class="btn btn-default dropdown-toggle col-sm-2 col-md-2 col-xs-12 mr-3 justify-content-between"
                                         type="button" id="dropdownWH" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
-                                        Warehouse
+                                      Warehouse
                                     </button>
                                     <ul class="dropdown-menu checkbox-menu allow-focus">
-                                        <?php echo $siteSelect; ?>
+                                      <?php echo $siteSelect; ?>
                                     </ul>
-                                </div>
+                                  </div>
+                                <?php } ?>
                                 <label>Month:</label>
                                 <div class="d-inline">
                                     <button
@@ -78,27 +76,78 @@ for ($year = 2023; $year <= $currentYear; $year++) {
                                         <?php echo $monthSelect; ?>
                                     </ul>
                                 </div>
-                                <div class="d-inline">
-                                    <label>Year:</label>
+                              <div class="d-inline">
+                                <label>Year:</label>
                                     <button
                                         class="btn btn-default dropdown-toggle col-sm-2 col-md-2 col-xs-12 mr-3 justify-content-between"
                                         type="button" id="dropdownYear" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="true">
                                         Year
                                     </button>
-                                    <ul class="dropdown-menu checkbox-menu allow-focus">
-                                        <?php echo $yearSelect; ?>
-                                    </ul>
+                                  <ul class="dropdown-menu checkbox-menu allow-focus">
+                                    <?php echo $yearSelect; ?>
+                                  </ul>
                                 </div>
                                 <button
                                     class="btn btn-sm btn-secondary buttons-excel buttons-html5 btn-export mt-1 mb-1"
                                     type="button">
                                     <i class="fas fa-download"></i> Export PNG
                                 </button>
+                        </div>
+                      </div>
+                  </div>
+                </div> -->
+                
+
+                <div class="card p-0">
+                    <div class="card-body p-1">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-xs-12 ml-1">
+                                <label>Warehouse:</label> &nbsp;
+                                <?php if ($action == "errorLog") { ?>
+                                    <div class="d-inline">
+                                        <button
+                                            class="btn btn-default dropdown-toggle col-sm-2 col-md-2 col-xs-12 mr-3 justify-content-between"
+                                            type="button" id="dropdownWH" data-toggle="dropdown" aria-haspopup="true"
+                                            aria-expanded="true">
+                                            Warehouse
+                                        </button>
+                                    <ul class="dropdown-menu checkbox-menu allow-focus">
+                                        <?php echo $siteSelect; ?>
+                                    </ul>
+                                </div>
+                                <?php } else { ?>
+                                    <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3" name="dropdownWH"
+                                    id="dropdownWH" style="width:100%; font-size:0.85rem;" required="">
+                                        <?php echo $siteSelect ?>
+                                    </select>
+                                
+                                <?php } if ($action == "errorMachine") { ?>
+                                    <label>Machine:</label> &nbsp;
+                                    <div class="d-inline col-3">
+                                        sadasd       
+                                        <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3"data-placeholder="Select Machine" >
+                                            <option selected>Alabama</option>
+                                            <option selected>Alaska</option>
+                                        </select> 
+                                    </div>
+                                                   
+                                <?php } ?> 
+
+                                <label>Date:</label> &nbsp;
+                                <div class="d-inline">
+                                    <button type="button" class="btn btn-default" id="date" name="date">
+                                        <i class="far fa-calendar-alt"></i>
+                                        Last 30 Days
+                                        <i class="fas fa-caret-down"></i>
+                                    </button>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+                <input type="hidden" id="selectedDateRange" name="selectedDateRange" value="">
             </form>
 
             <div id="chart_script"></div>
@@ -114,63 +163,12 @@ for ($year = 2023; $year <= $currentYear; $year++) {
     </div>
 </section>
 
-
 <script type="text/javascript">
-function updateMonthButtonText() {
-    var selectedMonths = [];
-    $("input[name='dropdownMonth[]']:checked").each(function () {
-        selectedMonths.push($(this).parent().text().trim());
-    });
-    if (selectedMonths.length > 0) {
-        var buttonText = "";
-        if (selectedMonths.length === 1) {
-            buttonText = selectedMonths[0];
-        } else {
-            buttonText = selectedMonths[0] + " - " + selectedMonths[selectedMonths.length - 1];
-        }
-        $("#dropdownMonth").text(buttonText);
-    } else {
-        $("#dropdownMonth").text("Select Month");
-    }
-}
-
-function updateYearButtonText() {
-    var selectedYears = [];
-    $("input[name='dropdownYear[]']:checked").each(function () {
-        selectedYears.push($(this).parent().text().trim());
-    });
-    if (selectedYears.length > 0) {
-        var buttonText = "";
-        if (selectedYears.length === 1) {
-            buttonText = selectedYears[0];
-        } else {
-            buttonText = selectedYears[0] + " - " + selectedYears[selectedYears.length - 1];
-        }
-        $("#dropdownYear").text(buttonText);
-    } else {
-        $("#dropdownYear").text("Select Year");
-    }
-}
-
-function TitleText() {
-    var siteText = $("#site option:selected").text();
-
-    var monthText = " ช่วงเดือน " + $("#dropdownMonth").text();
-    if ($("#dropdownMonth").text() == "เลือกเดือน") {
-        monthText = "";
-    }
-    var yearText = " " + $("#dropdownYear").text();
-    if ($("#dropdownYear").text() == "เลือกปี") {
-        yearText = "";
-    }
-    if ($("#dropdownYear").text().includes("-")) {
-        yearText = " ," + yearText;
-    }
-    $(".title-text").text(siteText + monthText + yearText);
-}
+$('.select2bs4').select2({
+  theme: 'bootstrap4'
+})
 
 function SendData() {
-
     var frmData = $("form#needs-validation").serialize();
     var action = "<?php echo $action ?>";
 
@@ -193,63 +191,48 @@ function SendData() {
     });
 }
 
-$(".checkbox-menu").on("change", "input[type='checkbox']", function () {
-    $(this).closest("li").toggleClass("active", this.checked);
-});
-
-$(".checkbox1-menu").on("change", "input[type='checkbox']", function () {
-    $(this).closest("li").toggleClass("active", this.checked);
-});
+$('#date').daterangepicker(
+          {
+            ranges   : {
+            //   'Today'       : [moment(), moment()],
+            //   'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+              'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
+              'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+              'This Month'  : [moment().startOf('month'), moment().endOf('month')],
+              'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            },
+            startDate: moment().subtract(29, 'days'),
+            endDate  : moment()
+          },
+          function (start, end, label) {
+            $('#selectedDateRange').val(end.format('YYYY-MM-DD') + '||//' + start.format('YYYY-MM-DD'));
+            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+            if (label === 'Custom Range') {
+            $('#date').html('<i class="far fa-calendar-alt"></i> ' + start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY') + ' <i class="fas fa-caret-down"></i>');
+        } else {
+            $('#date').html('<i class="far fa-calendar-alt"></i> ' + label + ' <i class="fas fa-caret-down"></i>');
+        }
+          }
+    )
 
 $(document).ready(function () {
+    var startDate = moment().subtract(29, 'days');
+    var endDate   = moment();
+    $('#selectedDateRange').val(endDate.format('YYYY-MM-DD') + '||//' + startDate.format('YYYY-MM-DD'));
 
-    var selectedYear = parseInt($("input[name='dropdownYear[]']:checked").val());
-    var currentYear = new Date().getFullYear();
-    var currentMonth = new Date().getMonth() + 1;
-
-    // Enable or disable month checkboxes based on selected year
-    $("input[name='dropdownMonth[]']").prop("disabled", false);
-
-    if (selectedYear < currentYear) {
-        $("input[name='dropdownMonth[]']").prop("disabled", false);
-    } else if (selectedYear === currentYear) {
-        $("input[name='dropdownMonth[]']").each(function () {
-            var monthValue = parseInt($(this).val());
-            $(this).prop("disabled", monthValue > currentMonth);
-        });
-    }
+     $('#date').on('apply.daterangepicker', function (event, picker) {
+        SendData(); // Trigger SendData when the date range changes
+    });
+    // Listen for changes in the form elements (warehouse select, etc.)
+    $("form#needs-validation").on("change", "select, input[type='checkbox'], button", function () {
+        SendData(); // Trigger SendData when form elements change
+    });
 
     $('.dropdown-menu').on('click', function (e) {
         e.stopPropagation();
     });
-
-    updateMonthButtonText();
-    updateYearButtonText();
+   
     SendData();
-    TitleText();
-
-});
-
-$(document).on("change", "form", function () {
-
-var selectedYear = parseInt($("input[name='dropdownYear[]']:checked").val());
-var currentYear = new Date().getFullYear();
-var currentMonth = new Date().getMonth() + 1;
-updateMonthButtonText();
-updateYearButtonText();
-SendData();
-TitleText();
-
-// Enable or disable month checkboxes based on selected year
-$("input[name='dropdownMonth[]']").prop("disabled", false);
-
-if (selectedYear < currentYear) {
-    $("input[name='dropdownMonth[]']").prop("disabled", false);
-} else if (selectedYear === currentYear) {
-    $("input[name='dropdownMonth[]']").each(function () {
-        var monthValue = parseInt($(this).val());
-        $(this).prop("disabled", monthValue > currentMonth);
-    });
-}
+    
 });
 </script>

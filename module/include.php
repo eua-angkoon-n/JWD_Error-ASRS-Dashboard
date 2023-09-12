@@ -156,4 +156,9 @@
         margin-bottom: .5em;
     }
 }
+
+.select2bs4 {
+    display: inline-block !important; /* Ensure it's inline with other elements */
+    /* Force it to fill the entire container */
+}
 </style>

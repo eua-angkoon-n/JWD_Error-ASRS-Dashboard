@@ -3,48 +3,55 @@ require_once __DIR__ . "/../../config/connect_db.inc.php";
 require_once __DIR__ . "/../../include/class_crud.inc.php";
 require_once __DIR__ . "/../../include/function.inc.php";
 
-Class ErrorLog_WH
+Class ErrorCode
 {
     private $wh;
     private $date;
-    private $arrWH;
-    
-    public function __construct($wh,$date,$arrWH)
+    private $errCode;
+    private $dateBetween;
+    private $maxView;
+    public function __construct($wh,$date,$errCode)
     {
-        $this->wh = $wh; 
-        $this->date = $date;
-        $this->arrWH = $arrWH;
+        $this->wh      = ($wh == NULL ? false : $wh); 
+        $this->date    = ($date == NULL ? false : $date);
+        $this->errCode = ($errCode == NULL ? false : $errCode);
+        $this->maxView = 0;
     }
 
     public function getChart() {
         return $this->createChart();
     }
-
-    public function getErrorLogData(){
-
-        $WH    = $this->wh;
-        $DATE  = $this->date;
-        $date  = getDateDay($DATE,$start,$end);
-        if(!$WH || !$date)
-        $getRow = '';
+    public function getErrorCodeData(){
+        $WH      = $this->wh;
+        $DATE    = $this->date;
+        $date    = getDateDay($DATE,$start,$end);
+        $col     = getDatesBetween($start,$end);
+        $this->dateBetween = $col;
+        $errCode = $this->errCode;
+        if(!$WH || !$date || !$errCode || !$col)
+            return false;
         $con = connect_database();
         $obj = new CRUD($con);
-        try {
-            $sql  = "SELECT wh, DATE(asrs_error_trans.tran_date_time) AS day, COUNT(*) AS count ";
-            $sql .= "FROM asrs_error_trans ";
-            $sql .= "WHERE $WH ";
-            $sql .= "AND ";
-            $sql .= "asrs_error_trans.tran_date_time ";
-            $sql .= "BETWEEN '$start' AND '$end' ";
-            $sql .= "GROUP BY day,wh ";
-            $sql .= "ORDER BY day,wh;";
-            $fetchRow = $obj->fetchRows($sql);
-            
-            if(empty($fetchRow))
-                return false;
-            $col = getDatesBetween($start,$end);
-            $countArray = $this->getArrayCount($col,$fetchRow);
-           
+        try{
+            foreach ($errCode as $keyerrCode => $valueErrCode){
+                $NameErrCode = $valueErrCode;
+                $sql  = "SELECT `Error Name`, `Error Code`, DATE(asrs_error_trans.tran_date_time) AS day, COUNT(*) as count ";
+                $sql .= "FROM asrs_error_trans ";
+                $sql .= "WHERE ";
+                $sql .= "asrs_error_trans.wh = '$WH' ";
+                $sql .= "AND ";
+                $sql .= "(asrs_error_trans.`Error Name` = '".$NameErrCode['Error Name']."' ";
+                $sql .= "AND ";
+                $sql .= "asrs_error_trans.`Error Code` = '".$NameErrCode['Error Code']."') ";
+                $sql .= "AND asrs_error_trans.tran_date_time BETWEEN '$start' AND '$end' ";
+                $sql .= "GROUP BY day ";
+                $sql .= "ORDER BY day;";
+
+                $fetchRow = $obj->fetchRows($sql);
+                $Data[] = $fetchRow;
+            }
+            $countArray = $this->getRowDataString($col, $Data);
+            $this->maxView = $this->findMaxCount($Data);
             return $countArray;
         } catch(Exception $e) {
             return "Caught exception : <b>".$e->getMessage()."</b><br/>";
@@ -52,7 +59,44 @@ Class ErrorLog_WH
             $con = null;
         }
     }
+    public function getRowDataString($col, $dataCount) {
+        $rowData = $this->createRowData($col ,$dataCount);
+        $rowStrings = [];
+    
+        foreach ($rowData as $row) {
+            $rowString = '[' . implode(', ', $row) . ']';
+            $rowStrings[] = $rowString;
+        }
+    
+        $resultString = implode(",\n", $rowStrings);
+    
+        return $resultString;
+    }
 
+    public function createRowData($col, $dataCount) {
+        $rowData = [];
+        
+        foreach ($col as $date) {
+            $row = [formatDateToChart($date)];
+            
+            foreach ($dataCount as $errorData) {
+                $count = 0;
+                
+                foreach ($errorData as $error) {
+                    if ($error['day'] === $date) {
+                        $count = $error['count'];
+                        break;
+                    }
+                }
+        
+                $row[] = $count;
+            }
+            
+            $rowData[] = $row;
+        }
+        
+        return $rowData;
+    }
     public function getArrayCount($col,$dataCount) {
         $countArray = [];
         foreach ($col as $date) {
@@ -61,71 +105,66 @@ Class ErrorLog_WH
         // Fill in counts from $fetchArray into $countArray where dates match
         foreach ($dataCount as $item) {
             $date = $item["day"];
-            $wh = $item["wh"];
+            if ($item["Error Name"] != "")
+                $Error_Name = $item["Error Name"];
+            else
+                $Error_Name = $item["Error Code"];
             $count = $item["count"];
-            
-            if (!isset($countArray[$date][$wh])) {
-                $countArray[$date][$wh] = 0;
+    
+            if (!isset($countArray[$date][$Error_Name])) {
+                $countArray[$date][$Error_Name] = 0;
             }
-            
-            $countArray[$date][$wh] += $count;
+    
+            $countArray[$date][$Error_Name] += $count;
         }
         // Fill in missing "wh" values with counts initialized to 0
         foreach ($countArray as &$dateData) {
             foreach ($dataCount as $item) {
-                $wh = $item["wh"];
-                if (!isset($dateData[$wh])) {
-                    $dateData[$wh] = 0;
+                if ($item["Error Name"] != "")
+                    $Error_Name = $item["Error Name"];
+                else
+                    $Error_Name = $item["Error Code"];
+                if (!isset($dateData[$Error_Name])) {
+                    $dateData[$Error_Name] = 0;
                 }
             }
         }
         return $countArray;
     }
+    public function findMaxCount($dataCount) {
+        $maxCount = 0;
     
-    public function getDataRow($count){
-        $wh = $this->arrWH;
-        if(!$count || !$wh)
-            return false;
-        $addRow = "";
-        foreach ($count as $key => $countValue){
-            $date = formatDateToChart($key);
-            $addRow .= "[ ".$date .", ";
-            foreach ($wh as $key => $whValue) {
-                    if(empty($countValue[strtolower($whValue)]))
-                        $addRow .= "0, ";
-                    else
-                        $addRow .= $countValue[strtolower($whValue)].", ";
+        foreach ($dataCount as $errorData) {
+            foreach ($errorData as $error) {
+                if ($error['count'] > $maxCount) {
+                    $maxCount = $error['count'] + 5;
+                }
             }
-            $addRow .= "], ";
         }
-        return $addRow;
+        return $maxCount;
     }
-
     public function getDataColumn(){
-        $wh = $this->arrWH;
-        if(!$wh)
+        $errCode = $this->errCode;
+        if(!$errCode)
             return false;
         $col = "";
-        foreach ($wh as $key => $value){
-            $col .= "data.addColumn('number', '$value');";
+        foreach ($errCode as $code => $type){
+            if ($type['Error Name'] != "")
+                $name = $type['Error Name'];
+            else 
+                $name = $type['Error Code'];
+            $col .= "data.addColumn('number', '$name');\n";
         }
         return $col;
     }
-
-    public function getColorChart(){
-        $ColorBar = Setting::$ColumnBarColor;
-        $color = formatColorChart($ColorBar);
-        return $color;
-    }
-
+    
     public function createChart(){
-        $wh = $this->wh;
+        $date = $this->date;
 
-        $ChartData = $this->getErrorLogData();
-        $row       = $this->getDataRow($ChartData);
-        $col       = $this->getDataColumn();
+        $row = $this->getErrorCodeData();
+        $col = $this->getDataColumn();
 
-        if(!$ChartData || !$row || !$wh) {
+        if(!$row || !$col){
             $today = date('Y-m-d');
             $now = formatDateToChart($today);
             $row = "[$now, 0]";
@@ -146,7 +185,7 @@ Class ErrorLog_WH
                     ]);
             
                     var options = {
-                        title: 'Error Log',
+                        title: 'Error Code/Name',
                         chartArea: { width: '90%', height: '80%' },
                         fontName: 'Arial',
                         fontSize: '14',
@@ -159,6 +198,7 @@ Class ErrorLog_WH
                         },
                         vAxis: {
                           gridlines: {color: 'none'},
+                          maxValue: ".$this->maxView.",
                           minValue: 0
                         },
                         animation: {
@@ -188,17 +228,15 @@ Class ErrorLog_WH
     }
 }
 
-Class ErrorLog_WHTotal
+Class ErrorCode_Total 
 {
     private $wh;
     private $date;
-    private $whCount;
-    private $arrWH;
-    public function __construct($wh,$date,$arrWH)
-    {
+    private $errorCode;
+
+    public function __construct($wh,$date) {
         $this->wh = $wh;
         $this->date = $date;
-        $this->arrWH = $arrWH;
     }
 
     public function getChart() {
@@ -214,51 +252,36 @@ Class ErrorLog_WHTotal
         return $row;
     
     }
-
-    public function getWH(){
-      
-        $sql  = "SELECT * ";
-        $sql .= "FROM asrs_error_wh ";
-        $sql .= "WHERE ";
-        $sql .= "1=1 ";
-        $sql .= "ORDER BY site_name ASC ";
-        
-        $con = connect_database();
-        $obj = new CRUD($con);
-        try{
-            $wh = $obj->fetchRows($sql);
-            $wh_query = "";
-            foreach ($wh as $key => $value) {
-                $wh_query .= count($wh) > 1 && $key == 0 ? ' ( ' : ' ';
-            
-                $wh_query .= count($wh) > 1 && $key == 0 ? ' asrs_error_trans.wh = "' .$value['site_name']. '" ' : ' OR asrs_error_trans.wh = "' .$value['site_name']. '" ';
-            
-                $wh_query .= count($wh) > 1 && array_key_last($wh) == $key ? ') ' : '';
-            }
-            count($wh) == 1 ? $wh_query = str_replace('OR', '', $wh_query) : $wh_query;
-        } finally {
-            $con = null;
+    public function getDateDay(&$start,&$end) {
+        $date  = $this->date;
+        if (!$date)
+            return false;
+        foreach ($date as $key => $day) {
+            if($key == 1)
+                $start = $day;
+            else if ($key == 0)
+                $end = $day;
         }
-        return $wh_query;
+        return true;
     }
-
     public function getErrorLogData(){
 
-        $WH = $this->wh;
-        $date = $this->date;
-        if(!$WH)
+        $WH    = $this->wh;
+        $DATE  = $this->date;
+        $date  = getDateDay($DATE,$start,$end);
+        if(!$WH || !$date)
             return false;
-        $wh = $this->getWH();
-        $sql  = "SELECT wh, COUNT(*) as count ";
+        
+        $sql  = "SELECT `Error Name`, `Error Code`, COUNT(*) as count ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
         $sql .= $WH;        
         $sql .= "AND ";
-        $sql .= "asrs_error_trans.tran_date_time BETWEEN ";
-        $sql .= "'".$date[1]."' ";
-        $sql .= "AND ";
-        $sql .= "'".$date[0]."' ";
-        $sql .= "GROUP BY wh; ";
+        $sql .= "asrs_error_trans.tran_date_time ";
+        $sql .= "BETWEEN '$start' AND '$end' ";
+        $sql .= "GROUP BY `Error Name`, `Error Code` ";
+        $sql .= "ORDER BY count DESC ";
+        $sql .= "LIMIT 5";
 
         $con = connect_database();
         $obj = new CRUD($con);
@@ -268,7 +291,6 @@ Class ErrorLog_WHTotal
             if(empty($fetchRow))
                 return false;
             else {
-                $this->whCount = count($fetchRow);
                 return $fetchRow;
             }
         } catch(Exception $e) {
@@ -277,43 +299,33 @@ Class ErrorLog_WHTotal
             $con = null;
         }
     }
+
+    public function getErrorCode(){
+        return $this->errorCode;
+    }
     
     public function addRow($data){
-        $arrWH = $this->arrWH;
         $addRow = '';
         $ColumnBarColor = Setting::$ColumnBarColor;
         $i = 0;
-    
-        foreach ($arrWH as $wh) {
-            $found = false;
-            foreach ($data as $key => $value) {
-                $whValue = strtoupper($value['wh']);
-                if ($whValue === $wh) {
-                    $addRow .= "['" . $whValue . "', " . $value['count'] . ", " . $value['count'] . ", '" . $ColumnBarColor[$i] . "'],";
-                    $i++;
-                    $found = true;
-                    break; // Exit the inner loop when a match is found
-                }
-            }
-            
-            if (!$found) {
-                // 'wh' value not found in $data, add a row with count = 0
-                $addRow .= "['" . strtoupper($wh) . "', 0, 0, '" . $ColumnBarColor[$i] . "'],";
-                $i++;
-            }
+        foreach ($data as $key => $value) {
+            $addRow .= "['" . (IsNullOrEmptyString($value['Error Name']) ? $value['Error Code'] : $value['Error Name']) . "', " . $value['count'] . ", ". $value['count'] .", '" . $ColumnBarColor[$i] . "'],";
+            $i++;
+            $errorCode[] = array(
+                'Error Name' => $value['Error Name'],
+                'Error Code' => $value['Error Code']); 
         }
+        $this->errorCode = $errorCode;
         return $addRow;
     } 
-
     public function barWidth(){
-        $wh = $this->whCount;
+        $wh = $this->errorCode;
         if ($wh < 2)
             return '10%';
         else if ($wh < 5)
             return '30%';
         return '50%';
     }
-    
     public function createChart(){
         $row = $this->createRow();
         if(!$row)
@@ -324,13 +336,13 @@ Class ErrorLog_WHTotal
         google.charts.setOnLoadCallback(function drawChart() {
     
                 var data = new google.visualization.arrayToDataTable([
-                      ['Warehouse','Error Log', {type: 'number', role: 'annotation'}, { role: 'style' }],
+                      ['Error Name/Code','Error', {type: 'number', role: 'annotation'}, { role: 'style' }],
                       $row
                       ]);
             
             
                 var options = {
-                    title: 'Error Log Total',
+                    title: 'Total Error Code/Name',
                     bar: { groupWidth: '85%' },
                     chartArea: { width: '90%', height: '80%' },
                     fontName: 'Arial',
@@ -370,5 +382,4 @@ Class ErrorLog_WHTotal
         return $chartScript;
     }
 }
-
 ?>

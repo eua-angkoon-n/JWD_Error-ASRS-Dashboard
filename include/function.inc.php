@@ -725,4 +725,40 @@ function formatColorChart($color) {
     return $row;
 }
 
+function getDatesBetween($startDate, $endDate) {
+    $startDate = new DateTime($startDate);
+    $endDate = new DateTime($endDate);
+    
+    $dateArray = array();
+    
+    while ($startDate <= $endDate) {
+        $dateArray[] = $startDate->format('Y-m-d');
+        $startDate->modify('+1 day');
+    }
+    if (empty($dateArray))
+        return false;
+    return $dateArray;
+}
+
+function formatDateToChart($inputDate) {
+    $dateTime = new DateTime($inputDate);
+    $year = $dateTime->format('Y');
+    $month = $dateTime->format('n') - 1; // Subtract 1 from the month
+    $day = $dateTime->format('j');
+    
+    return "new Date($year, $month, $day)";
+}
+
+function getDateDay($date,&$start,&$end) {
+    if (!$date)
+        return false;
+    foreach ($date as $key => $day) {
+        if($key == 1)
+            $start = $day;
+        else if ($key == 0)
+            $end = $day;
+    }
+    return true;
+}
+
 ?>
