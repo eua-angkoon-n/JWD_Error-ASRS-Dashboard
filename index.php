@@ -25,10 +25,20 @@ switch ($module) {
         $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
         break;
     case "errorMachine" :
-    
+        $include_module = __DIR__ . "/module/dashboard.inc.php";
+        $action = "errorMachine";
+        $module == "errorMachine" ? $active_errorMachine = "active" : $active_errorMachine = ""; #ไฮไลท์เมนูด้านซ้าย
+        $title_site = Setting::$title_site[$action];
+        $title_act = Setting::$title_act[$action];
+        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
         break;
     case "MachineDetails" :
-     
+        $include_module = __DIR__ . "/module/dashboard.inc.php";
+        $action = "MachineDetails";
+        $module == "MachineDetails" ? $active_MachineDetails = "active" : $active_MachineDetails = ""; #ไฮไลท์เมนูด้านซ้าย
+        $title_site = Setting::$title_site[$action];
+        $title_act = Setting::$title_act[$action];
+        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
         break;
     default:
         $include_module = __DIR__ . "/module/dashboard.inc.php";
