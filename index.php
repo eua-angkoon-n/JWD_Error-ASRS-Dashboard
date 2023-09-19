@@ -19,37 +19,32 @@ switch ($module) {
     case "errorCode" :
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorCode";
-        $module == "errorCode" ? $active_errorCode = "active" : $active_errorCode = ""; #ไฮไลท์เมนูด้านซ้าย
-        $title_site = Setting::$title_site[$action];
-        $title_act = Setting::$title_act[$action];
-        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
+        $module == "errorCode" ? $active_errorCode = "active" : $active_errorCode = "";
         break;
     case "errorMachine" :
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorMachine";
-        $module == "errorMachine" ? $active_errorMachine = "active" : $active_errorMachine = ""; #ไฮไลท์เมนูด้านซ้าย
-        $title_site = Setting::$title_site[$action];
-        $title_act = Setting::$title_act[$action];
-        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
+        $module == "errorMachine" ? $active_errorMachine = "active" : $active_errorMachine = "";
         break;
     case "MachineDetails" :
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "MachineDetails";
-        $module == "MachineDetails" ? $active_MachineDetails = "active" : $active_MachineDetails = ""; #ไฮไลท์เมนูด้านซ้าย
-        $title_site = Setting::$title_site[$action];
-        $title_act = Setting::$title_act[$action];
-        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
+        $module == "MachineDetails" ? $active_MachineDetails = "active" : $active_MachineDetails = "";
+        break;
+    case "errorDetails" :
+        $include_module = __DIR__ . "/module/table.inc.php";
+        $action = "errorDetails";
+        $module == "errorDetails" ? $active_errorDetails = "active" : $active_errorDetails = "";
         break;
     default:
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorLog";
         $module == "dashboard" || $module == "" ? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
-        $title_site = Setting::$title_site[$action];
-        $title_act = Setting::$title_act[$action];
-        $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
       break;
 }
-
+$title_site = Setting::$title_site[$action];
+$title_act = Setting::$title_act[$action];
+$breadcrumb_txt = Setting::$breadcrumb_txt[$action];
 ?>
 
 <!DOCTYPE html>
@@ -103,33 +98,34 @@ switch ($module) {
                         data-accordion="false">
                         <li class="nav-item">
                             <a href="./" class="nav-link <?PHP echo $active_errorlog; ?>">
-                                <i class="nav-icon fa fa-solid fa-chalkboard"></i>
-                                <p>Error Log</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="?module=errorCode" class="nav-link <?PHP echo $active_errorCode;?>">
-                                <i class="nav-icon fas fa-tools"></i> 
-                                <p>Error Code</p>
+                                <i class="nav-icon fas fa-warehouse"></i>
+                                <p>Warehouse</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="?module=errorMachine" class="nav-link <?PHP echo $active_errorMachine;?>">
-                                <i class="nav-icon fas fa-tools"></i> 
-                                <p>Error Machine</p>
+                                <i class="nav-icon fas fa-truck-loading"></i> 
+                                <p>Machine</p>
                             </a>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a href="?module=MachineDetails" class="nav-link <?PHP echo $active_MachineDetails;?>">
-                                <i class="nav-icon fas fa-tools"></i> 
-                                <p>Machine Details</p>
+                        <li class="nav-item">
+                            <a href="?module=errorCode" class="nav-link <?PHP echo $active_errorCode;?>">
+                                <i class="nav-icon fas fa-exclamation"></i> 
+                                <p>Error Name/Code</p>
                             </a>
-                        </li> -->
-
-                        <li class="nav-item"><a href="?module=logout" class="nav-link"><i
-                                    class="nav-icon fas fa-sign-out-alt"></i>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?module=errorDetails" class="nav-link <?PHP echo $active_errorDetails;?>">
+                                <i class="nav-icon fas fa-table"></i> 
+                                <p>Error Log Details</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?module=logout" class="nav-link">
+                            <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>Logout</p>
-                            </a></li>
+                            </a>
+                        </li>
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>

@@ -3,15 +3,24 @@ require_once __DIR__ . "/module_errorlog/errorlog.php";
 require_once __DIR__ . "/module_errorcode/errorCode.php";
 require_once __DIR__ . "/moule_errorMachine/errorMachine.php";
 
+require_once __DIR__ . "/../config/connect_db.inc.php";
+require_once __DIR__ . "/../include/class_crud.inc.php";
+
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
+    if($action == 'Machine'){
+        $getMachine = new getMachine($_POST['data']);
+        $result = $getMachine->getMachine();
+        echo $result; exit;
+    }
     // Check the value of the "action" parameter
     $getAction = new getAction($_POST['data']);
     $getAction->getData(
         $wh,
         $date,
         $newDate,
-        $arrWH
+        $arrWH,
+        $machine
     );
     switch ($action){
         case 'errorLog':
@@ -32,9 +41,8 @@ if (isset($_POST['action'])) {
         case 'errorMachine':
             $CtResult  = new ErrorMachine_Total($wh,$newDate);
             $result    = $CtResult->getChart();
-            // $errorCode = $CtResult->getErrorCode();
-            // $Ct2Result = new ErrorMachine_Compare($WH,$date,$errorCode);
-            // $result   .= $Ct2Result->getChart();
+            $Ct2Result = new ErrorMachine($wh,$newDate,$machine);
+            $result   .= $Ct2Result->getChart();
             print_r($result);
             break;
         case 'MachineDetails':
@@ -49,15 +57,19 @@ if (isset($_POST['action'])) {
 }
 exit;
 
+
+
 Class getAction
 {
     private $wh;
     private $date;
+    private $machine;
     public function __construct($formData)
     {
         parse_str($formData, $data);
   
         $this->wh = $data['dropdownWH'] ?? NULL;
+        $this->machine = $data['machine'] ?? NULL;
         $this->date = $data['selectedDateRange'] ?? NULL;
     }
 
@@ -71,12 +83,15 @@ Class getAction
         &$wh_query,
         &$date,
         &$newDate,
-        &$arrWH
+        &$arrWH,
+        &$machine
     ) {
         $wh_query = $this->getWH();
         $date     = $this->date;
         $newDate  = $this->getDate();
         $arrWH    = $this->wh;
+        $machine  = $this->machine;
+
     }
 
     public function getWH(){
@@ -151,5 +166,40 @@ Class getAction
     //     $WH = $this->wh;
     // }
    
+}
+
+Class getMachine
+{
+    private $wh;
+    public function __construct($formData)
+    {
+       $this->wh = $formData;
+    }
+
+    public function getMachine(){
+        return $this->createList();
+    }
+
+    public function createList(){
+        $wh   = $this->wh;
+        $sql  = "SELECT DISTINCT(Machine),wh "; 
+        $sql .= "FROM asrs_error_trans "; 
+        $sql .= "WHERE wh = '".strtolower($wh)."' ";
+        $sql .= "ORDER BY Machine ASC";
+
+        try {
+            $con = connect_database();
+            $obj = new CRUD($con);
+
+            $fetch   = $obj->fetchRows($sql);
+            $options = "<option value='All'>All</option>";
+            foreach ($fetch as $key => $value){
+                $options .=  "<option value='".$value['Machine']."' ".($key== 0 ? 'selected' : '').">".$value['Machine']."</option>";
+            }
+        } finally {
+            $con = NULL;
+        }
+        return $options;
+    }
 }
 ?>

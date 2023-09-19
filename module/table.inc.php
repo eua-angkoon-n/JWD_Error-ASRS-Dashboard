@@ -2,9 +2,9 @@
 include( __DIR__ . "/include.php" );
 require_once __DIR__ . "/dashboard.class.php";
 
-$SelectBar = new DashBoard($action);
-$siteSelect = $SelectBar->getSiteSelect();
-$machine = $SelectBar->getMachine();
+// $SelectBar = new DashBoard($action);
+// $siteSelect = $SelectBar->getSiteSelect();
+// $machine = $SelectBar->getMachine();
 ?>
 
 <section class="content">
@@ -41,20 +41,20 @@ $machine = $SelectBar->getMachine();
                                             Warehouse
                                         </button>
                                     <ul class="dropdown-menu checkbox-menu allow-focus">
-                                        <?php echo $siteSelect; ?>
+                                        <?php //echo $siteSelect; ?>
                                     </ul>
                                 </div>
                                 <?php } else { ?>
                                     <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3" name="dropdownWH"
                                     id="dropdownWH" style="width:100%; font-size:0.85rem;" required="" onchange="getValue(this)">
-                                        <?php echo $siteSelect ?>
+                                        <?php //echo $siteSelect ?>
                                     </select>
                                 
                                 <?php } if ($action == "errorMachine") { ?>
                                     <label>Machine:</label> &nbsp;
                                     <div class="d-inline col-3">
                                         <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3"data-placeholder="Select Machine" id="machine" name="machine">
-                                           <?php echo $machine ?>
+                                           <?php //echo $machine ?>
                                         </select> 
                                     </div>
                                                    
