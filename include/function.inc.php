@@ -767,5 +767,23 @@ function isAll($value){
     else
         return false;
 }
+function getLast30Day(){
+    // Get the current date as a DateTime object
+    $currentDate = new DateTime();
+
+    // Subtract 30 days from the current date
+    $startDate = clone $currentDate;
+    $startDate->modify('-29 days');
+
+    // Format the start and end dates as strings
+    $startDateStr = $startDate->format('Y-m-d'); // Format: YYYY-MM-DD
+    $currentDateStr = $currentDate->format('Y-m-d');
+
+    $dateRange = array(
+        0 => $currentDateStr,
+        1 => $startDateStr
+    );
+    return $dateRange;
+}
 
 ?>

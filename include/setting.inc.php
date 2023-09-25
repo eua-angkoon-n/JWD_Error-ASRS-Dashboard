@@ -174,4 +174,33 @@ class Setting
         "#003C87"  // Navy Blue
     );
     public static $SQLSET = "SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));";
+    public static $errLogCol = array( 
+        0 => "asrs_error_trans.id",
+        1 => "asrs_error_trans.id",
+        2 => "asrs_error_trans.wh",
+        3 => "asrs_error_trans.tran_date_time",
+        4 => "asrs_error_trans.`Control WCS`",
+        5 => "asrs_error_trans.`Control CELL`",
+        6 => "asrs_error_trans.Machine",
+        7 => "asrs_error_trans.Position",
+        8 => "asrs_error_trans.`Transport Data Total`",
+        9 => "asrs_error_trans.`Error Code`",
+        10 => "asrs_error_trans.`Error Name`",
+        11 => "asrs_error_trans.`Transfer Equipment #`",
+        12 => "asrs_error_trans.Cycle",
+        13 => "asrs_error_trans.Destination",
+        14 => "asrs_error_trans.`Final Destination`",
+        15 => "asrs_error_trans.`Load Size Info (Height)`",
+        16 => "asrs_error_trans.`Load Size Info (Width)`",
+        17 => "asrs_error_trans.`Load Size Info (Length)`",
+        18 => "asrs_error_trans.`Load Size Info (Other)`",
+        19 => "asrs_error_trans.Weight",
+        20 => "asrs_error_trans.`Barcode Data`",
+
+    );
+    public static $errLogSearch = array(
+        "wh",
+        "Error Name",
+        "Error Code"
+    );
 }

@@ -227,11 +227,11 @@ $('#errorTable').DataTable({
     "order": [0, 'desc'], //ถ้าโหลดครั้งแรกจะให้เรียงตามคอลัมน์ไหนก็ใส่เลขคอลัมน์ 0,'desc'
     "aoColumnDefs": [{
             "bSortable": false,
-            "aTargets": [0, 3, 6, 7, 8, 9, 10, 11]
+            "aTargets": [0]
         }, //คอลัมน์ที่จะไม่ให้ฟังก์ชั่นเรียง
         {
             "bSearchable": false,
-            "aTargets": [0, 3, 6, 7, 8, 9, 10, 11]
+            "aTargets": [0,2,3,4,5,6,7,10,11,12,13,14,15,16,17,18,19]
         } //คอลัมน์ที่จะไม่ให้เสริท
     ],
     ajax: {
@@ -251,9 +251,32 @@ $('#errorTable').DataTable({
     },
     "lengthMenu": [
         [10, 25, 50, 100, -1],
-        [10, 25, 50, 100, "ทั้งหมด"]
+        [10, 25, 50, 100, "All"]
     ],
-   
+    "language": {
+        "decimal":        "",
+        "emptyTable":     "No data available in table",
+        "info":           "Showing _START_ to _END_ of _TOTAL_ entries",
+        "infoEmpty":      "Showing 0 to 0 of 0 entries",
+        "infoFiltered":   "(filtered from _MAX_ total entries)",
+        "infoPostFix":    "",
+        "thousands":      ",",
+        "lengthMenu":     "Show _MENU_ entries",
+        "loadingRecords": "Loading...",
+        "processing":     "",
+        "search":         "Search:",
+        "zeroRecords":    "No matching records found",
+        "paginate": {
+            "first":      "First",
+            "last":       "Last",
+            "next":       "Next",
+            "previous":   "Previous"
+        },
+        "aria": {
+            "sortAscending":  ": activate to sort column ascending",
+            "sortDescending": ": activate to sort column descending"
+        }
+    },
     "paging": true,
     "lengthChange": true, //ออฟชั่นแสดงผลต่อหน้า
     "pagingType": "simple_numbers",
@@ -261,10 +284,12 @@ $('#errorTable').DataTable({
     "searching": true,
     "ordering": true,
     "info": true,
-    //"autoWidth": false,
+    "autoWidth": true,
     //"responsive": true,
     "buttons": ["excel", "colvis"]
 }).buttons().container().appendTo('#errorTable_wrapper .col-md-6:eq(0)');
+
+$('input[type=search]').attr('placeholder', 'Warehouse, Name/Code');
 
 $(document).on("click", ".btn-showData", function (event) {
     $('#errorTable').DataTable().ajax.reload();
