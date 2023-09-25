@@ -228,7 +228,7 @@ Class DataTable extends TableProcessing {
                 $dataRow[] = $No . '.';
               
                 $dataRow[] = ($fetchRow[$key]['wh']                         == '' ? '-' : strtoupper($fetchRow[$key]['wh']));
-                $dataRow[] = ($fetchRow[$key]['tran_date_time']             == '' ? '-' : $fetchRow[$key]['tran_date_time']);
+                $dataRow[] = ($fetchRow[$key]['tran_date_time']             == '' ? '-' : date("d/m/Y H:i:s", strtotime($fetchRow[$key]['tran_date_time'])));
                 $dataRow[] = ($fetchRow[$key]['Control WCS']                == '' ? '-' : $fetchRow[$key]['Control WCS']);
                 $dataRow[] = ($fetchRow[$key]['Control CELL']               == '' ? '-' : $fetchRow[$key]['Control CELL']);
                 $dataRow[] = ($fetchRow[$key]['Machine']                    == '' ? '-' : $fetchRow[$key]['Machine']);
