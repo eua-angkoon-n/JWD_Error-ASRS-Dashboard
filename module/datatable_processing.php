@@ -23,11 +23,11 @@ $dataGet = array(
     'draw'   => $draw
 );
 
-new TableProcessing($dataGet);
-$Call   = new DataTable($_POST['formData']);
+// new TableProcessing($dataGet);
+$Call   = new DataTable($_POST['formData'],$dataGet);
 $result = $Call->getTable(); 
-echo $result;
-// echo json_encode($result);
+// echo $result;
+echo json_encode($result);
 exit;
 Class TableProcessing {
     protected $search;
@@ -81,7 +81,7 @@ Class TableProcessing {
     }
 
     public function getLimit(){
-        $limit = "LIMIT " . $this->start . ", " . $this->length . "";
+        $limit = "LIMIT " . max(0, $this->start) . ", " . $this->length . "";
         $this->length == -1 ? $limit = "" : '';
         return $limit;
     }
@@ -126,13 +126,38 @@ Class TableProcessing {
     }
 }
 
-Class DataTable extends TableProcessing {
+Class DataTable {
+
+    protected $search;
+    protected $query_search;
+    protected $length;
+    protected $start;
+    protected $limit;
+    protected $column_sort;
+    protected $orderBY;
+    protected $column;
+    protected $dir;
+    protected $draw;
     
     private $wh;
     private $machine;
     private $errorName;
     private $date;
-    public function __construct($formData){
+    public function __construct($formData,$dataGet){
+
+
+        $this->length = $dataGet['length'];
+        $this->search = $dataGet['search'];
+        $this->dir    = $dataGet['dir'];
+        $this->draw   = $dataGet['draw'];
+
+        $this->query_search = $this->getQuery_search($dataGet['search']);
+        $this->length = $this->getLength($dataGet['start']);
+        $this->start = $this->getStart($dataGet['start']);
+        $this->limit = $this->getLimit();
+        $this->column = $this->getColumn($dataGet['column']);
+        $this->column_sort = $this->getColumn_sort();
+        $this->orderBY = $this->getOrderBY();
 
         parse_str($formData, $data);
         $newDate = NULL;
@@ -182,7 +207,11 @@ Class DataTable extends TableProcessing {
         $errorName = $this->errorName;
         $date      = $this->date;
 
-        $sql  = "SELECT * ";
+        if($OrderBY){
+            $sql  = "SELECT * ";         
+        } else {
+            $sql  = "SELECT count(id) AS total_row ";
+        }
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE 1=1 ";
         if(!isAll($wh))
@@ -255,6 +284,75 @@ Class DataTable extends TableProcessing {
         );
 
         return $output;
+    }
+
+    public function getQuery_search($search){
+        $query_search = "";
+        if (!empty($search)) {
+            $query_search = " AND (wh LIKE '%" . $search . "%' OR `Error Name` LIKE '%" . $search . "%') ";
+        } else {
+            $query_search = "";
+        }
+        return $query_search;
+    }
+
+    public function getLength($start){
+        if ($start == 0) {
+            $length = $this->length;
+        } else {
+            $length = $this->length;
+        }
+        return $length;
+    }
+
+    public function getStart($start){
+        $start = ($start - 1) * $this->length;
+        return $start;
+    }
+
+    public function getLimit(){
+        $limit = " LIMIT " . max(0, $this->start) . ", " . $this->length . "";
+        $this->length == -1 ? $limit = "" : '';
+        return $limit;
+    }
+
+    public function getColumn($column){
+        empty($column) ? $column = 0 : $column;
+        return $column;
+    }
+
+    public function getColumn_sort(){
+        $colunm_sort = array( 
+            0 => "asrs_error_trans.id",
+            1 => "asrs_error_trans.id",
+            2 => "asrs_error_trans.wh",
+            3 => "asrs_error_trans.tran_date_time",
+            4 => "asrs_error_trans.`Control WCS`",
+            5 => "asrs_error_trans.`Control CELL`",
+            6 => "asrs_error_trans.Machine",
+            7 => "asrs_error_trans.Position",
+            8 => "asrs_error_trans.`Transport Data Total`",
+            9 => "asrs_error_trans.`Error Code`",
+            10 => "asrs_error_trans.`Error Name`",
+            11 => "asrs_error_trans.`Transfer Equipment #`",
+            12 => "asrs_error_trans.Cycle",
+            13 => "asrs_error_trans.Destination",
+            14 => "asrs_error_trans.`Final Destination`",
+            15 => "asrs_error_trans.`Load Size Info (Height)`",
+            16 => "asrs_error_trans.`Load Size Info (Width)`",
+            17 => "asrs_error_trans.`Load Size Info (Length)`",
+            18 => "asrs_error_trans.`Load Size Info (Other)`",
+            19 => "asrs_error_trans.Weight",
+            20 => "asrs_error_trans.`Barcode Data`",
+
+        );
+        return $colunm_sort;
+    }
+
+    public function getOrderBY(){
+        $column_sort = $this->column_sort;
+        $orderBY = $column_sort[$this->column];
+        return $orderBY;
     }
 
     
