@@ -2,9 +2,10 @@
 include( __DIR__ . "/include.php" );
 require_once __DIR__ . "/dashboard.class.php";
 
-// $SelectBar = new DashBoard($action);
-// $siteSelect = $SelectBar->getSiteSelect();
-// $machine = $SelectBar->getMachine();
+$SelectBar    = new DashBoard($action);
+$siteSelect   = $SelectBar->getSiteSelect();
+$machine      = $SelectBar->getMachine();
+$CodeNMachine = $SelectBar->getErrorNameNCode();
 ?>
 
 <section class="content">
@@ -27,64 +28,94 @@ require_once __DIR__ . "/dashboard.class.php";
         <form id="needs-validation" class="addform " name="addform" method="POST" enctype="multipart/form-data"
                 autocomplete="off" novalidate="">
 
-                <div class="card p-0">
-                    <div class="card-body p-1">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-xs-12 ml-1">
-                                <label>Warehouse:</label> &nbsp;
-                                <?php if ($action == "errorLog") { ?>
-                                    <div class="d-inline">
-                                        <button
-                                            class="btn btn-default dropdown-toggle col-sm-2 col-md-2 col-xs-12 mr-3 justify-content-between"
-                                            type="button" id="dropdownWH" data-toggle="dropdown" aria-haspopup="true"
-                                            aria-expanded="true">
-                                            Warehouse
-                                        </button>
-                                    <ul class="dropdown-menu checkbox-menu allow-focus">
-                                        <?php //echo $siteSelect; ?>
-                                    </ul>
-                                </div>
-                                <?php } else { ?>
-                                    <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3" name="dropdownWH"
-                                    id="dropdownWH" style="width:100%; font-size:0.85rem;" required="" onchange="getValue(this)">
-                                        <?php //echo $siteSelect ?>
-                                    </select>
-                                
-                                <?php } if ($action == "errorMachine") { ?>
-                                    <label>Machine:</label> &nbsp;
-                                    <div class="d-inline col-3">
-                                        <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3"data-placeholder="Select Machine" id="machine" name="machine">
-                                           <?php //echo $machine ?>
-                                        </select> 
-                                    </div>
-                                                   
-                                <?php } ?> 
-
-                                <label>Date:</label> &nbsp;
-                                <div class="d-inline">
-                                    <button type="button" class="btn btn-default" id="date" name="date">
-                                        <i class="far fa-calendar-alt"></i>
-                                        Last 30 Days
-                                        <i class="fas fa-caret-down"></i>
-                                    </button>
-                                </div>
-
-                            </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Warehouse:</label>
+                            <select class="form-control col-sm-12 col-md-12 col-xs-12" name="dropdownWH" id="dropdownWH"
+                                style="width:100%; font-size:0.85rem;" required="" onchange="getWH(this)">
+                                <option value='All'>All</option>
+                                <?php echo $siteSelect ?>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <label class="col-sm-12 col-md-12 col-xs-12">Date:</label>
+                            <button type="button" class="btn btn-default form-control col-sm-12 col-md-12 col-xs-12" id="date" name="date">
+                                <i class="far fa-calendar-alt"></i>
+                                Last 30 Days
+                                <i class="fas fa-caret-down"></i>
+                            </button>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <button type="button" class="btn btn-block btn-outline-success btn-showData col-sm-12 col-md-4 col-xs-4">Search</button>
                         </div>
                     </div>
+                    <!-- /.col -->
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Machine:</label> &nbsp;
+                            <select class="form-control col-sm-12 col-md-12 col-xs-12"
+                                data-placeholder="Select Machine" id="machine" name="machine" onchange="getCode(this)">
+                                <?php echo $machine ?>
+                            </select>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Error Name/Code:</label> &nbsp;
+
+                            <select class="form-control col-sm-12 col-md-12 col-xs-12"
+                                data-placeholder="Select Machine" id="NameCode" name="NameCode">
+                                <?php echo $CodeNMachine ?>
+                            </select>
+
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
                 </div>
+
+                <div class="row pt-3 p-2">
+                <div class="col-sm-12 p-0 m-0">
+                    <table id="errorTable" class="table table-bordered table-hover dataTable dtr-inline display nowrap"
+                        style="width:1000px">
+                        <thead>
+                            <tr class="bg-light">
+                                <th scope="col" class="sorting_disabled">No</th>
+                                <th scope="col">Warehouse</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Control WCS</th>
+                                <th scope="col">Control CELL</th>
+                                <th scope="col">Machine</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Transport Data Total</th>
+                                <th scope="col">Error Code</th>
+                                <th scope="col">Error Name</th>
+                                <th scope="col">Transfer Equipment</th>
+                                <th scope="col">Cycle</th>
+                                <th scope="col">Destination</th>
+                                <th scope="col">Final Destination Location</th>
+                                <th scope="col">Load Size Info (Height)</th>
+                                <th scope="col">Load Size Info (Width)</th>
+                                <th scope="col">Load Size Info (Length)</th>
+                                <th scope="col">Load Size Info (Other)</th>
+                                <th scope="col">Weight</th>
+                                <th scope="col">Barcode Data</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div><!-- /.row -->
+
                 <input type="hidden" id="selectedDateRange" name="selectedDateRange" value="">
             </form>
 
-            <div id="chart_script"></div>
-
-            <div class="row">
-                <div class="col p-0 pt-3">
-                <div class="ChartSize" id="Chart1"></div>
-                <div class="ChartSize" id="Chart2"></div>
-                </div>
-                <!-- /.col -->
-            </div>
         </div>
     </div>
 </section>
@@ -94,7 +125,7 @@ $('.select2bs4').select2({
   theme: 'bootstrap4'
 })
 
-function getValue(wh) {
+function getWH(wh) {
 
 var wh = wh.value;
 
@@ -103,10 +134,14 @@ $.ajax({
     type: "POST",
     data: {
         "data": wh,
-        "action": "Machine"
+        "action": "Machine",
+        "box" : "Machine"
     },
     success: function (data) {
-        $("#machine").html(data);
+        var jsonData = JSON.parse(data);
+        $("#machine").html(jsonData.machine);
+        $("#NameCode").html(jsonData.code);
+        console.log(data);
     },
     error: function (data) {
         console.log(data);
@@ -115,27 +150,30 @@ $.ajax({
 });
 }
 
-function SendData() {
-    var frmData = $("form#needs-validation").serialize();
-    var action = "<?php echo $action ?>";
+function getCode(mc) {
 
-    $.ajax({
-        url: "module/ajax_action.php",
-        type: "POST",
-        data: {
-            "data": frmData,
-            "action": action
-        },
-        success: function (data) {
-            $("#chart_script").html(data);
-            console.log(data);
-            event.stopPropagation();
-        },
-        error: function (data) {
-            console.log(data);
-            sweetAlert("ผิดพลาด!", "ไม่สามารถแสดงผลข้อมูลได้", "error");
-        }
-    });
+var dropdownWHValue = document.getElementById("dropdownWH").value;
+var mc = mc.value;
+
+$.ajax({
+    url: "module/ajax_action.php",
+    type: "POST",
+    data: {
+        "data": dropdownWHValue,
+        "action": "Machine",
+        "machine":mc,
+        "box" : "Code"
+    },
+    success: function (data) {
+        var jsonData = JSON.parse(data);
+        $("#NameCode").html(jsonData.code);
+        console.log(data);
+    },
+    error: function (data) {
+        console.log(data);
+        sweetAlert("ผิดพลาด!", "ไม่สามารถแสดงผลข้อมูลได้", "error");
+    }
+});
 }
 
 $('#date').daterangepicker(
@@ -153,9 +191,9 @@ $('#date').daterangepicker(
           },
           function (start, end, label) {
             $('#selectedDateRange').val(end.format('YYYY-MM-DD') + '||//' + start.format('YYYY-MM-DD'));
-            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+            $('#reportrange span').html(start.format('d/M/YY') + ' - ' + end.format('d/M/YY'))
             if (label === 'Custom Range') {
-            $('#date').html('<i class="far fa-calendar-alt"></i> ' + start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY') + ' <i class="fas fa-caret-down"></i>');
+            $('#date').html('<i class="far fa-calendar-alt"></i> ' + start.format('d/M/YY') + ' - ' + end.format('d/M/YY') + ' <i class="fas fa-caret-down"></i>');
         } else {
             $('#date').html('<i class="far fa-calendar-alt"></i> ' + label + ' <i class="fas fa-caret-down"></i>');
         }
@@ -168,18 +206,67 @@ $(document).ready(function () {
     $('#selectedDateRange').val(endDate.format('YYYY-MM-DD') + '||//' + startDate.format('YYYY-MM-DD'));
 
      $('#date').on('apply.daterangepicker', function (event, picker) {
-        SendData(); // Trigger SendData when the date range changes
+     
     });
     // Listen for changes in the form elements (warehouse select, etc.)
     $("form#needs-validation").on("change", "select, input[type='checkbox'], button", function () {
-        SendData(); // Trigger SendData when form elements change
+    
     });
 
     $('.dropdown-menu').on('click', function (e) {
         e.stopPropagation();
     });
 
-    SendData();
     
+});
+
+$('#errorTable').DataTable({
+    "scrollX": true,
+    "processing": true,
+    "serverSide": true,
+    "order": [0, 'desc'], //ถ้าโหลดครั้งแรกจะให้เรียงตามคอลัมน์ไหนก็ใส่เลขคอลัมน์ 0,'desc'
+    "aoColumnDefs": [{
+            "bSortable": false,
+            "aTargets": [0, 3, 6, 7, 8, 9, 10, 11]
+        }, //คอลัมน์ที่จะไม่ให้ฟังก์ชั่นเรียง
+        {
+            "bSearchable": false,
+            "aTargets": [0, 3, 6, 7, 8, 9, 10, 11]
+        } //คอลัมน์ที่จะไม่ให้เสริท
+    ],
+    ajax: {
+        beforeSend: function () {
+            //จะให้ทำอะไรก่อนส่งค่าไปหรือไม่
+        },
+        url: 'module/datatable_processing.php',
+        type: 'POST',
+        data: function (data) {
+            data.formData = $('#needs-validation').serialize();
+        },
+        error: function (xhr, error, code) {
+            console.log(xhr, code);
+        },
+        async: false,
+        cache: false,
+    },
+    "lengthMenu": [
+        [10, 25, 50, 100, -1],
+        [10, 25, 50, 100, "ทั้งหมด"]
+    ],
+   
+    "paging": true,
+    "lengthChange": true, //ออฟชั่นแสดงผลต่อหน้า
+    "pagingType": "simple_numbers",
+    "pageLength": 10,
+    "searching": true,
+    "ordering": true,
+    "info": true,
+    //"autoWidth": false,
+    //"responsive": true,
+    "buttons": ["excel", "colvis"]
+}).buttons().container().appendTo('#errorTable_wrapper .col-md-6:eq(0)');
+
+$(document).on("click", ".btn-showData", function (event) {
+    $('#errorTable').DataTable().ajax.reload();
 });
 </script>

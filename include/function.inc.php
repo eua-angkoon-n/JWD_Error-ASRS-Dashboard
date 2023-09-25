@@ -761,4 +761,11 @@ function getDateDay($date,&$start,&$end) {
     return true;
 }
 
+function isAll($value){
+    if($value == 'All')
+        return true;
+    else
+        return false;
+}
+
 ?>

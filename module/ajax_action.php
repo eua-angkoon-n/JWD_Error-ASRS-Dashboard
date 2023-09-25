@@ -9,8 +9,9 @@ require_once __DIR__ . "/../include/class_crud.inc.php";
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
     if($action == 'Machine'){
-        $getMachine = new getMachine($_POST['data']);
-        $result = $getMachine->getMachine();
+        !isset($_POST['machine']) ? $_POST['machine'] = '' : $_POST['machine'];
+        $getMachine = new getMachine($_POST['data'],$_POST['box'],$_POST['machine']);
+        $result     = $getMachine->getMachine();
         echo $result; exit;
     }
     // Check the value of the "action" parameter
@@ -45,15 +46,15 @@ if (isset($_POST['action'])) {
             $result   .= $Ct2Result->getChart();
             print_r($result);
             break;
-        case 'MachineDetails':
+        case 'errorDetails':
             
             break;
         default:
-            echo "No Action Name " . $action;
+            echo "Cannot Open Page " . $action;
             break;
     }
 } else {
-    echo "Action parameter not set";
+    echo "Page Not Found";
 }
 exit;
 
@@ -171,35 +172,129 @@ Class getAction
 Class getMachine
 {
     private $wh;
-    public function __construct($formData)
+    private $box;
+    private $machine;
+    private bool $onlyCode;
+    public function __construct($formData,$box,?string $machine)
     {
-       $this->wh = $formData;
+       $this->wh  = $formData;
+       $this->box = $box;
+       $this->machine = $machine;
+       $this->onlyCode = $this->checkOnlyCode();
     }
 
     public function getMachine(){
-        return $this->createList();
+        $code    = $this->createList(false);
+        if($this->onlyCode){
+            $machine = 0;
+        } else{
+            $machine = $this->createList(true);
+        }
+
+        $result = array (
+            'machine' => $machine,
+            'code'    => $code
+        );
+        return json_encode($result);
     }
 
-    public function createList(){
-        $wh   = $this->wh;
-        $sql  = "SELECT DISTINCT(Machine),wh "; 
-        $sql .= "FROM asrs_error_trans "; 
-        $sql .= "WHERE wh = '".strtolower($wh)."' ";
-        $sql .= "ORDER BY Machine ASC";
+    public function createList(bool $isMachine){
+        $wh       = $this->wh;
+        $onlyCode = $this->onlyCode;
+        if(!$onlyCode){
+            if ($isMachine){
+                if($wh == 'All'){
+                    $sql  = $this->SqlMcNError(true,true);
+                } else{
+                    $sql  = $this->SqlMcNError(true,false);
+                }
+            } else {
+                if($wh == 'All'){
+                    $sql  = $this->SqlMcNError(false,true);
+                } else {
+                    $sql  = $this->SqlMcNError(false,false);
+                }
+            }
+        } else {
+            $sql = $this->SqlOnlyError();
+        }
 
         try {
             $con = connect_database();
             $obj = new CRUD($con);
 
-            $fetch   = $obj->fetchRows($sql);
-            $options = "<option value='All'>All</option>";
+            $fetch    = $obj->fetchRows($sql);
+            $options  = "<option value='All' selected>All</option>";
             foreach ($fetch as $key => $value){
-                $options .=  "<option value='".$value['Machine']."' ".($key== 0 ? 'selected' : '').">".$value['Machine']."</option>";
+                if ($isMachine){
+                    $options .=  "<option value='".$value['Machine']."'>".$value['Machine']."</option>";
+                } else {
+                    $v = $value['Error Name'];
+                    if (IsNullOrEmptyString($v)){
+                        $v = $value['Error Code'];
+                    }
+                    $options .=  "<option value='$v'>$v</option>";
+                }
             }
+
         } finally {
             $con = NULL;
         }
         return $options;
     }
+
+    public function checkOnlyCode(){
+        $box = $this->box;
+        if($box == "Code")
+            return true;
+        else   
+            return false;
+    }
+
+    public function SqlMcNError(bool $isMachine,bool $all){
+        $wh = $this->wh;
+        if($isMachine){
+            $sql  = "SELECT DISTINCT(Machine),wh "; 
+            $sql .= "FROM asrs_error_trans ";
+            $sql .= "WHERE ";
+            if($all)
+                $sql .= "1=1 ";
+            else
+                $sql .= "wh = '".strtolower($wh)."' ";
+            $sql .= "ORDER BY Machine ASC";  
+        } else {
+            $sql  = "SELECT `Error Code`,`Error Name` ";
+            $sql .= "FROM asrs_error_trans ";
+            $sql .= "WHERE ";
+            if($all)
+                $sql .= "1=1 ";
+            else
+                $sql .= "wh = '".strtolower($wh)."' ";
+            $sql .= "GROUP BY `Error Name`, `Error Code` ";
+            $sql .= "ORDER BY `Error Name` ASC";
+        }
+        return $sql;
+    }
+
+    public function SqlOnlyError(){
+        $wh = $this->wh;
+        $mc   = $this->machine;
+            $sql  = "SELECT `Error Code`,`Error Name` ";
+            $sql .= "FROM asrs_error_trans ";
+            $sql .= "WHERE ";
+            if($wh == 'All') 
+                $sql .= "1=1 ";
+            else  
+                $sql .= "wh = '$wh' ";
+            if($mc != 'All') {
+                $sql .= "AND ";
+                $sql .= "Machine = '$mc' ";
+            }
+            $sql .= "GROUP BY `Error Name`, `Error Code` ";
+            $sql .= "ORDER BY `Error Name` ASC";
+
+        return $sql;
+    }
+        
 }
 ?>

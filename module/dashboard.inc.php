@@ -106,7 +106,8 @@ $.ajax({
         "action": "Machine"
     },
     success: function (data) {
-        $("#machine").html(data);
+        var jsonData = JSON.parse(data);
+        $("#machine").html(jsonData.machine);
     },
     error: function (data) {
         console.log(data);
