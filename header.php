@@ -72,12 +72,8 @@
       $('.text-pcs-ct').html() == "<?PHP echo $title_site; ?>" ? $('.text-pcs-ct').html('') : $('.text-pcs-ct').html('<?PHP echo $title_site; ?>');
     });
 
-    <?PHP if ($_SESSION['sess_popup_howto'] == 0) {?>
-      //$('#Modalhowto').modal('show');
-    <?PHP
-$_SESSION['sess_popup_howto'] = 1;
-}
-?>
+    updateTime();
+    setInterval(updateTime, 1000);
 
     /*สกอร์บาร์*/
     $(window).scroll(function(){
@@ -93,4 +89,27 @@ $_SESSION['sess_popup_howto'] = 1;
     });
 
   });//document
+
+  function updateTime() {
+    var currentDate = new Date();
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes();
+    var seconds = currentDate.getSeconds();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // Convert hours to 12-hour format
+    if (hours > 12) {
+        hours -= 12;
+    } else if (hours === 0) {
+        hours = 12;
+    }
+
+    // Add leading zeros to minutes and seconds
+    
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    var formattedTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+    $("#currentTime").text(formattedTime);
+  }
 </script>

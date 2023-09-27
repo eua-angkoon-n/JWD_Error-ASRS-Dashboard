@@ -69,7 +69,7 @@ Class TableProcessing {
     }
 
     public function getStringSearch($search) {
-        $arrSearch = Setting::$errLogSearch;
+        $arrSearch = Setting::$DataTableSearch;
         
         // Initialize an empty array to store individual search conditions
         $conditions = [];
@@ -117,7 +117,7 @@ Class TableProcessing {
     }
 
     public function getColumn_sort(){
-        $column_sort = Setting::$errLogCol;
+        $column_sort = Setting::$DataTableCol;
         return $column_sort;
     }
 

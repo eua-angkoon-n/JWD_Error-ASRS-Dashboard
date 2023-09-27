@@ -8,7 +8,6 @@ Class ErrorMachine
     private $wh;
     private $date;
     private $machine;
-    private $ComboChartData;
     private $maxValue;
     public function __construct($wh,$date,$machine)
     {
@@ -107,9 +106,14 @@ Class ErrorMachine
         $errorNames = [];
         foreach ($originalData as $entry) {
             $errorName = $entry['Error Name'];
+            $errorCode = $entry['Error Code'];
+
             if (!empty($errorName) && !in_array($errorName, $errorNames)) {
                 $errorNames[] = $errorName;
                 $header[] = $errorName;
+            } elseif (empty($errorName) && !empty($errorCode)) {
+                $errorNames[] = $errorCode;
+                $header[] = $errorCode;
             }
         }
     
@@ -120,16 +124,21 @@ Class ErrorMachine
         foreach ($originalData as $entry) {
             $date = $entry['transaction_date'];
             $errorName = $entry['Error Name'];
+            $errorCode = $entry['Error Code'];
             $count = (int)$entry['Count'];
     
             $entryDateObj = new DateTime($date);
     
             // Check if the date is within the specified range.
             if ($entryDateObj >= $startDateObj && $entryDateObj <= $endDateObj) {
-                $comboData[$date][$errorName] = $count;
+                // Determine whether to use "Error Name" or "Error Code" as the column name.
+                $columnName = !empty($errorName) ? $errorName : $errorCode;
+    
+                $comboData[$date][$columnName] = $count;
                 $comboData[$date]['Total'] += $count;
             }
         }
+    
     
         // Create the final data array.
         $comboChartData = [$header];

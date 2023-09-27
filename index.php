@@ -78,7 +78,7 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
             <!-- Sidebar -->
             <div class="sidebar"><br><br>
                 <!-- Sidebar user panel (optional) -->
-                <div class="user-panel mt-3 pb-1 mb-3 d-flex">
+                <!-- <div class="user-panel mt-3 pb-1 mb-3 d-flex">
                     <div class="image">
                         <img src="dist/img/user2-160x160.png" class="img-circle elevation-2" alt="User Image">
                     </div>
@@ -90,10 +90,10 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                             <?PHP echo "ยังไม่เสร็จ _SESSION['sess_dept_initialname'];" ?></span>
                         <a href="?module=profile" class="d-block text-yellow">[แก้ไขข้อมูลส่วนตัว]</a>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- Sidebar Menu active-->
-                <nav class="mt-2">
+                <nav class="mt-3">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item">
@@ -120,12 +120,12 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                                 <p>Error Log Details</p>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a href="?module=logout" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>Logout</p>
                             </a>
-                        </li>
+                        </li> -->
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>

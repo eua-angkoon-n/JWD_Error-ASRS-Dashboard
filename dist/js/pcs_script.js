@@ -28,7 +28,7 @@ $(function(){
 			mkSecond="0"+mkSecond;  
 		} 	
 		var runDateTime=mkHour+":"+mkMinute+":"+mkSecond;		 
-		$("#css_time_run").html('เวลา: '+runDateTime+' นาที');	 
+		$("#css_time_run").html(runDateTime);	 
 	 },1000);
 });  
 /*เวลา*/

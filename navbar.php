@@ -7,20 +7,21 @@
                             class="fas fa-2x fa-bars"></i></a>
                 </li>
                 <li class="nav-item d-none d-sm-inline-block">
-                    <a href="./" class="nav-link">หน้าหลัก</a>
+                    <a href="./" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item d-none d-sm-inline-block">
+                <!-- <li class="nav-item d-none d-sm-inline-block">
                     <a href="?module=howto" class="nav-link">คู่มือการใช้งาน</a>
-                </li>
+                </li> -->
             </ul>
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <div class="ul-datetime-clock">
                         <ul>
-                            <li>วัน<?php echo Setting::$arr_day_of_week[date('N', strtotime('today'))]; ?>ที่
-                                <?php echo nowDate(date('Y-m-d H:i:s')); ?>&nbsp;</li>
-                            <li id="css_time_run"> เวลา: <?php echo date("H:i:s"); ?> นาที</li>
+                            <li><?php echo Setting::$arr_day_of_weekEN[date('N', strtotime('today'))]; ?> 
+                                <?php echo nowDateEN(date('Y-m-d H:i:s')); ?>&nbsp;
+                            </li>
+                            <li id="currentTime"></li>
                         </ul>
                     </div>
                     <!--clock-->

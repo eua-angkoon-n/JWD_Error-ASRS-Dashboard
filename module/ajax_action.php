@@ -21,7 +21,8 @@ if (isset($_POST['action'])) {
         $date,
         $newDate,
         $arrWH,
-        $machine
+        $machine,
+        $nameCode
     );
     switch ($action){
         case 'errorLog':
@@ -34,8 +35,7 @@ if (isset($_POST['action'])) {
         case 'errorCode':
             $CtResult  = new ErrorCode_Total($wh,$newDate);
             $result    = $CtResult->getChart();
-            $errorCode = $CtResult->getErrorCode();
-            $Ct2Result = new ErrorCode($arrWH,$newDate,$errorCode);
+            $Ct2Result = new ErrorCode($wh,$newDate,$nameCode);
             $result   .= $Ct2Result->getChart();
             print_r($result);
             break;
@@ -65,6 +65,7 @@ Class getAction
     private $wh;
     private $date;
     private $machine;
+    private $nameCode;
     public function __construct($formData)
     {
         parse_str($formData, $data);
@@ -72,6 +73,7 @@ Class getAction
         $this->wh = $data['dropdownWH'] ?? NULL;
         $this->machine = $data['machine'] ?? NULL;
         $this->date = $data['selectedDateRange'] ?? NULL;
+        $this->nameCode = $data['nameCode'] ?? NULL;
     }
 
     public function getDate(){
@@ -85,13 +87,15 @@ Class getAction
         &$date,
         &$newDate,
         &$arrWH,
-        &$machine
+        &$machine,
+        &$nameCode
     ) {
         $wh_query = $this->getWH();
         $date     = $this->date;
         $newDate  = $this->getDate();
         $arrWH    = $this->wh;
         $machine  = $this->machine;
+        $nameCode  = $this->nameCode;
 
     }
 
@@ -114,59 +118,6 @@ Class getAction
         
         return $wh_query;
     }
-
-    // public function getMonth(){
-    //     $month = $this->month;
-    //     if($month == NULL)
-    //         return false;
-    //     $month_query =' ';
-    //     //MONTH(`tran_date_time`) = 7
-    //     foreach ($month as $key => $value) {
-    //         $month_query .= count($month) > 1 && $key == 0 ? ' ( ' : ' ';
-        
-    //         $month_query .= count($month) > 1 && $key == 0 ? ' MONTH(`tran_date_time`) = "' .$value. '" ' : ' OR MONTH(`tran_date_time`) = "' .$value. '" ';
-        
-    //         $month_query .= count($month) > 1 && array_key_last($month) == $key ? ') ' : '';
-    //     }
-    //     count($month) == 1 ? $month_query = str_replace('OR', '', $month_query) : $month_query;
-        
-    //     return $month_query;
-    // }
-
-    // public function getYear(){
-    //     $year = $this->year;
-    //     if($year == NULL)
-    //         return false;
-    //     $year_query =' ';
-        
-    //     foreach ($year as $key => $value) {
-    //         $year_query .= count($year) > 1 && $key == 0 ? ' ( ' : ' ';
-        
-    //         $year_query .= count($year) > 1 && $key == 0 ? ' YEAR(`tran_date_time`) = "' .$value. '" ' : ' OR YEAR(`tran_date_time`) = "' .$value. '" ';
-        
-    //         $year_query .= count($year) > 1 && array_key_last($year) == $key ? ') ' : '';
-    //     }
-    //     count($year) == 1 ? $year_query = str_replace('OR', '', $year_query) : $year_query;
-        
-    //     return $year_query;
-    // }
-
-    // public function getCompare(&$mt_date, &$WH){
-    //     $Year = $this->year;
-    //     $Month = $this->month;
-    //     if($Year == NULL || $Month == NULL)
-    //         return NULL;
-
-    //     foreach ($Year as $key => $value) {
-    //         $Year = $value;
-    //         foreach ($Month as $key => $values) {
-    //             $dateReq = $Year . '-' . $values;
-    //             $mt_date[] = $dateReq;
-    //         }
-    //     }
-    //     $WH = $this->wh;
-    // }
-   
 }
 
 Class getMachine
@@ -175,12 +126,14 @@ Class getMachine
     private $box;
     private $machine;
     private bool $onlyCode;
+    private $notFromTable;
     public function __construct($formData,$box,?string $machine)
     {
-       $this->wh  = $formData;
-       $this->box = $box;
-       $this->machine = $machine;
-       $this->onlyCode = $this->checkOnlyCode();
+        $this->notFromTable = false;
+        $this->wh  = $formData;
+        $this->box = $box;
+        $this->machine = $machine;
+        $this->onlyCode = $this->checkOnlyCode();
     }
 
     public function getMachine(){
@@ -247,7 +200,9 @@ Class getMachine
         $box = $this->box;
         if($box == "Code")
             return true;
-        else   
+        else
+            if ($box == "NotTable")
+                $this->notFromTable = true;   
             return false;
     }
 

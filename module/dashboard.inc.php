@@ -5,6 +5,7 @@ require_once __DIR__ . "/dashboard.class.php";
 $SelectBar = new DashBoard($action);
 $siteSelect = $SelectBar->getSiteSelect();
 $machine = $SelectBar->getMachine();
+$nameCode = $SelectBar->getErrorNameNCode();
 ?>
 
 <section class="content">
@@ -58,6 +59,13 @@ $machine = $SelectBar->getMachine();
                                         </select> 
                                     </div>
                                                    
+                                <?php } if ($action == "errorCode") { ?>
+                                    <label>Name or Code:</label> &nbsp;
+                                    <div class="d-inline col-3">
+                                        <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3"data-placeholder="Select Machine" id="nameCode" name="nameCode">
+                                           <?php echo $nameCode ?>
+                                        </select> 
+                                    </div>
                                 <?php } ?> 
 
                                 <label>Date:</label> &nbsp;
@@ -103,11 +111,15 @@ $.ajax({
     type: "POST",
     data: {
         "data": wh,
-        "action": "Machine"
+        "action": "Machine",
+        "box": "NotTable"
     },
     success: function (data) {
         var jsonData = JSON.parse(data);
         $("#machine").html(jsonData.machine);
+        $("#nameCode").html(jsonData.code);
+        SendData();
+        // console.log(data);
     },
     error: function (data) {
         console.log(data);
@@ -129,7 +141,7 @@ function SendData() {
         },
         success: function (data) {
             $("#chart_script").html(data);
-            console.log(data);
+            // console.log(data);
             event.stopPropagation();
         },
         error: function (data) {

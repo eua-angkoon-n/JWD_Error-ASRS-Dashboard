@@ -2,28 +2,9 @@
 class Setting
 {
     public static $AppTimeZone = 'Asia/Bangkok';
-    public static $DFFWDConst = 'ask_dialog_flow';
-    public static $RETIMGURLConst = 'RETIMGURLConst';
-
-    public static $INTENT_IMG_LOCATION = '/images/intent/';
-    public static $INTENT_IMG_PREFIX = 'INTENT_IMG_';
-    public static $TRAIN_IMG_PREFIX = 'TRAIN_IMG_';
-
-    public static $TRAIN_CLIP_LOCATION = '/var/www/clips/';
-
     public static $DefaultProvinceTH = 'สมุทรสาคร';
     public static $DefaultProvince = 'Samut Sakhon';
-
-    public static $strDOWCut = array("อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัสบดี", "ศุกร์", "เสาร์");
-    public static $strMonthCut = array("", "ม.ค.", "ก.พ.", "มี.ค.", "เม.ย.", "พ.ค.", "มิ.ย.", "ก.ค.", "ส.ค.", "ก.ย.", "ต.ค.", "พ.ย.", "ธ.ค.");
-
     public static $SiteList = array('PCS', 'JPK', 'JPAC', 'PACM', 'PLP', 'PACS', 'PACA', 'PACT');
-    public static $UserHasNoRight = "ขอโทษค่ะ คุณไม่มีสิทธิใช้คำสั่งนี้ค่ะ\n";
-
-    public static $LineReplyTimeOutSec = 28;
-    public static $DFWebhookTimeOutSec = 5;
-
-    public static $BG_Command = 'bg';
     public static $title_site = array
     (
         "errorLog" => "Warehouse Error ASRS", 
@@ -45,53 +26,8 @@ class Setting
         "errorCode" => "Error Name,Code", 
         "errorDetails" => "Error Details",
     );
-    
     public static $noreply_mail = "no-reply@cc.pcs-plp.com";
     public static $pass_mail = "Pcs@1234";
-
-    public static $req_digit = "-RQ-"; //ตัวย่อหน้าเลขที่ใบเบิก
-    
-    public static $keygen = 'Pcs@'; //sha1+password
-     
-    public static $btn_perPage = 10;#จำนวนปุ่มแสดงเลขหน้า
-    public static $limit_perPage = 10; #จำนวนข้อมูลที่แสดงต่อ 1 หน้า *ทั้งโปรแกรม
-     
-    public static $imagesize = 5100;
-     
-    public static $pathImgDefault = "uploads/default.png";
-     
-    public static $path_machine= "uploads-asset/";
-    public static $path_machine_Default = "uploads-asset/default.png";
-     
-    public static $pathUser= "uploads-user/";
-     
-    public static $pathUserDefault = "uploads-user/default.png";
-     
-    public static $pathReq= "upload-pic-req/";
-     
-    public static $pathPdf= "pdf/";
-     
-    public static $noimg = "noimg.gif";
-     
-    public static $timeDiff = 7200; // เวลา (นาที) = 5 วัน
-
-    public static $deptArr = array( 
-        array(0,'',''),
-        array(1,'MA','Management'),
-        array(2,'PLP','Pacific Logistics Pro'),
-        array(3,'WH','Warehouse'),
-        array(4,'QA','xxxxxxxxxxxxxxx'),
-        array(5,'Safety','xxxxxxxxxxxxxxx'),
-        array(6,'CS','Customer Service'),
-        array(7,'AC','Account'),
-        array(8,'EN','xxxxxxxxxxxxxxx'),
-        array(9,'HR','xxxxxxxxxxxxxxx'),
-        array(10,'IT/MIS','xxxxxxxxxxxxxxx'),
-        array(11,'INV','Inventory'),
-        array(12,'MT','xxxxxxxxxxxxxxx'),    
-        array(13,'MK','xxxxxxxxxxxxxxx'),
-        array(14,'PC','xxxxxxxxxxxxxxx')
-    );
     public static $warning_text = array(
         0=> "คุณไม่มีสิทธิ์ใช้งานในส่วนนี้", 
         1 => "คุณไม่มีสิทธิ์เข้าดูข้อมูลส่วนนี้", 
@@ -99,7 +35,8 @@ class Setting
         3=>"กรุณาติดต่อแผนก IT/MIS เพื่อสอบถามข้อมูลเพิ่มเติม โทร. 1111"
     );	//ข้อความ เกี่ยวกับความปลอดภัย
 
-    public static $arr_day_of_week = array('','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์','อาทิตย์');	
+    public static $arr_day_of_week = array('','จันทร์','อังคาร','พุธ','พฤหัสบดี','ศุกร์','เสาร์','อาทิตย์');
+    public static $arr_day_of_weekEN = array('','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');	
     public static $arr_mouth = array('มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม');	
     public static $arr_mouthEN = array('January','February','March','April','May','June','July','August','September','October','November','December');	
 
@@ -174,7 +111,7 @@ class Setting
         "#003C87"  // Navy Blue
     );
     public static $SQLSET = "SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));";
-    public static $errLogCol = array( 
+    public static $DataTableCol = array( 
         0 => "asrs_error_trans.id",
         1 => "asrs_error_trans.id",
         2 => "asrs_error_trans.wh",
@@ -198,7 +135,7 @@ class Setting
         20 => "asrs_error_trans.`Barcode Data`",
 
     );
-    public static $errLogSearch = array(
+    public static $DataTableSearch = array(
         "wh",
         "Error Name",
         "Error Code"

@@ -273,7 +273,7 @@ function print_mem()
    $mem_peak = memory_get_peak_usage();
    //echo 'The script is now using: <strong>' . round($mem_usage / 1024) . 'KB</strong> of memory.<br>';
    //echo 'Peak usage: <strong>' . round($mem_peak / 1024) . 'KB</strong> of memory.<br><br>';
-   echo ' ใช้หน่วยความจำไป: <strong>' . round($mem_usage / 1024) . 'KB</strong>.';
+   echo ' Memory Used: <strong>' . round($mem_usage / 1024) . 'KB</strong>.';
 }
 
 function dateRange( $first, $last, $step = '+1 day', $format = 'Y-m-d' ) {
