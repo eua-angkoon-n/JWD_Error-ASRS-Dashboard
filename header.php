@@ -68,8 +68,8 @@
 <script type="text/javascript">
   $(document).ready(function(){
     $('#pushmenu').click(function(){
-      //this.hide();
-      $('.text-pcs-ct').html() == "<?PHP echo $title_site; ?>" ? $('.text-pcs-ct').html('') : $('.text-pcs-ct').html('<?PHP echo $title_site; ?>');
+      // this.hide();
+      $('.text-pcs-ct').html() != "" ? $('.text-pcs-ct').html('') : $('.text-pcs-ct').html('<?PHP echo $title_site; ?>');
     });
 
     updateTime();

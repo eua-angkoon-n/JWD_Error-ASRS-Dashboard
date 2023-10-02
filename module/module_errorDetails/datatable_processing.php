@@ -3,10 +3,10 @@ ob_start();
 session_start();
 header('Content-Type: text/html; charset=utf-8');
 
-require_once __DIR__ . "/../config/connect_db.inc.php";
-require_once __DIR__ . "/../include/class_crud.inc.php";
-require_once __DIR__ . "/../include/function.inc.php";
-require_once __DIR__ . "/../include/setting.inc.php";
+require_once __DIR__ . "/../../config/connect_db.inc.php";
+require_once __DIR__ . "/../../include/class_crud.inc.php";
+require_once __DIR__ . "/../../include/function.inc.php";
+require_once __DIR__ . "/../../include/setting.inc.php";
 
 $column = $_POST['order']['0']['column'] + 1;
 $search = $_POST["search"]["value"];
@@ -192,14 +192,23 @@ Class DataTable extends TableProcessing {
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE 1=1 ";
         if(!isAll($wh))
-            $sql .= "AND wh = '$wh' ";
+            $sql .= "AND wh = '".strtolower($wh)."' ";
         if(!isAll($machine))
             $sql .= "AND Machine = '$machine' ";
         if(!isAll($errorName))
             $sql .= "AND (`Error Code` = '$errorName' OR `Error Name` = '$errorName') ";
-        if(!empty($date))
-            $sql .= "AND tran_date_time BETWEEN '".$date[1]."' AND '".$date[0]."' ";
-            $sql .= "$this->query_search ";
+        if(!empty($date)) {
+            $sql .= "AND ";
+            if($date[1] != $date[0]){
+                $sql .= "tran_date_time ";
+                $sql .= "BETWEEN '$date[1]' AND '$date[0]' ";
+            }
+            else {
+                $sql .= "date(tran_date_time) ";
+                $sql .= "= '".$date[0]."' ";
+            }
+        }
+        $sql .= "$this->query_search ";
         if($OrderBY) {
             $sql .= "ORDER BY ";
             $sql .= "$this->orderBY ";

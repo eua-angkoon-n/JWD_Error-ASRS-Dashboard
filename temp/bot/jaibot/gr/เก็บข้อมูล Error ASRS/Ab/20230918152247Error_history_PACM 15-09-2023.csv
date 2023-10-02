@@ -1,0 +1,89 @@
+﻿Error History (09/15/2023 00:00-09/15/2023 23:59 Area:AS/RS)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+09/15/2023 21:56:12,AGCA01,-,A01010,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,454456,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000005476,,0665.8                        ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 20:52:47,AGCA01,-,SRMA001,105215,1,1114002,Location empty,Fork 1,Pickup,R-SRA001-001-077-016,-,-,-,-,-,454413,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000015496,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 20:52:01,AGCA01,-,SRMA001,106676,1,1114002,Location empty,Fork 1,Pickup,R-SRA001-002-078-016,-,-,-,-,-,454415,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000013011,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 20:51:00,AGCA01,-,SRMA001,105214,1,1114002,Location empty,Fork 1,Pickup,R-SRA001-002-077-016,-,-,-,-,-,454412,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004956,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 20:45:42,AGCA01,-,AA0102,,1,1217765,Approach Detection Sensor Error,--,1,,-,-,-,-,-,453862,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000007788,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 20:45:42,AGCA01,-,AA0101,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+09/15/2023 20:45:42,AGCA01,-,A01020,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+09/15/2023 20:45:42,AGCA01,-,A01019,,1,1217765,Approach Detection Sensor Error,--,Transport Request,,-,-,-,-,-,453864,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000017360,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 20:45:38,AGCA01,-,SRMA001,104,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:45:03,AGCA01,-,SRMA001,104,0,1030070,Main unit communication error,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:45:01,AGCA01,-,SRMA001,104,0,1030002,Key switch off error,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:43:06,AGCA01,-,SSA002,10305,0,1543223,Key switch off,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:43:06,AGCA01,-,SSA001,0,0,1543223,Key switch off,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:40:16,AGCA01,-,SSA002,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:40:16,AGCA01,-,SSA001,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:40:13,AGCA01,-,SSA002,32382,0,1543223,Key switch off,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:40:13,AGCA01,-,SSA001,0,0,1543223,Key switch off,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:39:38,AGCA01,-,SSA002,32382,0,1543003,Protrusion Stop,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:39:38,AGCA01,-,SSA001,0,0,1543003,Protrusion Stop,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:39:26,AGCA01,-,SSA002,32382,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:39:26,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:36:24,AGCA01,-,SSA002,50,0,1543223,Key switch off,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:36:24,AGCA01,-,SSA001,50,0,1543223,Key switch off,Fork 1,No Cycle,,-,-,-,-,-
+09/15/2023 20:34:52,AGCA01,-,SRMA001,104,0,1030011,External emergency stop 1,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:33:57,AGCA01,-,SRMA001,102,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:32:30,AGCA01,-,SRMA001,112187,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:31:55,AGCA01,-,SRMA001,112187,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:30:33,AGCA01,-,SRMA001,106637,0,1116009,Restricted location,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:27:52,AGCA01,-,SRMA001,106677,0,1116009,Restricted location,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:27:35,AGCA01,-,SRMA001,106677,0,1116009,Restricted location,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:25:41,AGCA01,-,SRMA001,106676,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:23:56,AGCA01,-,SRMA001,103,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:22:12,AGCA01,-,SRMA001,102,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:17:16,AGCA01,-,SRMA001,106655,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:17:14,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:17:09,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:17:07,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:17:05,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:16:59,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:16:57,AGCA01,-,SRMA001,106655,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:16:28,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:16:21,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:16:14,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:16:12,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:15:56,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:15:54,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:15:53,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:15:51,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 20:11:06,AGCA01,-,SRMA001,106654,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:41:42,AGCA01,-,SRMA001,103918,0,1030019,HP-side maintenance door 1,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:40:22,AGCA01,-,SRMA001,103919,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:39:17,AGCA01,-,SRMA001,95665,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:39:15,AGCA01,-,SRMA001,95665,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:38:42,AGCA01,-,SRMA001,95665,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:37:17,AGCA01,-,SRMA001,14338,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:35:51,AGCA01,-,SRMA001,14338,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:34:45,AGCA01,-,SSA001,10305,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Pickup,A01014,-,-,-,-,-,454354,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004250,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 19:34:31,AGCA01,-,SRMA001,13788,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:33:15,AGCA01,-,SRMA001,13044,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:32:38,AGCA01,-,SRMA001,11585,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:31:36,AGCA01,-,SRMA001,-9,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:31:28,AGCA01,-,SRMA001,-9,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:31:15,AGCA01,-,SRMA001,-9,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+09/15/2023 19:30:10,AGCA01,-,SSA001,10305,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Pickup,A01014,-,-,-,-,-,454354,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004250,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 19:29:04,AGCA01,-,SRMA001,-10,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+09/15/2023 18:48:59,AGCA01,-,SRMA001,0,0,1030003,Emergency stop 1,--,No Cycle,,-,-,-,-,-
+09/15/2023 18:48:49,AGCA01,-,SRMA001,0,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+09/15/2023 18:14:42,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,454302,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004067,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 18:12:50,AGCA01,-,SRMA002,52854,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,R-SRA001-008-039-009,-,-,-,-,-,454296,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016532,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 17:32:53,AGCA01,-,SSA001,6307,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Pickup,A01009,-,-,-,-,-,454228,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016425,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 17:27:58,AGCA01,-,A01005,,1,1032016,Load presence error when releasing,--,Transport Request,,-,-,-,-,-,454247,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 15:48:30,AGCA01,-,A01014,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+09/15/2023 15:48:30,AGCA01,-,A01022,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+09/15/2023 15:48:30,AGCA01,-,A01013,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+09/15/2023 15:48:30,AGCA01,-,A01012,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+09/15/2023 15:48:30,AGCA01,-,A01011,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+09/15/2023 15:48:30,AGCA01,-,A01010,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+09/15/2023 13:18:47,AGCA01,-,SRMA001,123783,1,1030019,HP-side maintenance door 1,Fork 1,Pickup,R-SRA001-002-094-016,-,-,-,-,-,453840,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 13:17:39,AGCA01,-,SRMA001,123784,1,1115021,TRNS1: Excess load height,Fork 1,Pickup,R-SRA001-002-094-016,-,-,-,-,-,453840,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 13:11:35,AGCA01,-,SRMA001,123783,1,1115021,TRNS1: Excess load height,Fork 1,Pickup,R-SRA001-002-094-016,-,-,-,-,-,453840,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 13:10:39,AGCA01,-,SRMA001,123783,1,1030011,External emergency stop 1,Fork 1,Pickup,R-SRA001-002-094-016,-,-,-,-,-,453840,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 13:10:38,AGCA01,-,AA0102,,1,1217765,Approach Detection Sensor Error,--,Waiting for Pickup Completion,,-,-,-,-,-,453862,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000007788,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 13:10:38,AGCA01,-,A01019,,1,1217765,Approach Detection Sensor Error,--,Release On,,-,-,-,-,-,453864,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000017360,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 13:05:37,AGCA01,-,SRMA001,123783,1,1030019,HP-side maintenance door 1,Fork 1,Pickup,R-SRA001-002-094-016,-,-,-,-,-,453840,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 12:59:41,AGCA01,-,SRMA001,123783,1,1115021,TRNS1: Excess load height,Fork 1,Pickup,R-SRA001-002-094-016,-,-,-,-,-,453840,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 12:58:39,AGCA01,-,SRMA001,123778,1,1115021,TRNS1: Excess load height,Fork 1,Pickup,R-SRA001-002-094-016,-,-,-,-,-,453840,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+09/15/2023 10:06:35,AGCA01,-,SSA002,18681,1,1540163,Interval MON lack of distance (following in OP),Fork 1,Deposit,A01004,-,-,-,-,-,453687,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000007220,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-

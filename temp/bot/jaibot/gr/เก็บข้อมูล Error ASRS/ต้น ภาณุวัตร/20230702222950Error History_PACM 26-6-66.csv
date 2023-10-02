@@ -1,0 +1,148 @@
+﻿Error History (06/26/2023 00:00-06/26/2023 23:59 Area:AS/RS)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+06/26/2023 14:41:40,AGCA01,-,A01013,,1,1217765,Approach Detection Sensor Error,--,Transport Request,,-,-,-,-,-,381171,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000006257,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/26/2023 14:41:40,AGCA01,-,A01014,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/26/2023 14:41:40,AGCA01,-,A01022,,1,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-,381171,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000006257,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/26/2023 14:41:40,AGCA01,-,A01010,,1,1217765,Approach Detection Sensor Error,--,Transport Arrival,,-,-,-,-,-,381064,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000010631,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/26/2023 14:41:40,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/26/2023 14:41:40,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/26/2023 14:34:59,AGCA01,-,A01013,,1,1217120,Transport 1 time-out,--,Transport Request,,-,-,-,-,-,381171,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000006257,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/26/2023 14:34:59,AGCA01,-,A01012,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+06/26/2023 14:34:59,AGCA01,-,A01014,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+06/26/2023 14:34:59,AGCA01,-,A01022,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,381171,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000006257,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/26/2023 14:34:59,AGCA01,-,A01010,,1,1217120,Transport 1 time-out,--,Transport Arrival,,-,-,-,-,-,381064,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000010631,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/26/2023 14:34:59,AGCA01,-,A01011,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+06/26/2023 14:09:55,AGCA01,-,SRMA003,31177,1,1030019,HP-side maintenance door 1,Fork 1,Deposit,R-SRA001-010-084-006,-,-,-,-,-,381094,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000013740,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/26/2023 11:45:32,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:45:32,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:45:32,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:45:32,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:45:32,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:45:32,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:55,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:55,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:55,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:55,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:55,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:55,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:54,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:54,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:54,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:54,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:54,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:54,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:53,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:53,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:53,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:53,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:53,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:53,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:49,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:49,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:49,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:49,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:49,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:49,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:48,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:48,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:48,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:48,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:48,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:48,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:17,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:17,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:17,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:17,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:17,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:17,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:15,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:14,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:13,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:13,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:13,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:13,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:13,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:13,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:12,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:11,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:11,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:11,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:11,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:11,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:44:11,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:43:29,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:43:29,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:43:29,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:43:29,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:43:29,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:43:29,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:41:56,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:41:56,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:41:56,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:41:56,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:41:56,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:41:56,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:22,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:22,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:22,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:22,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:22,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:22,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:13,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:13,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:13,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:12,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:12,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:40:12,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:09:21,AGCA01,-,A01014,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:09:21,AGCA01,-,A01022,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:09:21,AGCA01,-,A01013,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:09:21,AGCA01,-,A01012,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:09:21,AGCA01,-,A01011,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 11:09:21,AGCA01,-,A01010,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/26/2023 10:02:58,AGCA01,-,SSA002,18681,1,1540163,Interval MON lack of distance (following in OP),Fork 1,Deposit,A01004,-,-,-,-,-,380707,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000017885,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-

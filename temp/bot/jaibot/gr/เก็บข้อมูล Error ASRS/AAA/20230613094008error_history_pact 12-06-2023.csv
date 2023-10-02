@@ -1,0 +1,176 @@
+﻿Error History (06/12/2023 00:00-06/12/2023 23:59)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+06/12/2023 17:43:35,AGCA001,-,RMA00101,133,0,1113262,LIO communication error,-,No Cycle,,-,-,0,0
+06/12/2023 17:43:26,AGCA001,-,RMA00101,134,0,1030002,Key switch off error,-,No Cycle,,-,-,0,0
+06/12/2023 17:32:17,AGCA001,-,1BA020,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 17:32:16,AGCA001,-,1BA010,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 17:32:16,AGCA001,-,1AA020,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 17:32:16,AGCA001,-,1AA010,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 17:24:35,AGCA001,-,SSA00102,25205,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 17:24:35,AGCA001,-,SSA00101,47,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 17:22:11,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 17:22:11,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 17:21:49,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 17:12:40,AGCA001,-,SSA00102,25205,0,1543003,Protrusion Stop,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 17:10:04,AGCA001,-,SSA00101,47,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 17:10:04,AGCA001,-,SSA00102,22168,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 16:46:45,AGCA001,-,1DA020,,0,1217771,Protrusion detection error,-,Standby,,-,-,0,0
+06/12/2023 16:46:45,AGCA001,-,1CA130,,0,1217771,Protrusion detection error,-,Standby,,-,-,0,0
+06/12/2023 16:46:45,AGCA001,-,1DA040,,0,1217771,Protrusion detection error,-,Standby,,-,-,0,0
+06/12/2023 16:46:45,AGCA001,-,1DA030,,0,1217771,Protrusion detection error,-,Standby,,-,-,0,0
+06/12/2023 16:46:45,AGCA001,-,1CA120,,0,1217771,Protrusion detection error,-,Standby,,-,-,0,0
+06/12/2023 16:46:45,AGCA001,-,1DA010,,0,1217771,Protrusion detection error,-,Standby,,-,-,0,0
+06/12/2023 16:41:10,AGCA001,-,SSA00102,25065,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Pickup,1CA150,-,-,0,0,,72352,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000007331,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 16:41:10,AGCA001,-,SSA00101,4322,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 16:40:30,AGCA001,-,RMA00101,0,0,1030003,Emergency stop 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:59,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:59,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:56,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:56,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:54,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:54,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:52,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:52,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:52,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:23:52,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:10:02,AGCA001,-,1CA090,,1,1217140,STV transfer 1 time-out,-,Release On,,-,-,0,0,,72272,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000006127,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 16:10:02,AGCA001,-,1CA100,,1,1217140,STV transfer 1 time-out,-,Waiting for Pickup Completion,,-,-,0,0,,72268,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000007242,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 16:09:39,AGCA001,-,SSA00101,41061,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Pickup,1CA100,-,-,0,0,,72268,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000007242,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 16:09:39,AGCA001,-,SSA00102,44553,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Deposit,1BA050,-,-,0,0,,72276,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000006111,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 16:09:04,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:09:04,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:08:51,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:08:51,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:08:42,AGCA001,-,RMA00101,25364,0,1113201,HORIZ distance sensor Qp error,-,No Cycle,,-,-,0,0
+06/12/2023 16:08:27,AGCA001,-,RMA00101,25364,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:08:27,AGCA001,-,RMA00101,25364,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:08:17,AGCA001,-,RMA00101,25364,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:08:17,AGCA001,-,RMA00101,25364,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 16:01:47,AGCA001,-,SSA00102,16025,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Deposit,1BA050,-,-,0,0,,72243,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000007471,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 16:01:47,AGCA001,-,SSA00101,11160,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Move,1BA080,-,-,0,0
+06/12/2023 15:52:57,AGCA001,-,1AA070,,1,1032012,Barcode data length error,-,Standby,,-,-,0,0,,72214,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000005683,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 15:46:27,AGCA001,-,1CA070,,1,1032012,Barcode data length error,-,Overwrite Transport Data,,-,-,0,0,,72217,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 15:44:30,AGCA001,-,RMA00101,25364,0,1030003,Emergency stop 1,-,No Cycle,,-,-,0,0
+06/12/2023 15:40:02,AGCA001,-,1CA070,,1,1032012,Barcode data length error,-,Overwrite Transport Data,,-,-,0,0,,72198,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 14:38:11,AGCA001,-,1CA070,,0,1032001,Load release time-out,-,Release Off,,-,-,0,0
+06/12/2023 13:43:21,AGCA001,-,SSA00102,41063,1,1035509,Transfer retry count exceeded: Main unit,Transfer Equipment #1-Transfer Section #1,Pickup,1CA100,-,-,0,0,,71958,1,,,Online Data,,,,,,,,,,,,,,0,,1 ,0 ,0 ,0    ,0.000,P000004408,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 13:41:41,AGCA001,-,1CA080,,0,1032001,Load release time-out,-,Release Off,,-,-,0,0
+06/12/2023 13:40:43,AGCA001,-,1CA100,,1,1217120,Transport 1 time-out,-,Waiting for Pickup Completion,,-,-,0,0,,71958,1,,,Online Data,,,,,,,,,,,,,,0,,1 ,0 ,0 ,0    ,0.000,P000004408,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 13:40:43,AGCA001,-,1CA090,,1,1217120,Transport 1 time-out,-,Standby,,-,-,0,0,,71961,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000019177,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 13:36:20,AGCA001,-,1CA100,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 13:36:20,AGCA001,-,1CA090,,1,1217120,Transport 1 time-out,-,Standby,,-,-,0,0,,71951,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000005177,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 13:34:33,AGCA001,-,1CA080,,0,1032001,Load release time-out,-,Release Off,,-,-,0,0
+06/12/2023 13:33:31,AGCA001,-,1CA090,,1,1217120,Transport 1 time-out,-,Standby,,-,-,0,0,,71951,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000005177,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 13:33:31,AGCA001,-,1CA100,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 12:04:13,AGCA001,-,SSA00102,35908,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Deposit,1BA030,-,-,0,0,,71911,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000014279,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 12:04:13,AGCA001,-,SSA00101,48,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 11:24:02,AGCA001,-,1CA070,,0,1032001,Load release time-out,-,Release Off,,-,-,0,0
+06/12/2023 10:15:53,AGCA001,-,RMA00101,25364,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:15:53,AGCA001,-,RMA00101,25364,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:05:08,AGCA001,-,RMA00101,25359,0,1113261,AGC/SRC communication error,-,No Cycle,,-,-,0,0
+06/12/2023 10:04:43,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:04:43,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:04:36,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:04:36,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:03:05,AGCA001,-,RMA00101,25359,0,1113262,LIO communication error,-,No Cycle,,-,-,0,0
+06/12/2023 10:02:45,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:02:45,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:02:30,AGCA001,-,SSA00102,37617,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Deposit,1BA030,-,-,0,0,,71688,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000006513,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 10:02:30,AGCA001,-,SSA00101,49,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 10:02:08,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:02:08,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:01:36,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 10:01:36,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:18,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:18,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:17,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:17,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:14,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:14,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:11,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:11,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:09,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:09,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:06,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:06,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:05,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:05,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:02,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:02,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:01,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:01,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:00,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:59:00,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:58:46,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:58:46,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:58:45,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:58:45,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:58:43,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:58:43,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:44:18,AGCA001,-,1CA030,,1,1217210,Descending 1 Time-out,-,Standby,,-,-,0,0,,71659,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000010749,,          0082.500            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 09:44:18,AGCA001,-,1DA080,,0,1217210,Descending 1 Time-out,-,Standby,,-,-,0,0
+06/12/2023 09:44:18,AGCA001,-,1CA010,,0,1217210,Descending 1 Time-out,-,Release Off,,-,-,0,0
+06/12/2023 09:38:50,AGCA001,-,SSA00102,37938,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Pickup,1CA100,-,-,0,0,,71639,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000010721,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 09:38:50,AGCA001,-,SSA00101,49,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 09:38:38,AGCA001,-,RMA00101,25359,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:38:38,AGCA001,-,RMA00101,25359,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:36:05,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:36:05,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:36:05,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:36:05,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:35:59,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:35:59,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:35:32,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:35:32,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:35:31,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:35:31,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:50,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:50,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:19,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:19,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:18,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:18,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:17,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:34:17,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:33:27,AGCA001,-,RMA00101,0,0,1030027,HP-side maintenance door plug 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:33:27,AGCA001,-,RMA00101,0,0,1030019,HP-side maintenance door 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:30:46,AGCA001,-,SSA00102,36113,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Pickup,1CA100,-,-,0,0,,71624,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000010647,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 09:30:46,AGCA001,-,SSA00101,49,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 09:26:31,AGCA001,-,1CA030,,1,1217210,Descending 1 Time-out,-,Standby,,-,-,0,0,,71619,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000009821,,          0082.000            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 09:26:31,AGCA001,-,1DA080,,0,1217210,Descending 1 Time-out,-,Standby,,-,-,0,0
+06/12/2023 09:26:31,AGCA001,-,1CA010,,0,1217210,Descending 1 Time-out,-,Release Off,,-,-,0,0
+06/12/2023 09:25:31,AGCA001,-,RMA00101,0,0,1030011,External emergency stop 1,-,No Cycle,,-,-,0,0
+06/12/2023 09:23:46,AGCA001,-,1AA030,,0,1217140,STV transfer 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 09:23:46,AGCA001,-,1BA030,,0,1217140,STV transfer 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 09:23:22,AGCA001,-,SSA00102,22170,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Deposit,1BA030,-,-,0,0,,71612,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000017952,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 09:23:22,AGCA001,-,SSA00101,48,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+06/12/2023 09:15:29,AGCA001,-,1DA010,,1,1032005,Load presence error 2,-,Transport Request,,-,-,0,0,,71604,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000017939,,          0082.500            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 09:00:16,AGCA001,-,1DA010,,1,1032005,Load presence error 2,-,Transport Request,,-,-,0,0,,71575,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000017264,,          0082.000            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 08:13:23,AGCA001,-,1DA040,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 08:13:23,AGCA001,-,1CA130,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 08:13:23,AGCA001,-,1CA120,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 08:13:23,AGCA001,-,1DA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 08:13:23,AGCA001,-,1DA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 08:13:23,AGCA001,-,1DA030,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 08:10:43,AGCA001,-,1DA080,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 08:10:43,AGCA001,-,1CA030,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 08:10:43,AGCA001,-,1CA010,,0,1217002,Emergency Stop,-,Destination Request,,-,-,0,0
+06/12/2023 07:42:35,AGCA001,-,1CA030,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 07:42:35,AGCA001,-,1DA080,,0,1217002,Emergency Stop,-,Standby,,-,-,0,0
+06/12/2023 07:42:35,AGCA001,-,1CA010,,0,1217002,Emergency Stop,-,Destination Request,,-,-,0,0
+06/12/2023 07:23:58,AGCA001,-,1DA010,,1,1032005,Load presence error 2,-,Transport Request,,-,-,0,0,,71469,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000006063,,          0085.500            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 07:22:35,AGCA001,-,1DA010,,1,1032005,Load presence error 2,-,Transport Request,,-,-,0,0,,71469,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000006063,,          0085.500            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 06:35:40,AGCA001,-,1DA040,,1,1032005,Load presence error 2,-,Transport Request,,-,-,0,0,,71376,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000018108,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 06:33:55,AGCA001,-,1DA040,,1,1217120,Transport 1 time-out,-,Standby,,-,-,0,0,,71376,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000018108,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 06:33:55,AGCA001,-,1DA030,,0,1217120,Transport 1 time-out,-,Release Off,,-,-,0,0
+06/12/2023 06:33:55,AGCA001,-,1CA130,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:33:55,AGCA001,-,1DA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:33:55,AGCA001,-,1CA120,,1,1217120,Transport 1 time-out,-,Overwrite Transport Data,,-,-,0,0,,71379,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 06:33:55,AGCA001,-,1DA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:23:18,AGCA001,-,1DA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:23:18,AGCA001,-,1DA030,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:23:18,AGCA001,-,1CA130,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:23:18,AGCA001,-,1DA040,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:23:18,AGCA001,-,1CA120,,1,1217120,Transport 1 time-out,-,Overwrite Transport Data,,-,-,0,0,,71377,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000018108,,          0086.500            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+06/12/2023 06:23:18,AGCA001,-,1DA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+06/12/2023 06:19:42,AGCA001,-,1DA020,,0,1032002,Load presence error 1,-,Standby,,-,-,0,0

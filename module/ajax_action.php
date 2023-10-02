@@ -1,14 +1,16 @@
 <?php
 require_once __DIR__ . "/module_errorlog/errorlog.php";
 require_once __DIR__ . "/module_errorcode/errorCode.php";
-require_once __DIR__ . "/moule_errorMachine/errorMachine.php";
+require_once __DIR__ . "/module_errorMachine/errorMachine.php";
+require_once __DIR__ . "/module_errorMachine/errorMachine.php";
+require_once __DIR__ . "/module_mainDB/mainDashboard.php";
 
 require_once __DIR__ . "/../config/connect_db.inc.php";
 require_once __DIR__ . "/../include/class_crud.inc.php";
 
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
-    if($action == 'Machine'){
+    if($action == 'Machine'){ // เช็คเปลี่ยนค่า Select ด้านบน
         !isset($_POST['machine']) ? $_POST['machine'] = '' : $_POST['machine'];
         $getMachine = new getMachine($_POST['data'],$_POST['box'],$_POST['machine']);
         $result     = $getMachine->getMachine();
@@ -25,6 +27,11 @@ if (isset($_POST['action'])) {
         $nameCode
     );
     switch ($action){
+        case 'DashBoard':
+            $CtResult  = new MainDashboard($newDate);
+            $result    = $CtResult->test();
+            print_r($result);
+            break;
         case 'errorLog':
             $CtResult  = new ErrorLog_WH($wh,$newDate,$arrWH);
             $CtResult2 = new ErrorLog_WHTotal($wh,$newDate,$arrWH);
@@ -204,6 +211,8 @@ Class getMachine
             if ($box == "NotTable")
                 $this->notFromTable = true;   
             return false;
+
+        
     }
 
     public function SqlMcNError(bool $isMachine,bool $all){

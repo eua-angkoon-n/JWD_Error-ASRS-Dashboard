@@ -1,0 +1,100 @@
+﻿Error History (04/17/2023 00:00-04/17/2023 23:59)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+04/17/2023 18:55:16,AGCA001,-,SSA00102,15342,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+04/17/2023 18:55:16,AGCA001,-,SSA00101,46,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+04/17/2023 18:55:15,AGCA001,-,1BA020,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:55:15,AGCA001,-,1AA020,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:55:01,AGCA001,-,1DA060,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:55:01,AGCA001,-,1DA050,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:55:01,AGCA001,-,1DA070,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:54:58,AGCA001,-,1CA140,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:54:58,AGCA001,-,1CA150,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:50:05,AGCA001,-,1DA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:50:05,AGCA001,-,1CA130,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:50:05,AGCA001,-,1DA040,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:50:05,AGCA001,-,1DA030,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:50:05,AGCA001,-,1CA120,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:50:05,AGCA001,-,1DA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:47:48,AGCA001,-,1CA120,,1,1217120,Transport 1 time-out,-,Overwrite Transport Data,,-,-,0,0,,45538,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:47:48,AGCA001,-,1CA130,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:47:48,AGCA001,-,1DA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:47:48,AGCA001,-,1DA030,,0,1217120,Transport 1 time-out,-,Release Off,,-,-,0,0
+04/17/2023 18:47:48,AGCA001,-,1DA040,,1,1217120,Transport 1 time-out,-,Standby,,-,-,0,0,,45535,1,,,Online Data,,,,,,,,,,,,,,0,,1 ,0 ,0 ,0    ,0.000,P000004048,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:47:48,AGCA001,-,1DA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 18:28:27,AGCA001,-,SSA00102,36371,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Deposit,1BA010,-,-,0,0,,45491,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012862,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:28:26,AGCA001,-,SSA00101,46,0,1543003,Protrusion Stop,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+04/17/2023 18:27:22,AGCA001,-,RMA00501,161,1,1030011,External emergency stop 1,Transfer Equipment #1-Transfer Section #1,Pickup,1AA090,-,-,0,0,,45481,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012692,,P000012692                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:26:29,AGCA001,-,SSA00102,15341,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+04/17/2023 18:26:28,AGCA001,-,1AA020,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:26:28,AGCA001,-,1BA020,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:26:28,AGCA001,-,SSA00101,46,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+04/17/2023 18:25:15,AGCA001,-,RMA00501,161,1,1115102,TRNS1 load protrusion error: Stopped,Transfer Equipment #1-Transfer Section #1,Pickup,1AA090,-,-,0,0,,45481,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012692,,P000012692                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:25:09,AGCA001,-,1BA050,,0,1032002,Load presence error 1,-,Standby,,-,-,0,0
+04/17/2023 18:25:08,AGCA001,-,RMA00501,161,1,1115102,TRNS1 load protrusion error: Stopped,Transfer Equipment #1-Transfer Section #1,Pickup,1AA090,-,-,0,0,,45481,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012692,,P000012692                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:25:08,AGCA001,-,1AA070,,1,1217765,Approach Detection Sensor Error,-,Waiting for Pickup Completion,,-,-,0,0,,45469,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012650,,P000012650                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:24:28,AGCA001,-,1AA020,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:24:28,AGCA001,-,1BA020,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+04/17/2023 18:24:10,AGCA001,-,SSA00102,15341,1,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,Deposit,1BA050,-,-,0,0,,45487,1,,,Online Data,,,,,,,,,,,,,,0,,1 ,0 ,0 ,0    ,0.000,P000004025,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:24:10,AGCA001,-,SSA00101,46,0,1543006,Intrusion detection error,Transfer Equipment #1-Transfer Section #1,No Cycle,,-,-,0,0
+04/17/2023 18:23:53,AGCA001,-,1BA070,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,0,0
+04/17/2023 18:23:41,AGCA001,-,1AA090,,1,1032005,Load presence error 2,-,Waiting for Pickup Completion,,-,-,0,0,,45481,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012692,,P000012692                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:23:26,AGCA001,-,1BA080,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,0,0
+04/17/2023 18:23:26,AGCA001,-,1AA080,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,0,0
+04/17/2023 18:23:26,AGCA001,-,RMA00401,158,1,1030011,External emergency stop 1,Transfer Equipment #1-Transfer Section #1,Pickup,1AA070,-,-,0,0,,45469,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012650,,P000012650                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:22:48,AGCA001,-,RMA00501,161,1,1115102,TRNS1 load protrusion error: Stopped,Transfer Equipment #1-Transfer Section #1,Pickup,1AA090,-,-,0,0,,45481,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012692,,P000012692                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:15:51,AGCA001,-,1AA070,,1,1032005,Load presence error 2,-,Waiting for Pickup Completion,,-,-,0,0,,45469,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012650,,P000012650                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 18:14:58,AGCA001,-,RMA00401,159,1,1115102,TRNS1 load protrusion error: Stopped,Transfer Equipment #1-Transfer Section #1,Pickup,1AA070,-,-,0,0,,45469,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000012650,,P000012650                    ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 17:03:19,AGCA001,-,1DA010,,1,1032005,Load presence error 2,-,Transport Request,,-,-,0,0,,45442,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000016951,,          0599.500            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 15:14:49,AGCA001,-,1DA030,,1,1217008,Motor Overload,-,Transport Request,,-,-,0,0,,45356,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000016864,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 15:14:49,AGCA001,-,1DA020,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 15:14:49,AGCA001,-,1DA040,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 15:14:49,AGCA001,-,1CA130,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 15:14:49,AGCA001,-,1CA120,,1,1217008,Motor Overload,-,Overwrite Transport Data,,-,-,0,0,,45359,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 15:14:49,AGCA001,-,1DA010,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 14:59:46,AGCA001,-,1DA020,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 14:59:46,AGCA001,-,1CA130,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 14:59:46,AGCA001,-,1DA040,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 14:59:46,AGCA001,-,1DA030,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 14:59:46,AGCA001,-,1CA120,,1,1217008,Motor Overload,-,Overwrite Transport Data,,-,-,0,0,,45346,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:59:46,AGCA001,-,1DA010,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 14:33:23,AGCA001,-,1CA120,,1,1217120,Transport 1 time-out,-,Overwrite Transport Data,,-,-,0,0,,45316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:33:23,AGCA001,-,1DA040,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:33:23,AGCA001,-,1CA130,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:33:23,AGCA001,-,1DA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:33:23,AGCA001,-,1DA030,,1,1217120,Transport 1 time-out,-,Transport Request,,-,-,0,0,,45313,1,,,Online Data,,,,,,,,,,,,,,0,,1 ,0 ,0 ,0    ,0.000,P000003051,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:33:23,AGCA001,-,1DA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:26:22,AGCA001,-,1CA120,,1,1032004,Load size data time-out,-,Overwrite Transport Data,,-,-,0,0,,45305,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014751,,          0861.000            ,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:23:13,AGCA001,-,1CA120,,1,1217120,Transport 1 time-out,-,Overwrite Transport Data,,-,-,0,0,,45305,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:23:13,AGCA001,-,1DA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:23:13,AGCA001,-,1DA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:23:13,AGCA001,-,1DA030,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:23:13,AGCA001,-,1CA130,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 14:23:13,AGCA001,-,1DA040,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+04/17/2023 11:50:59,AGCA001,-,1CA120,,1,1217008,Motor Overload,-,Overwrite Transport Data,,-,-,0,0,,45205,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 11:50:59,AGCA001,-,1DA020,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:50:59,AGCA001,-,1DA040,,0,1217008,Motor Overload,-,Release Off,,-,-,0,0
+04/17/2023 11:50:59,AGCA001,-,1CA130,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:50:59,AGCA001,-,1DA030,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:50:59,AGCA001,-,1DA010,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:22:10,AGCA001,-,1DA040,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:22:10,AGCA001,-,1CA130,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:22:10,AGCA001,-,1DA030,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:22:10,AGCA001,-,1DA020,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:22:10,AGCA001,-,1CA120,,1,1217008,Motor Overload,-,Overwrite Transport Data,,-,-,0,0,,45172,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 11:22:10,AGCA001,-,1DA010,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:20:23,AGCA001,-,1CA130,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:20:23,AGCA001,-,1DA020,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:20:23,AGCA001,-,1DA030,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:20:23,AGCA001,-,1DA040,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:20:23,AGCA001,-,1CA120,,1,1217008,Motor Overload,-,Overwrite Transport Data,,-,-,0,0,,45171,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 11:20:23,AGCA001,-,1DA010,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:04:22,AGCA001,-,1CA130,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:04:22,AGCA001,-,1DA030,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:04:22,AGCA001,-,1DA020,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:04:22,AGCA001,-,1DA040,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 11:04:22,AGCA001,-,1CA120,,1,1217008,Motor Overload,-,Overwrite Transport Data,,-,-,0,0,,45170,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 11:04:22,AGCA001,-,1DA010,,0,1217008,Motor Overload,-,Standby,,-,-,0,0
+04/17/2023 09:04:59,AGCA001,-,1CA070,,0,1032002,Load presence error 1,-,Standby,,-,-,0,0
+04/17/2023 08:55:31,AGCA001,-,1DA080,,0,1032002,Load presence error 1,-,Standby,,-,-,0,0
+04/17/2023 08:47:44,AGCA001,-,1CA070,,1,1032002,Load presence error 1,-,Standby,,-,-,0,0,,45111,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000011133,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 08:40:20,AGCA001,-,SSA00101,41063,1,1035509,Transfer retry count exceeded: Main unit,Transfer Equipment #1-Transfer Section #1,Deposit,1CA100,-,-,0,0,,45108,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000008616,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-

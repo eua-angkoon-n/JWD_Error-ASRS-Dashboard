@@ -38,8 +38,14 @@ Class ErrorCode
             $sql .= "OR asrs_error_trans.`Error Name` = '$nameCode') ";
         }
         $sql .= "AND ";
-        $sql .= "asrs_error_trans.tran_date_time ";
-        $sql .= "BETWEEN '$start' AND '$end' ";
+        if($start != $end){
+            $sql .= "asrs_error_trans.tran_date_time ";
+            $sql .= "BETWEEN '$start' AND '$end' ";
+        }
+        else {
+            $sql .= "date(asrs_error_trans.tran_date_time) ";
+            $sql .= "= '$start' ";
+        }
         $sql .= "GROUP BY "; 
         $sql .= "`Error Code`, `Error Name`, transaction_date, Machine;";
 

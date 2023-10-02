@@ -1,0 +1,115 @@
+﻿Error History (04/17/2023 00:00-04/19/2023 22:59 Area:AS/RS)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+04/19/2023 12:29:05,AGCA001,-,RMA00101,87343,1,1115021,TRNS1: Excess load height,Carriage #1-Transfer Equipment #1,Pickup,R-SRA001-002-069-010,-,-,-,-,-,92467,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009110,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/19/2023 07:43:43,AGCA001,-,SSA00101,24277,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 17:10:37,AGCA001,-,RMA00201,84,1,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,Deposit,1AB010,-,-,-,-,-,92261,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000002512,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 17:08:42,AGCA001,-,RMA00201,84,1,1030027,HP-side maintenance door plug 1,Carriage #1-Transfer Equipment #1,Deposit,1AB010,-,-,-,-,-,92261,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000002512,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 17:08:40,AGCA001,-,RMA00201,84,1,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,Deposit,1AB010,-,-,-,-,-,92261,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000002512,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 17:06:38,AGCA001,-,RMA00201,84,1,1115021,TRNS1: Excess load height,Carriage #1-Transfer Equipment #1,Deposit,1AB010,-,-,-,-,-,92261,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000002512,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 16:55:51,AGCA001,-,1AA020,,1,1032610,Continuous no-read error,-,1,,-,-,-,-,-,92250,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000007975,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 16:50:46,AGCA001,-,RMA00201,9546,1,1115021,TRNS1: Excess load height,Carriage #1-Transfer Equipment #1,Pickup,R-SRA001-005-008-016,-,-,-,-,-,92261,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000002512,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 16:20:11,AGCA001,-,1AA020,,1,1032610,Continuous no-read error,-,1,,-,-,-,-,-,92240,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000003498,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:02:59,AGCA001,-,SSA00101,4684,1,1545104,TRANS1 Protrusion(R in Stopping),Carriage #1-Transfer Equipment #1,Pickup,1BA070,-,-,-,-,-,92071,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:01:38,AGCA001,-,SSA00101,4684,1,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,Pickup,1BA070,-,-,-,-,-,92071,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:01:02,AGCA001,-,SSA00101,4684,1,1545104,TRANS1 Protrusion(R in Stopping),Carriage #1-Transfer Equipment #1,Pickup,1BA070,-,-,-,-,-,92071,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:00:42,AGCA001,-,SSA00101,4684,1,1545104,TRANS1 Protrusion(R in Stopping),Carriage #1-Transfer Equipment #1,Pickup,1BA070,-,-,-,-,-,92071,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:00:38,AGCA001,-,1BA070,,1,1217140,STV transfer 1 time-out,-,Waiting for Pickup Completion,,-,-,-,-,-,92071,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:00:38,AGCA001,-,1BA050#01,,1,1217140,STV transfer 1 time-out,-,Destination Request,,-,-,-,-,-,92080,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:00:38,AGCA001,-,1BA050#02,,0,1217140,STV transfer 1 time-out,-,Standby,,-,-,-,-,-
+04/18/2023 13:00:38,AGCA001,-,1BA040,,0,1217140,STV transfer 1 time-out,-,Standby,,-,-,-,-,-
+04/18/2023 13:00:38,AGCA001,-,1BA060,,1,1217140,STV transfer 1 time-out,-,Release On,,-,-,-,-,-,92078,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000005705,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 13:00:16,AGCA001,-,SSA00101,4684,1,1542543,C/V1 Overrun Protrusion(L PKUP),Carriage #1-Transfer Equipment #1,Pickup,1BA070,-,-,-,-,-,92071,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 12:58:09,AGCA001,-,1BA030#02,,0,1032002,Load presence error 1,-,Standby,,-,-,-,-,-
+04/18/2023 12:56:51,AGCA001,-,1BA030#02,,0,1032002,Load presence error 1,-,Standby,,-,-,-,-,-
+04/18/2023 12:55:14,AGCA001,-,1BA030#02,,0,1032002,Load presence error 1,-,Standby,,-,-,-,-,-
+04/18/2023 12:53:36,AGCA001,-,1BA030#02,,0,1032002,Load presence error 1,-,Standby,,-,-,-,-,-
+04/18/2023 12:51:17,AGCA001,-,RMA00301,82,1,1116878,Deposit OK ON time-out: Left P/D,Carriage #1-Transfer Equipment #1,Deposit,1AC010,-,-,-,-,-,92074,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000005705,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 12:50:30,AGCA001,-,1BE010,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+04/18/2023 12:50:30,AGCA001,-,1AA010,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+04/18/2023 12:49:27,AGCA001,-,1BD030,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+04/18/2023 12:49:27,AGCA001,-,1BD010,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+04/18/2023 12:47:56,AGCA001,-,SSA00101,36057,1,1545104,TRANS1 Protrusion(R in Stopping),Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92073,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 12:25:07,AGCA001,-,1BA030#02,,0,1032002,Load presence error 1,-,Standby,,-,-,-,-,-
+04/18/2023 12:22:46,AGCA001,-,1BA030#02,,0,1032002,Load presence error 1,-,Standby,,-,-,-,-,-
+04/18/2023 12:19:24,AGCA001,-,RMA00301,82,1,1030071,Cycle completion report waiting time-out,Carriage #1-Transfer Equipment #1,Deposit,1AC010,-,-,-,-,-,92074,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000005705,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 12:17:08,AGCA001,-,1BE050,,1,1217140,STV transfer 1 time-out,-,Waiting for Pickup Completion,,-,-,-,-,-,92073,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 12:17:08,AGCA001,-,1AC010,,0,1217140,STV transfer 1 time-out,-,Standby,,-,-,-,-,-
+04/18/2023 12:16:47,AGCA001,-,1BA030#02,,1,1217120,Transport 1 time-out,-,Transport Arrival,,-,-,-,-,-,92072,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000006769,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 12:16:47,AGCA001,-,1BA030#01,,0,1217120,Transport 1 time-out,-,Standby,,-,-,-,-,-
+04/18/2023 12:16:47,AGCA001,-,1BA010,,0,1217120,Transport 1 time-out,-,Standby,,-,-,-,-,-
+04/18/2023 12:16:47,AGCA001,-,1BA020,,0,1217120,Transport 1 time-out,-,Standby,,-,-,-,-,-
+04/18/2023 12:16:46,AGCA001,-,SSA00101,36057,1,1542543,C/V1 Overrun Protrusion(L PKUP),Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92073,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011578,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 10:12:42,AGCA001,-,SSA00101,4376,1,1540043,TRVL OverSpeed(DCLRG),Carriage #1-Transfer Equipment #1,Pickup,1BA070,-,-,-,-,-,92044,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000001175,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:42:49,AGCA001,-,SSA00101,1677,1,1035509,Transfer retry count exceeded: Main unit,Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,92011,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000010359,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:40:15,AGCA001,-,1BA030#01,,1,1217120,Transport 1 time-out,-,Standby,,-,-,-,-,-,92015,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000010906,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:40:15,AGCA001,-,1BA020,,0,1217120,Transport 1 time-out,-,Release Off,,-,-,-,-,-
+04/18/2023 09:40:15,AGCA001,-,1BA030#02,,1,1217120,Transport 1 time-out,-,Transport Arrival,,-,-,-,-,-,92003,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000002200,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:40:15,AGCA001,-,1BA010,,1,1217120,Transport 1 time-out,-,Release On,,-,-,-,-,-,92005,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000003301,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:22:12,AGCA001,-,1BD010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:22:12,AGCA001,-,1BD030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:21:37,AGCA001,-,SSA00101,23453,0,1543001,E-stop (E-stop BTN),Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 09:21:30,AGCA001,-,SSA00101,23453,0,1543001,E-stop (E-stop BTN),Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 09:21:30,AGCA001,-,SSA00101,23453,0,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 09:21:01,AGCA001,-,1BD030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:21:01,AGCA001,-,1BD010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:20:01,AGCA001,-,SSA00102,40607,1,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:20:01,AGCA001,-,SSA00101,23453,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 09:19:40,AGCA001,-,1AC020,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+04/18/2023 09:19:40,AGCA001,-,1BE060,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+04/18/2023 09:17:06,AGCA001,-,SSA00102,38940,1,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:17:06,AGCA001,-,SSA00101,23453,0,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 09:17:06,AGCA001,-,1BA030#02,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:17:06,AGCA001,-,1BA010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:17:06,AGCA001,-,1BA030#01,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:17:06,AGCA001,-,1BA020,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:16:55,AGCA001,-,SSA00102,38940,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:16:46,AGCA001,-,SSA00102,38940,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:14:34,AGCA001,-,SSA00102,38940,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:10:17,AGCA001,-,SSA00102,38940,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:07:34,AGCA001,-,SSA00102,40489,1,1543001,E-stop (E-stop BTN),Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:07:18,AGCA001,-,SSA00102,40439,1,1543001,E-stop (E-stop BTN),Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:07:17,AGCA001,-,SSA00102,40439,1,1543001,E-stop (E-stop BTN),Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:07:17,AGCA001,-,SSA00102,40439,1,1543001,E-stop (E-stop BTN),Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:06:24,AGCA001,-,1BD010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:06:24,AGCA001,-,1BD030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 09:06:24,AGCA001,-,SSA00101,23453,0,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 09:05:32,AGCA001,-,SSA00102,40439,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:04:32,AGCA001,-,SSA00102,40439,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:02:02,AGCA001,-,SSA00102,40439,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 09:01:42,AGCA001,-,SSA00102,40439,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Pickup,1BE050,-,-,-,-,-,92019,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009897,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/18/2023 08:52:35,AGCA001,-,SSA00101,23769,0,1030002,Key switch off error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 07:31:58,AGCA001,-,SSA00102,40439,0,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 07:31:58,AGCA001,-,SSA00101,31564,0,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 07:29:32,AGCA001,-,1BA030#02,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 07:29:32,AGCA001,-,1BA020,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 07:29:32,AGCA001,-,1BA010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 07:29:32,AGCA001,-,1BA030#01,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+04/18/2023 07:28:10,AGCA001,-,SSA00102,40439,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/18/2023 07:28:10,AGCA001,-,SSA00101,31564,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 14:11:13,AGCA001,-,SSA00102,6169,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,91831,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000001860,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:10:55,AGCA001,-,SSA00102,6169,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,91831,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000001860,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:10:42,AGCA001,-,SSA00102,6169,1,1543001,E-stop (E-stop BTN),Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,91831,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000001860,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:10:42,AGCA001,-,SSA00101,1669,0,1545103,TRANS1 Protrusion(L in Stopping),Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 14:05:11,AGCA001,-,SSA00102,6169,1,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,91831,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000001860,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 14:05:11,AGCA001,-,SSA00101,-456,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 14:03:35,AGCA001,-,SSA00101,-456,0,1540058,Designated REG POS Pass(FWD),Carriage #1-Transfer Equipment #1,Move,DA1001,-,-,-,-,-
+04/17/2023 14:03:16,AGCA001,-,1BB020,,1,1032016,Load presence error when releasing,-,Transport Request,,-,-,-,-,-,91861,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000009352,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 13:56:29,AGCA001,-,1BA060,,0,1217002,Emergency Stop,-,Standby,,-,-,-,-,-
+04/17/2023 13:56:29,AGCA001,-,1BA070,,0,1217002,Emergency Stop,-,Standby,,-,-,-,-,-
+04/17/2023 13:56:29,AGCA001,-,1BA050#01,,1,1217002,Emergency Stop,-,Transport Request,,-,-,-,-,-,91895,1,,,Online Data,,,,,,,,,,,,,,0,,Location for short load  ,0 ,0 ,0    ,0.000,S000011353,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 13:56:29,AGCA001,-,1BA040,,0,1217002,Emergency Stop,-,Standby,,-,-,-,-,-
+04/17/2023 13:56:29,AGCA001,-,1BA050#02,,0,1217002,Emergency Stop,-,Standby,,-,-,-,-,-
+04/17/2023 13:49:52,AGCA001,-,1BB020,,1,1032016,Load presence error when releasing,-,Transport Request,,-,-,-,-,-,91835,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000002893,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 13:17:37,AGCA001,-,SSA00102,4950,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,91776,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000011308,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 13:16:06,AGCA001,-,SSA00102,4950,1,1543253,Undefined Error Code,Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,91776,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000011308,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 13:14:09,AGCA001,-,SSA00102,2917,1,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,Deposit,1BA010,-,-,-,-,-,91776,1,,,Online Data,,,,,,,,,,,,,,0,,Location for tall load,0 ,0 ,0    ,0.000,S000011308,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/17/2023 13:14:09,AGCA001,-,SSA00101,-104,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 12:30:06,AGCA001,-,SSA00101,-105,0,1540043,TRVL OverSpeed(DCLRG),Carriage #1-Transfer Equipment #1,Move,DA1001,-,-,-,-,-
+04/17/2023 07:11:38,AGCA001,-,SSA00102,31574,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 07:11:38,AGCA001,-,SSA00101,1748,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 07:10:26,AGCA001,-,SSA00102,31574,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 07:10:26,AGCA001,-,SSA00101,1748,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 06:56:26,AGCA001,-,SSA00102,31574,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 06:56:26,AGCA001,-,SSA00101,43,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 06:55:55,AGCA001,-,SSA00102,31574,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+04/17/2023 06:55:55,AGCA001,-,SSA00101,43,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-

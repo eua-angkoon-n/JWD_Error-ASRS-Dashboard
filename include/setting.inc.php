@@ -7,6 +7,7 @@ class Setting
     public static $SiteList = array('PCS', 'JPK', 'JPAC', 'PACM', 'PLP', 'PACS', 'PACA', 'PACT');
     public static $title_site = array
     (
+        "DashBoard" => "Error ASRS Dashboard",
         "errorLog" => "Warehouse Error ASRS", 
         "errorMachine" => "Error ASRS | Error Machine",
         "errorCode" => "Error ASRS | Error Name/Code",
@@ -14,6 +15,7 @@ class Setting
     );
     public static $title_act = array
     (
+        "DashBoard" => "Error ASRS Dashboard",
         "errorLog" => "Warehouse Error ASRS Log", 
         "errorMachine" => "ASRS Machine Error Log",
         "errorCode" => "ASRS Name/Code Error",
@@ -21,6 +23,7 @@ class Setting
     );
     public static $breadcrumb_txt = array
     (
+        "DashBoard" => "Error ASRS Dashboard",
         "errorLog" => "Error Log", 
         "errorMachine" => "Error Machine",
         "errorCode" => "Error Name,Code", 
@@ -68,35 +71,6 @@ class Setting
         '11' => 'November',
         '12' => 'December'
     );
-
-    public static $pathFile = "upload/";
-    public static $pathImg = "uploads/";
-    public static $pathURL = "https://ebooking.cc.pcs-plp.com/euaangkoon_test/linebot/";
-
-    public static $font_path = './fonts/thsarabunnew.ttf';
-
-    public static $LineToken = "Rwfo0ellYbzELwL5kO21mHgyNEQfmOZLEEf99KIQXHoRyQrOnPeWrRij47c8O+EvVulfOXrJbyWrosYNEKNuGGSvS21+H5gB8MZnDsjd/Ftyt8LzLljmeQwwhvltDGgogYNCyFYSoT5s7dOUDr37xwdB04t89/1O/w1cDnyilFU=";
-
-    public static $arrColumnTitle = array(
-        0 => 'เลขที่',
-        1 => 'วันที่',
-        2 => 'ชื่อลูกค้า',
-        3 => 'รหัสพนักงาน',
-        4 => 'ชื่อ',
-        5 => 'นามสกุล',
-        6 => 'ทะเบียน',
-        7 => 'ที่รับของ',
-        8 => 'ที่ส่งของ',
-        9 => 'ราคารวม',
-        10 => 'เก็บลูกค้า',
-        11 => 'จ่าย พขร.',
-        12 => 'สั้น',
-        13 => 'กลาง',
-        14 => 'ยาว',
-        15 => 'ค้างคืน',
-        16 => 'วันหยุด',
-        17 => 'TOTAL'
-    );
     public static $ColumnBarColor = array(
         "#3459B8", // Dark Blue
         "#5077C6",
@@ -133,11 +107,21 @@ class Setting
         18 => "asrs_error_trans.`Load Size Info (Other)`",
         19 => "asrs_error_trans.Weight",
         20 => "asrs_error_trans.`Barcode Data`",
-
     );
     public static $DataTableSearch = array(
         "wh",
         "Error Name",
         "Error Code"
     );
+
+    public static $Warehouse = array(
+        "b8" => "PCS B8",
+        "b9" => "PCS B9",
+        "paca" => "PACA",
+        "pacm" => "PACM",
+        "pacs" => "PACS",
+        "pact" => "PACT"
+    );
+
+    public static $ErrorFilePath = '/temp/bot/jaibot/gr/เก็บข้อมูล Error ASRS';
 }

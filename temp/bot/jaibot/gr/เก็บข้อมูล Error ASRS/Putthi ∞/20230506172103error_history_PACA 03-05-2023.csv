@@ -1,0 +1,108 @@
+Occurrence time,Equipment type,Equipment group,Equipment No.,Error description
+02:46:51,02:Conveyor,00,1105,Error occured(Block No=1105，Error Code=9202，Details=LOAD PROFILE ERROR)
+11:37:51,02:Conveyor,00,1105,Error recovery(Block No=1105，Error Code=0000)
+11:37:58,02:Conveyor,00,1101,Error occured(Block No=1101，Error Code=9001，Details=EMERGENCY STOP)
+11:37:59,02:Conveyor,00,1102,Error occured(Block No=1102，Error Code=9001，Details=EMERGENCY STOP)
+11:38:01,02:Conveyor,00,1103,Error occured(Block No=1103，Error Code=9001，Details=EMERGENCY STOP)
+11:38:03,02:Conveyor,00,1104,Error occured(Block No=1104，Error Code=9001，Details=EMERGENCY STOP)
+11:38:04,02:Conveyor,00,1105,Error occured(Block No=1105，Error Code=9001，Details=EMERGENCY STOP)
+11:38:06,02:Conveyor,00,1106,Error occured(Block No=1106，Error Code=9001，Details=EMERGENCY STOP)
+11:38:08,02:Conveyor,00,1107,Error occured(Block No=1107，Error Code=9001，Details=EMERGENCY STOP)
+11:38:10,02:Conveyor,00,1108,Error occured(Block No=1108，Error Code=9001，Details=EMERGENCY STOP)
+11:38:11,02:Conveyor,00,1109,Error occured(Block No=1109，Error Code=9001，Details=EMERGENCY STOP)
+11:38:12,02:Conveyor,00,1110,Error occured(Block No=1110，Error Code=9001，Details=EMERGENCY STOP)
+11:38:14,02:Conveyor,00,1101,Error recovery(Block No=1101，Error Code=0000)
+11:38:16,02:Conveyor,00,1104,Error recovery(Block No=1104，Error Code=0000)
+11:38:17,02:Conveyor,00,1101,Error recovery(Block No=1101，Error Code=0000)
+11:38:19,02:Conveyor,00,1102,Error recovery(Block No=1102，Error Code=0000)
+11:38:21,02:Conveyor,00,1103,Error recovery(Block No=1103，Error Code=0000)
+11:38:22,02:Conveyor,00,1104,Error recovery(Block No=1104，Error Code=0000)
+11:38:24,02:Conveyor,00,1105,Error recovery(Block No=1105，Error Code=0000)
+11:38:25,02:Conveyor,00,1106,Error recovery(Block No=1106，Error Code=0000)
+11:38:27,02:Conveyor,00,1107,Error recovery(Block No=1107，Error Code=0000)
+11:38:29,02:Conveyor,00,1108,Error recovery(Block No=1108，Error Code=0000)
+11:38:30,02:Conveyor,00,1109,Error recovery(Block No=1109，Error Code=0000)
+11:38:32,02:Conveyor,00,1110,Error recovery(Block No=1110，Error Code=0000)
+11:59:26,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=9002,Abnormal content=EMERGENCY STOP: DCU)"
+11:59:47,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+12:00:18,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+12:01:42,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+12:01:42,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=0201,Abnormal content=OPTICAL TRANS: DCU)"
+12:02:16,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+12:02:47,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+12:05:31,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+12:05:33,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+12:05:36,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+12:05:37,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+12:16:08,02:Conveyor,00,1101,Error occured(Block No=1101，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:10,02:Conveyor,00,1101,Error occured(Block No=1101，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:10,02:Conveyor,00,1102,Error occured(Block No=1102，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:12,02:Conveyor,00,1102,Error occured(Block No=1102，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:12,02:Conveyor,00,1103,Error occured(Block No=1103，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:13,02:Conveyor,00,1103,Error occured(Block No=1103，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:14,02:Conveyor,00,1104,Error occured(Block No=1104，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:15,02:Conveyor,00,1104,Error occured(Block No=1104，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:15,02:Conveyor,00,1105,Error occured(Block No=1105，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:16,02:Conveyor,00,1105,Error occured(Block No=1105，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:17,02:Conveyor,00,1106,Error occured(Block No=1106，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:18,02:Conveyor,00,1106,Error occured(Block No=1106，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:19,02:Conveyor,00,1107,Error occured(Block No=1107，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:20,02:Conveyor,00,1107,Error occured(Block No=1107，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:20,02:Conveyor,00,1108,Error occured(Block No=1108，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:21,02:Conveyor,00,1108,Error occured(Block No=1108，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:21,02:Conveyor,00,1109,Error occured(Block No=1109，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:23,02:Conveyor,00,1109,Error occured(Block No=1109，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:23,02:Conveyor,00,1110,Error occured(Block No=1110，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:25,02:Conveyor,00,1110,Error occured(Block No=1110，Error Code=0101，Details=CELL COMMUNICATION ERROR)
+12:16:25,02:Conveyor,00,1101,Error recovery(Block No=1101，Error Code=0000)
+12:16:26,02:Conveyor,00,1101,Error recovery(Block No=1101，Error Code=0000)
+12:16:26,02:Conveyor,00,1102,Error recovery(Block No=1102，Error Code=0000)
+12:16:28,02:Conveyor,00,1102,Error recovery(Block No=1102，Error Code=0000)
+12:16:28,02:Conveyor,00,1103,Error recovery(Block No=1103，Error Code=0000)
+12:16:29,02:Conveyor,00,1103,Error recovery(Block No=1103，Error Code=0000)
+12:16:30,02:Conveyor,00,1104,Error recovery(Block No=1104，Error Code=0000)
+12:16:31,02:Conveyor,00,1104,Error recovery(Block No=1104，Error Code=0000)
+12:16:31,02:Conveyor,00,1105,Error recovery(Block No=1105，Error Code=0000)
+12:16:33,02:Conveyor,00,1105,Error recovery(Block No=1105，Error Code=0000)
+12:16:33,02:Conveyor,00,1106,Error recovery(Block No=1106，Error Code=0000)
+12:16:35,02:Conveyor,00,1106,Error recovery(Block No=1106，Error Code=0000)
+12:16:35,02:Conveyor,00,1107,Error recovery(Block No=1107，Error Code=0000)
+12:16:36,02:Conveyor,00,1107,Error recovery(Block No=1107，Error Code=0000)
+12:16:36,02:Conveyor,00,1108,Error recovery(Block No=1108，Error Code=0000)
+12:16:38,02:Conveyor,00,1108,Error recovery(Block No=1108，Error Code=0000)
+12:16:38,02:Conveyor,00,1109,Error recovery(Block No=1109，Error Code=0000)
+12:16:39,02:Conveyor,00,1109,Error recovery(Block No=1109，Error Code=0000)
+12:16:40,02:Conveyor,00,1110,Error recovery(Block No=1110，Error Code=0000)
+12:16:41,02:Conveyor,00,1110,Error recovery(Block No=1110，Error Code=0000)
+16:23:16,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+16:23:16,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=9002,Abnormal content=EMERGENCY STOP: DCU)"
+16:23:17,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+16:23:54,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:42:53,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+16:43:13,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=9002,Abnormal content=EMERGENCY STOP: DCU)"
+16:45:47,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+16:46:24,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:46:48,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:46:49,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:47:03,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:47:11,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:47:14,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:47:36,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:47:41,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:47:43,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:47:45,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:47:47,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:48:42,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:48:44,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:48:47,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:48:57,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:49:01,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:50:19,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:50:48,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:51:24,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+16:51:32,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=2131,Abnormal Content=FORK1 LOAD PROFILE:LEFT)"
+16:52:06,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"
+17:00:48,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+17:00:53,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=9002,Abnormal content=EMERGENCY STOP: DCU)"
+17:01:02,01:Crane,00,0003,"Crane error recovery(Abnormal alertﾞ=9002,Abnormal Content=EMERGENCY STOP: DCU)"
+17:01:44,01:Crane,00,0003,"Crane error occurred(Abnormal alertﾞ=2131,Abnormal content=FORK1 LOAD PROFILE:LEFT)"

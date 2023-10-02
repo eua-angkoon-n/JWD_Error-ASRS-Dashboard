@@ -1,0 +1,204 @@
+﻿Error History (06/04/2023 00:00-06/04/2023 23:59 Area:AS/RS)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+06/04/2023 11:23:05,AGCA01,-,SSA002,33963,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:23:05,AGCA01,-,SSA001,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,SSA002,33963,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,A01022,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,A01013,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,A01011,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,A01014,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,A01012,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:22:53,AGCA01,-,A01010,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:22:29,AGCA01,-,SSA002,33963,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:22:27,AGCA01,-,SSA001,50,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:21:51,AGCA01,-,SSA002,0,0,1543003,Protrusion Stop,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:21:51,AGCA01,-,SSA001,0,0,1543003,Protrusion Stop,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:11:20,AGCA01,-,A01002,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:11:20,AGCA01,-,A01001,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:11:20,AGCA01,-,A01004,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:10:38,AGCA01,-,SSA002,33963,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:10:38,AGCA01,-,SSA001,50,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:10:37,AGCA01,-,A01022,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 11:10:37,AGCA01,-,A01013,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 11:10:37,AGCA01,-,A01014,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 11:10:37,AGCA01,-,A01010,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 11:10:37,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 11:10:37,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 11:07:33,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:07:33,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 11:06:14,AGCA01,-,AA0302,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:06:14,AGCA01,-,A01015,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:03:14,AGCA01,-,A01008,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:03:14,AGCA01,-,A01021,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:03:14,AGCA01,-,A01009,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:03:14,AGCA01,-,A01006,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:03:14,AGCA01,-,A01005,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:03:14,AGCA01,-,A01007,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:01:40,AGCA01,-,A01004,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:01:40,AGCA01,-,A01001,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 11:01:40,AGCA01,-,A01002,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:58:18,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:58:18,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:58:17,AGCA01,-,A01014,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:58:17,AGCA01,-,A01022,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:58:17,AGCA01,-,A01013,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:58:17,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:58:17,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:58:17,AGCA01,-,A01010,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:58:17,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:57:42,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:57:33,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:57:33,AGCA01,-,SSA001,0,0,1543201,Distance sensor Qp error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:52:24,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:52:24,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:52:01,AGCA01,-,SSA001,0,0,1543201,Distance sensor Qp error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:54,AGCA01,-,SSA001,0,0,1543201,Distance sensor Qp error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:38,AGCA01,-,SSA002,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:38,AGCA01,-,SSA001,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:27,AGCA01,-,SSA002,0,0,1042001,Emergency stop,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:27,AGCA01,-,SSA001,0,0,1042001,Emergency stop,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:22,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:22,AGCA01,-,SSA001,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:18,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:18,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:16,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:51:16,AGCA01,-,A01013,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:51:16,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:51:16,AGCA01,-,A01014,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:51:16,AGCA01,-,A01022,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:51:16,AGCA01,-,A01010,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:51:15,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:51:14,AGCA01,-,SSA001,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:50:08,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:50:08,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:50:06,AGCA01,-,A01015,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:50:06,AGCA01,-,AA0302,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:49:38,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:48:39,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:48:19,AGCA01,-,SSA002,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:48:19,AGCA01,-,SSA001,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:47:52,AGCA01,-,SSA002,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:46:41,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:46:31,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:46:16,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:46:06,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:46:06,AGCA01,-,SSA001,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:45:54,AGCA01,-,A01022,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:54,AGCA01,-,A01014,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:54,AGCA01,-,A01010,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:54,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:54,AGCA01,-,A01013,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:54,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,A01021,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,A01009,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,A01008,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,A01007,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,A01005,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,A01006,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:45:50,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:45:47,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:43:32,AGCA01,-,SSA001,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:43:32,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:43:32,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:41:36,AGCA01,-,A01022,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:41:36,AGCA01,-,A01013,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:41:36,AGCA01,-,A01014,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:41:36,AGCA01,-,A01010,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:41:36,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:41:36,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:41:17,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:41:17,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:41:15,AGCA01,-,A01015,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:41:15,AGCA01,-,AA0302,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:40:40,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:39:51,AGCA01,-,SSA002,0,0,1543221,STV vehicle communication error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:39:33,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:39:24,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:39:24,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:38:41,AGCA01,-,A01014,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:38:41,AGCA01,-,A01022,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:38:41,AGCA01,-,A01013,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:38:41,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:38:41,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:38:41,AGCA01,-,A01010,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:36:34,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:36:34,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:36:34,AGCA01,-,AA0302,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:36:34,AGCA01,-,A01015,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+06/04/2023 10:36:23,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:35:39,AGCA01,-,SSA001,0,0,1543248,Main circuit error (time-out),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:51,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:51,AGCA01,-,SSA001,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:28,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:28,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:20,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:19,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:19,AGCA01,-,SSA001,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:32:16,AGCA01,-,AA0301,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:32:16,AGCA01,-,A01016,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:31:47,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:31:47,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:31:03,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:30:43,AGCA01,-,AA0302,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:30:43,AGCA01,-,A01015,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:30:43,AGCA01,-,SRMA003,96,0,1030011,External emergency stop 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:30:24,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:30:24,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:30:24,AGCA01,-,SSA001,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:28:41,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:28:41,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:28:38,AGCA01,-,AA0302,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:28:38,AGCA01,-,A01015,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:28:18,AGCA01,-,SRMA003,96,0,1030019,HP-side maintenance door 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:28:03,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:27:31,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:27:22,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:26:51,AGCA01,-,SSA002,0,0,1543001,E-stop (E-stop BTN),Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:26:51,AGCA01,-,SSA002,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:26:51,AGCA01,-,SSA001,0,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:26:26,AGCA01,-,SSA002,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:26:26,AGCA01,-,SSA001,0,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+06/04/2023 10:26:25,AGCA01,-,AA0302,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:25,AGCA01,-,AA0301,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:25,AGCA01,-,AA0202,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:25,AGCA01,-,AA0201,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:25,AGCA01,-,AA0102,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01019,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01018,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01017,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01016,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01015,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01014,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01013,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:24,AGCA01,-,A01022,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01012,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01011,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01010,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01008,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01006,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:26:23,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+06/04/2023 10:25:34,AGCA01,-,SRMA003,94,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:24:09,AGCA01,-,SRMA003,8796,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:23:13,AGCA01,-,SRMA003,8796,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:22:04,AGCA01,-,SRMA003,8797,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:20:17,AGCA01,-,SRMA003,95,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:18:54,AGCA01,-,SRMA003,527,0,1116009,Restricted location,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:16:10,AGCA01,-,SRMA003,-7,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:15:37,AGCA01,-,SRMA003,-7,0,1030011,External emergency stop 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 10:15:19,AGCA01,-,SRMA003,-7,0,1030019,HP-side maintenance door 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:50:40,AGCA01,-,SRMA001,543,0,1030019,HP-side maintenance door 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:47:43,AGCA01,-,SRMA002,528,0,1030011,External emergency stop 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:42:44,AGCA01,-,SRMA002,528,0,1030019,HP-side maintenance door 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:06:31,AGCA01,-,SRMA003,-7,0,1030011,External emergency stop 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:05:33,AGCA01,-,SRMA003,-7,0,1030019,HP-side maintenance door 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:03:49,AGCA01,-,SRMA003,-8,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:03:14,AGCA01,-,SRMA001,543,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:03:13,AGCA01,-,SRMA002,528,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+06/04/2023 08:02:17,AGCA01,-,SRMA003,-8,0,1030011,External emergency stop 1,--,No Cycle,,-,-,-,-,-
+06/04/2023 07:58:33,AGCA01,-,SRMA003,524,0,1113261,AGC/SRC communication error,--,No Cycle,,-,-,-,-,-
+06/04/2023 07:58:33,AGCA01,-,SRMA003,525,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-

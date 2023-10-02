@@ -1,0 +1,52 @@
+﻿Error History (04/03/2023 00:00-04/04/2023 08:00 Area:AS/RS)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+04/03/2023 21:42:56,AGCA01,-,SRMA002,289,1,1113014,Optical data transmission level dropped,Fork 1,Deposit,AA0201,-,-,-,-,-,310316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000963,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 21:36:23,AGCA01,-,SRMA002,289,1,1030019,HP-side maintenance door 1,Fork 1,Deposit,AA0201,-,-,-,-,-,310316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000963,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 21:35:40,AGCA01,-,SRMA002,288,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Deposit,AA0201,-,-,-,-,-,310316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000963,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 21:35:15,AGCA01,-,SRMA002,7499,1,1113014,Optical data transmission level dropped,Fork 1,Pickup,R-SRA001-006-006-007,-,-,-,-,-,310316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000963,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 21:33:36,AGCA01,-,SRMA002,7499,1,1030019,HP-side maintenance door 1,Fork 1,Pickup,R-SRA001-006-006-007,-,-,-,-,-,310316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000963,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 21:31:19,AGCA01,-,SRMA002,7499,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,R-SRA001-006-006-007,-,-,-,-,-,310316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000963,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 21:30:08,AGCA01,-,SRMA002,7499,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,R-SRA001-006-006-007,-,-,-,-,-,310316,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000963,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 14:51:19,AGCA01,-,A01004,,1,1217765,Approach Detection Sensor Error,--,Waiting for Pickup Completion,,-,-,-,-,-,310087,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000003787,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 14:51:19,AGCA01,-,A01001,,0,1217765,Approach Detection Sensor Error,--,Destination Request,,-,-,-,-,-
+04/03/2023 14:51:19,AGCA01,-,A01002,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+04/03/2023 13:06:34,AGCA01,-,SSA002,0,1,1540163,Interval MON lack of distance (following in OP),Fork 1,Deposit,A01004,-,-,-,-,-,310066,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014062,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 13:06:34,AGCA01,-,SSA001,6307,0,1543073,OPT level dropped,Fork 1,Move,DA0001,-,-,-,-,-
+04/03/2023 13:05:38,AGCA01,-,A01001,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+04/03/2023 13:05:38,AGCA01,-,A01004,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+04/03/2023 13:05:38,AGCA01,-,A01002,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+04/03/2023 13:03:43,AGCA01,-,SSA002,16027,1,1042004,Protrusion detection error,Fork 1,Deposit,A01004,-,-,-,-,-,310066,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014062,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 13:03:42,AGCA01,-,SSA001,6307,0,1042004,Protrusion detection error,Fork 1,Move,DA0001,-,-,-,-,-
+04/03/2023 12:58:46,AGCA01,-,SSA002,18681,1,1540163,Interval MON lack of distance (following in OP),Fork 1,Deposit,A01004,-,-,-,-,-,310066,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014062,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 11:09:50,AGCA01,-,SSA002,29735,1,1540163,Interval MON lack of distance (following in OP),Fork 1,Deposit,A01009,-,-,-,-,-,309958,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016307,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:38:01,AGCA01,-,A01001,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+04/03/2023 08:38:01,AGCA01,-,A01002,,1,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-,309852,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000333,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:38:01,AGCA01,-,A01004,,0,1217771,Protrusion detection error,--,Release Off,,-,-,-,-,-
+04/03/2023 08:36:37,AGCA01,-,A01002,,1,1032002,Load presence error 1,--,Standby,,-,-,-,-,-,309852,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000333,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:36:37,AGCA01,-,A01001,,0,1032002,Load presence error 1,--,Standby,,-,-,-,-,-
+04/03/2023 08:34:31,AGCA01,-,SSA002,0,1,1543003,Protrusion Stop,Fork 1,Deposit,A01004,-,-,-,-,-,309852,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000333,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:34:31,AGCA01,-,SSA001,0,0,1543003,Protrusion Stop,Fork 1,No Cycle,,-,-,-,-,-
+04/03/2023 08:33:35,AGCA01,-,A01004,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+04/03/2023 08:33:35,AGCA01,-,A01002,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+04/03/2023 08:33:35,AGCA01,-,A01001,,0,1217770,Protrusion error,--,Standby,,-,-,-,-,-
+04/03/2023 08:32:48,AGCA01,-,SSA002,6307,1,1042004,Protrusion detection error,Fork 1,Deposit,A01004,-,-,-,-,-,309852,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000333,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:32:48,AGCA01,-,SSA001,50,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+04/03/2023 08:32:00,AGCA01,-,SSA002,6307,1,1030071,Cycle completion report waiting time-out,Fork 1,Deposit,A01004,-,-,-,-,-,309852,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000333,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:31:00,AGCA01,-,A01002,,0,1032002,Load presence error 1,--,Standby,,-,-,-,-,-
+04/03/2023 08:22:36,AGCA01,-,SSA002,0,1,1540045,TRVL UnderSpeed(ACCELG),Fork 1,Pickup,A01018,-,-,-,-,-,309852,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000000333,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:20:59,AGCA01,-,SSA002,0,0,1540045,TRVL UnderSpeed(ACCELG),Fork 1,Move,DA0002,-,-,-,-,-
+04/03/2023 08:20:14,AGCA01,-,SSA001,1536,1,1546712,C/V1 TRANS IL OK INTRPT(R ULD),Fork 1,Deposit,A01004,-,-,-,-,-,309851,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:14:30,AGCA01,-,SSA002,32382,1,1042004,Protrusion detection error,Fork 1,Pickup,A01020,-,-,-,-,-,309853,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014228,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:14:30,AGCA01,-,A01001,,0,1217460,Shift 1 Regular Position Sensor Error,--,Standby,,-,-,-,-,-
+04/03/2023 08:14:30,AGCA01,-,A01004,,0,1217460,Shift 1 Regular Position Sensor Error,--,Standby,,-,-,-,-,-
+04/03/2023 08:14:30,AGCA01,-,A01002,,0,1217460,Shift 1 Regular Position Sensor Error,--,Standby,,-,-,-,-,-
+04/03/2023 08:14:30,AGCA01,-,SSA001,1536,1,1042004,Protrusion detection error,Fork 1,Deposit,A01004,-,-,-,-,-,309851,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:14:29,AGCA01,-,SSA001,1536,1,1546712,C/V1 TRANS IL OK INTRPT(R ULD),Fork 1,Deposit,A01004,-,-,-,-,-,309851,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 08:14:01,AGCA01,-,SSA002,32382,0,1543073,OPT level dropped,Fork 1,No Cycle,,-,-,-,-,-
+04/03/2023 08:14:01,AGCA01,-,SSA001,0,1,1546712,C/V1 TRANS IL OK INTRPT(R ULD),Fork 1,Deposit,A01004,-,-,-,-,-,309851,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 07:47:42,AGCA01,-,SSA002,32382,0,1042004,Protrusion detection error,Fork 1,No Cycle,,-,-,-,-,-
+04/03/2023 07:47:42,AGCA01,-,SSA001,1536,1,1042004,Protrusion detection error,Fork 1,Deposit,A01004,-,-,-,-,-,309851,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+04/03/2023 07:47:42,AGCA01,-,A01001,,0,1217460,Shift 1 Regular Position Sensor Error,--,Standby,,-,-,-,-,-
+04/03/2023 07:47:42,AGCA01,-,A01004,,0,1217460,Shift 1 Regular Position Sensor Error,--,Standby,,-,-,-,-,-
+04/03/2023 07:47:42,AGCA01,-,A01002,,0,1217460,Shift 1 Regular Position Sensor Error,--,Standby,,-,-,-,-,-
+04/03/2023 07:47:41,AGCA01,-,SSA001,1536,1,1546712,C/V1 TRANS IL OK INTRPT(R ULD),Fork 1,Deposit,A01004,-,-,-,-,-,309851,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-

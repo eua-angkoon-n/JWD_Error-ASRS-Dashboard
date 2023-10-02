@@ -1,0 +1,31 @@
+﻿Error History (08/03/2023 00:00-08/03/2023 23:59)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+08/03/2023 16:08:54,AGCA001,-,RMA00201,52762,0,1113261,AGC/SRC communication error,-,No Cycle,,-,-,0,0
+08/03/2023 16:08:39,AGCA001,-,RMA00201,52762,0,1030011,External emergency stop 1,-,No Cycle,,-,-,0,0
+08/03/2023 16:08:38,AGCA001,-,RMA00201,52762,0,1030070,Main unit communication error,-,No Cycle,,-,-,0,0
+08/03/2023 16:08:37,AGCA001,-,RMA00201,52762,0,1030011,External emergency stop 1,-,No Cycle,,-,-,0,0
+08/03/2023 16:07:18,AGCA001,-,1AA040,,0,1032002,Load presence error 1,-,Standby,,-,-,0,0
+08/03/2023 16:05:30,AGCA001,-,1AA040,,0,1032002,Load presence error 1,-,Standby,,-,-,0,0
+08/03/2023 16:03:22,AGCA001,-,1AA040,,0,1032002,Load presence error 1,-,Standby,,-,-,0,0
+08/03/2023 14:54:41,AGCA001,-,1CA050,,0,1217770,Protrusion error,-,Standby,,-,-,0,0
+08/03/2023 14:54:41,AGCA001,-,1CA040,,1,1217770,Protrusion error,-,Transport Request,,-,-,0,0,,94506,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000009395,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 14:14:43,AGCA001,-,SSA00102,44552,1,1035509,Transfer retry count exceeded: Main unit,Transfer Equipment #1-Transfer Section #1,Deposit,1CA050,-,-,0,0,,94494,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000009105,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 14:11:03,AGCA001,-,1CA090,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+08/03/2023 14:11:03,AGCA001,-,1CA100,,0,1217120,Transport 1 time-out,-,Standby,,-,-,0,0
+08/03/2023 13:49:54,AGCA001,-,1CA090,,1,1217705,Autodoor 1 Close Time-out,-,Standby,,-,-,0,0,,94471,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000014388,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 13:49:54,AGCA001,-,1CA100,,0,1217705,Autodoor 1 Close Time-out,-,Release Off,,-,-,0,0
+08/03/2023 13:49:48,AGCA001,-,SSA00101,41066,1,1035509,Transfer retry count exceeded: Main unit,Transfer Equipment #1-Transfer Section #1,Deposit,1CA100,-,-,0,0,,94469,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000016700,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 13:47:25,AGCA001,-,1CA090,,1,1217705,Autodoor 1 Close Time-out,-,Standby,,-,-,0,0,,94471,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000014388,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 13:47:25,AGCA001,-,1CA100,,0,1217705,Autodoor 1 Close Time-out,-,Release Off,,-,-,0,0
+08/03/2023 13:45:30,AGCA001,-,1CA100,,0,1217705,Autodoor 1 Close Time-out,-,Release Off,,-,-,0,0
+08/03/2023 13:45:30,AGCA001,-,1CA090,,1,1217705,Autodoor 1 Close Time-out,-,Standby,,-,-,0,0,,94471,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000014388,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 13:42:08,AGCA001,-,1CA040,,0,1217460,Shift 1 Regular Position Sensor Error,-,Release Off,,-,-,0,0
+08/03/2023 13:42:08,AGCA001,-,1CA050,,0,1217460,Shift 1 Regular Position Sensor Error,-,Standby,,-,-,0,0
+08/03/2023 13:37:26,AGCA001,-,1CA090,,1,1217705,Autodoor 1 Close Time-out,-,Standby,,-,-,0,0,,94473,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000014315,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 13:37:26,AGCA001,-,1CA100,,0,1217705,Autodoor 1 Close Time-out,-,Release Off,,-,-,0,0
+08/03/2023 13:12:58,AGCA001,-,SSA00101,41062,1,1035509,Transfer retry count exceeded: Main unit,Transfer Equipment #1-Transfer Section #1,Deposit,1CA100,-,-,0,0,,94450,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000005428,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 13:08:31,AGCA001,-,1CA090,,1,1217705,Autodoor 1 Close Time-out,-,Standby,,-,-,0,0,,94446,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000015985,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 13:08:31,AGCA001,-,1CA100,,0,1217705,Autodoor 1 Close Time-out,-,Release Off,,-,-,0,0
+08/03/2023 10:48:22,AGCA001,-,SSA00101,41064,1,1035509,Transfer retry count exceeded: Main unit,Transfer Equipment #1-Transfer Section #1,Deposit,1CA100,-,-,0,0,,94416,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000010369,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+08/03/2023 10:44:03,AGCA001,-,1CA100,,0,1217705,Autodoor 1 Close Time-out,-,Release Off,,-,-,0,0
+08/03/2023 10:44:03,AGCA001,-,1CA090,,1,1217705,Autodoor 1 Close Time-out,-,Standby,,-,-,0,0,,94412,1,,,Online Data,,,,,,,,,,,,,,0,,2 ,0 ,0 ,0    ,0.000,P000019392,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-

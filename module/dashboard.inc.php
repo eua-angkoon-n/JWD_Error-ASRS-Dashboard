@@ -32,8 +32,9 @@ $nameCode = $SelectBar->getErrorNameNCode();
                     <div class="card-body p-1">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-xs-12 ml-1">
+                                <?php if ($action != "DashBoard") { ?>
                                 <label>Warehouse:</label> &nbsp;
-                                <?php if ($action == "errorLog") { ?>
+                                <?php } if ($action == "errorLog") { ?>
                                     <div class="d-inline">
                                         <button
                                             class="btn btn-default dropdown-toggle col-sm-2 col-md-2 col-xs-12 mr-3 justify-content-between"
@@ -42,10 +43,10 @@ $nameCode = $SelectBar->getErrorNameNCode();
                                             Warehouse
                                         </button>
                                     <ul class="dropdown-menu checkbox-menu allow-focus">
-                                        <?php echo $siteSelect; ?>
+                                        <?php echo $siteSelect ?>
                                     </ul>
                                 </div>
-                                <?php } else { ?>
+                                <?php } else if ($action != "DashBoard"){ ?>
                                     <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3" name="dropdownWH"
                                     id="dropdownWH" style="width:100%; font-size:0.85rem;" required="" onchange="getValue(this)">
                                         <?php echo $siteSelect ?>

@@ -36,10 +36,15 @@ switch ($module) {
         $action = "errorDetails";
         $module == "errorDetails" ? $active_errorDetails = "active" : $active_errorDetails = "";
         break;
-    default:
+    case "errorLog" :
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorLog";
-        $module == "dashboard" || $module == "" ? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
+        $module == "errorLog" || $module == "" ? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
+      break;
+    default:
+        $include_module = __DIR__ . "/module/main.inc.php";
+        $action = "DashBoard";
+        $module == "dashboard" || $module == "" ? $active_DashBoard = "active" : $active_DashBoard = ""; #ไฮไลท์เมนูด้านซ้าย
       break;
 }
 $title_site = Setting::$title_site[$action];
@@ -60,18 +65,18 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="dist/img/SCGJWDLogo.png" alt="AdminLTELogo" height="40" width="200">
         </div>
 
        <?php include( __DIR__ . "/navbar.php"); ?>
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#00387c;">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#000043;">
             <!-- Brand Logo -->
             <a href="./" class="brand-link">
-                <img src="dist/img/logo_2.png" alt="JWD Logo" class="w-100 p-0 m-0">
+                <img src="dist/img/SCGJWDLogo.png" alt="JWD Logo" class="w-100 p-0 m-0">
                 <!--<img src="dist/img/logo_2.png" alt="JWD Logo" class="brand-image brand-text" >-->
-                <span class="font-weight-bold p-1 mt-2 text-pcs-ct">
+                <span class="font-weight-bold p-1 mt-2 text-pcs-ct" style="background-color:#f15c22;color:white">
                     <?PHP echo $title_site; ?></span>
             </a>
 
@@ -97,7 +102,13 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item">
-                            <a href="./" class="nav-link <?PHP echo $active_errorlog; ?>">
+                            <a href="./" class="nav-link <?PHP echo $active_DashBoard; ?>">
+                                <i class="nav-icon fas fa-chalkboard"></i>
+                                <p>Dashboard</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?module=errorLog" class="nav-link <?PHP echo $active_errorlog; ?>">
                                 <i class="nav-icon fas fa-warehouse"></i>
                                 <p>Warehouse</p>
                             </a>

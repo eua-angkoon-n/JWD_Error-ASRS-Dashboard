@@ -141,7 +141,7 @@ $.ajax({
         var jsonData = JSON.parse(data);
         $("#machine").html(jsonData.machine);
         $("#NameCode").html(jsonData.code);
-        console.log(data);
+        // console.log(data);
     },
     error: function (data) {
         console.log(data);
@@ -167,7 +167,7 @@ $.ajax({
     success: function (data) {
         var jsonData = JSON.parse(data);
         $("#NameCode").html(jsonData.code);
-        console.log(data);
+        // console.log(data);
     },
     error: function (data) {
         console.log(data);
@@ -238,7 +238,7 @@ $('#errorTable').DataTable({
         beforeSend: function () {
             //จะให้ทำอะไรก่อนส่งค่าไปหรือไม่
         },
-        url: 'module/datatable_processing.php',
+        url: 'module/module_errorDetails/datatable_processing.php',
         type: 'POST',
         data: function (data) {
             data.formData = $('#needs-validation').serialize();

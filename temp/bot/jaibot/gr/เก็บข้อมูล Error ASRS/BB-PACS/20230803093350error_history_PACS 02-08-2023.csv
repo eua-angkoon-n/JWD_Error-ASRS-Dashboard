@@ -1,0 +1,54 @@
+﻿Error History (08/01/2023 00:00-08/02/2023 23:59 Area:AS/RS)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+08/02/2023 06:56:42,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/02/2023 06:56:42,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/02/2023 06:55:30,AGCA001,-,1BE030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/02/2023 06:55:30,AGCA001,-,1BE010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/02/2023 06:55:30,AGCA001,-,1BD030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/02/2023 06:55:29,AGCA001,-,1BD010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/02/2023 06:55:27,AGCA001,-,1AB010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/02/2023 06:55:27,AGCA001,-,1AA010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/01/2023 13:57:24,AGCA001,-,SSA00101,38865,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:57:24,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:24,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:24,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:22,AGCA001,-,SSA00101,38865,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:22,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:11,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:11,AGCA001,-,SSA00101,38865,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:07,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:55:07,AGCA001,-,SSA00101,38865,0,1545103,TRANS1 Protrusion(L in Stopping),Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:54:00,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:54:00,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:54:00,AGCA001,-,SSA00101,38865,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:54:00,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:37,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:37,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:37,AGCA001,-,SSA00101,38865,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:37,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:30,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:30,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:30,AGCA001,-,SSA00101,38865,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:53:30,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:52:38,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:52:38,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:52:37,AGCA001,-,SSA00102,40438,0,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:52:37,AGCA001,-,SSA00101,38865,0,1543006,Intrusion detection error,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:50:38,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:50:38,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:50:38,AGCA001,-,SSA00102,40438,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:50:38,AGCA001,-,SSA00101,38865,0,1543003,Protrusion Stop,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:48:06,AGCA001,-,1BD030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/01/2023 13:48:06,AGCA001,-,1BD010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/01/2023 13:46:36,AGCA001,-,1BC030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/01/2023 13:46:36,AGCA001,-,1BC010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/01/2023 13:45:46,AGCA001,-,1BB030,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/01/2023 13:45:46,AGCA001,-,1BB010,,0,1217765,Approach Detection Sensor Error,-,Standby,,-,-,-,-,-
+08/01/2023 13:41:37,AGCA001,-,1BA020,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+08/01/2023 13:41:37,AGCA001,-,1BA010,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+08/01/2023 13:41:37,AGCA001,-,1BA030#02,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+08/01/2023 13:41:37,AGCA001,-,1BA030#01,,0,1217770,Protrusion error,-,Standby,,-,-,-,-,-
+08/01/2023 13:40:36,AGCA001,-,SSA00102,40438,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 13:40:36,AGCA001,-,SSA00101,38865,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 07:35:11,AGCA001,-,SSA00102,38860,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-
+08/01/2023 07:35:11,AGCA001,-,SSA00101,24273,0,1030019,HP-side maintenance door 1,Carriage #1-Transfer Equipment #1,No Cycle,,-,-,-,-,-

@@ -104,4 +104,64 @@ class DashBoard {
     }
 }
 
+class mainBoard {
+    private array $wh;
+    private $folderPath;
+
+    public function __construct(){
+        $this->wh = Setting::$Warehouse;
+        $this->folderPath = __DIR__ . '/..' . Setting::$ErrorFilePath;
+    }
+
+    public function getCard(){
+        return $this->CreateCard();
+    }
+
+    public function CreateCard() {
+        $result = "";
+        foreach ($this->wh as $wh => $name) {
+            $result .= '<div class="col-lg-2 col-md-2 col-sm-12">
+                            <div class="col-12 mb-0 pt-1">
+                                <div class="card card-outline card-primary">
+                                    <div class="card-header ">
+                                        <h2 class="" style="font-size:2rem"><strong>'.$name.'</strong></h2>
+                                    </div>
+                                <div class="card-body text-right"> 
+                                    <h1 class="d-inline" id="'.$wh.'" style="font-size:4.0rem">0</h1>
+                                    <h2 class="d-inline">&nbsp;Error</h2>
+                                </div>
+                                </div>
+                            </div>
+                        </div>';
+        }
+        return $result;
+    }
+    public function getAllFile(){
+      $this->ReadAllFile($this->folderPath,$result);
+        return $result;
+    }
+
+    public function ReadAllFile($folderPath, &$resultArray, $currentFolder = '') {
+        $items = glob($folderPath . '/*');
+
+        if ($items === false) {
+            return;
+        }
+    
+        foreach ($items as $item) {
+            if (is_file($item) && pathinfo($item, PATHINFO_EXTENSION) === 'csv') {
+                // This is an .xlsx file, so store its name, date/time, and folder name
+                $resultArray[] = [
+                    'folder' => str_replace("/","",$currentFolder) ,
+                    'name' => basename($item),
+                    'date' => date('Y-m-d H:i:s', filemtime($item)),
+                ];
+            } elseif (is_dir($item)) {
+                // This is a subfolder, so recurse into it with the updated folder name
+                $this->ReadAllFile($item, $resultArray, $currentFolder . '/' . basename($item));
+            }
+        }
+    }
+}
+
 ?>
