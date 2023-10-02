@@ -26,7 +26,7 @@ Class MainDashboard {
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
         if($date[0] == $date[1])
-            $sql .= "tran_date_time = '". $date[0] ."' ";
+            $sql .= "date(asrs_error_trans.tran_date_time) = '".$date[1]."'";
         else
             $sql .= "tran_date_time BETWEEN '". $date[1] ."' AND '". $date[0] ."' ";
         $sql .= "GROUP BY wh";
@@ -74,5 +74,3 @@ Class MainDashboard {
     }
 }
 ?>
-
-

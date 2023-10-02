@@ -7,32 +7,37 @@ Class ErrorMachine
 {
     private $wh;
     private $date;
-    private $machine;
+    private $nameCode;
     private $maxValue;
-    public function __construct($wh,$date,$machine)
+    private $itAll;
+    public function __construct($wh,$date,$nameCode)
     {
-        $this->wh = ($wh == NULL ? false : $wh); 
-        $this->date = ($date == NULL ? false : $date);
-        $this->machine = ($machine == NULL ? false : $machine);
+        $this->wh       = ($wh == NULL ? false : $wh); 
+        $this->date     = ($date == NULL ? false : $date);
+        $this->nameCode = ($nameCode == NULL ? false : $nameCode);
+        $this->itAll   = true;
     }
+
     public function getChart() {
         return $this->createChart();
     }
+
     public function getErrorCodeData(){
         $WH = $this->wh;
         $DATE = $this->date;
-        $machine =  $this->machine;
+        $nameCode =  $this->nameCode;
         $date  = getDateDay($DATE,$start,$end);
-        if(!$WH || !$date || !$machine)
+        if(!$WH || !$date || !$nameCode)
             return false;
         $getRow = '';
-        $sql  = "SELECT Machine, DATE(tran_date_time) AS transaction_date, `Error Code`, `Error Name`, COUNT(*) AS Count ";
+        $sql  = "SELECT `Error Code`, `Error Name`, DATE(tran_date_time) AS transaction_date, Machine, COUNT(*) AS Count ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
-        $sql .= $WH;
-        if ($machine != 'All'){
+        $sql .= "$WH ";
+        if ($nameCode != 'All'){
             $sql .= "AND ";
-            $sql .= "asrs_error_trans.Machine = '$machine' ";
+            $sql .= "asrs_error_trans.`Machine` = '$nameCode' ";
+            $this->itAll = false;
         }
         $sql .= "AND ";
         if($start != $end){
@@ -44,7 +49,7 @@ Class ErrorMachine
             $sql .= "= '$start' ";
         }
         $sql .= "GROUP BY "; 
-        $sql .= "Machine, transaction_date, `Error Code`, `Error Name`;";
+        $sql .= "`Error Code`, `Error Name`, transaction_date, Machine;";
 
         try{
             $con = connect_database();
@@ -61,9 +66,75 @@ Class ErrorMachine
         }
     }
 
+    public function generateComboChartData($originalData, $startDate, $endDate) {
+           // Convert the start and end date strings to DateTime objects.
+    $startDateObj = new DateTime($startDate);
+    $endDateObj = new DateTime($endDate);
+
+    // Create an array for all machines within the specified range.
+    $machines = array_unique(array_column($originalData, 'Machine'));
+
+    // Create an array for all dates within the specified range.
+    $currentDate = clone $startDateObj;
+    $endDatePlusOne = clone $endDateObj;
+    $endDatePlusOne->modify('+1 day');
+
+    $datesInRange = [];
+    while ($currentDate < $endDatePlusOne) {
+        $date = $currentDate->format('Y-m-d');
+        $datesInRange[] = $date;
+        $currentDate->modify('+1 day');
+    }
+
+    // Create an associative array to store data for each machine and date.
+    $comboData = array_fill_keys($datesInRange, []);
+    
+    // Loop through the original data to populate the associative array.
+    foreach ($originalData as $entry) {
+        $machine = $entry['Machine'];
+        $date = $entry['transaction_date'];
+        $count = (int)$entry['Count'];
+
+        $entryDateObj = new DateTime($date);
+
+        // Check if the date is within the specified range.
+        if ($entryDateObj >= $startDateObj && $entryDateObj <= $endDateObj) {
+            // Increment the count for the corresponding machine and date.
+            $comboData[$date][$machine] = isset($comboData[$date][$machine]) ? $comboData[$date][$machine] + $count : $count;
+        }
+    }
+
+    // Create the final data array.
+    $comboChartData = [];
+
+    // Loop through the associative array and create data rows.
+    // The header row will be created based on the machines.
+    $header = array_merge(['Date'], $machines, ['Total']);
+    $comboChartData[] = $header;
+
+    foreach ($comboData as $date => $machineCounts) {
+        $rowData = [formatDateToChart($date)];
+
+        $total = 0;
+
+        foreach ($machines as $machine) {
+            $count = isset($machineCounts[$machine]) ? $machineCounts[$machine] : 0;
+            $rowData[] = $count;
+            $total += $count;
+        }
+
+        $rowData[] = $total;
+
+        $comboChartData[] = $rowData;
+    }
+
+    return $comboChartData;
+    }
+    
+
     public function findMostValue($data){
         $maxTotal = PHP_INT_MIN; // Initialize with the minimum possible value
-
+        $plus = 1;
         // Find the index of the "Total" column
         $totalColumnIndex = array_search('Total', $data[0]);
     
@@ -78,91 +149,10 @@ Class ErrorMachine
         } else {
            return false;
         }
-        $maxTotal = ceil($maxTotal) + 5;
+        if($this->itAll)
+            $plus = 20;
+        $maxTotal = ceil($maxTotal) + $plus ;
         return $maxTotal;
-    }
-
-    public function generateComboChartData($originalData, $startDate, $endDate) {
-        // Create an associative array to store data for each date and error name.
-        $comboData = array();
-
-        // Convert the start and end date strings to DateTime objects.
-        $startDateObj = new DateTime($startDate);
-        $endDateObj = new DateTime($endDate);
-    
-        // Create an array for all dates within the specified range.
-        $currentDate = clone $startDateObj;
-        $endDatePlusOne = clone $endDateObj;
-        $endDatePlusOne->modify('+1 day');
-    
-        while ($currentDate < $endDatePlusOne) {
-            $date = $currentDate->format('Y-m-d');
-    
-            if (!isset($comboData[$date])) {
-                $comboData[$date] = array('timeofday' => formatDateToChart($date), 'Total' => 0);
-            }
-    
-            $currentDate->modify('+1 day');
-        }
-    
-        // Create an array for the header row.
-        $header = ['timeofday'];
-    
-        // Find unique error names to create columns for each error.
-        $errorNames = [];
-        foreach ($originalData as $entry) {
-            $errorName = $entry['Error Name'];
-            $errorCode = $entry['Error Code'];
-
-            if (!empty($errorName) && !in_array($errorName, $errorNames)) {
-                $errorNames[] = $errorName;
-                $header[] = $errorName;
-            } elseif (empty($errorName) && !empty($errorCode)) {
-                $errorNames[] = $errorCode;
-                $header[] = $errorCode;
-            }
-        }
-    
-        // Add the 'Total' column to the header.
-        $header[] = 'Total';
-    
-        // Loop through the original data to populate the associative array.
-        foreach ($originalData as $entry) {
-            $date = $entry['transaction_date'];
-            $errorName = $entry['Error Name'];
-            $errorCode = $entry['Error Code'];
-            $count = (int)$entry['Count'];
-    
-            $entryDateObj = new DateTime($date);
-    
-            // Check if the date is within the specified range.
-            if ($entryDateObj >= $startDateObj && $entryDateObj <= $endDateObj) {
-                // Determine whether to use "Error Name" or "Error Code" as the column name.
-                $columnName = !empty($errorName) ? $errorName : $errorCode;
-    
-                $comboData[$date][$columnName] = $count;
-                $comboData[$date]['Total'] += $count;
-            }
-        }
-    
-    
-        // Create the final data array.
-        $comboChartData = [$header];
-    
-        // Loop through the associative array and create data rows.
-        foreach ($comboData as $dateData) {
-            $rowData = [$dateData['timeofday']];
-    
-            foreach ($errorNames as $errorName) {
-                $rowData[] = isset($dateData[$errorName]) ? $dateData[$errorName] : 0;
-            }
-    
-            $rowData[] = $dateData['Total'];
-    
-            $comboChartData[] = $rowData;
-        }
-    
-        return $comboChartData;
     }
     
     public function getNumberOfColumns($comboChartData) {
@@ -183,7 +173,7 @@ Class ErrorMachine
     }
     
     public function createChart(){
-        $machine =  $this->machine;
+        $nameCode =  $this->nameCode;
         $row = $this->getErrorCodeData();
         $line = $this->getNumberOfColumns($row);
         $rowData = "[";
@@ -220,7 +210,7 @@ Class ErrorMachine
         
 
           var options = {
-            title : 'Error Machine: $machine',
+            title : 'Error Code: $nameCode',
             chartArea: { width: '90%', height: '80%' },
             seriesType: 'bars',
             series: {
