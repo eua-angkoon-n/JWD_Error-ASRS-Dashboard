@@ -34,8 +34,14 @@ Class ErrorLog_WH
             $sql .= "FROM asrs_error_trans ";
             $sql .= "WHERE $WH ";
             $sql .= "AND ";
-            $sql .= "asrs_error_trans.tran_date_time ";
-            $sql .= "BETWEEN '$start' AND '$end' ";
+            if($start != $end){
+                $sql .= "asrs_error_trans.tran_date_time ";
+                $sql .= "BETWEEN '$start' AND '$end' ";
+            }
+            else {
+                $sql .= "date(asrs_error_trans.tran_date_time) ";
+                $sql .= "= '$start' ";
+            }
             $sql .= "GROUP BY day,wh ";
             $sql .= "ORDER BY day,wh;";
             $fetchRow = $obj->fetchRows($sql);
@@ -243,7 +249,7 @@ Class ErrorLog_WHTotal
     }
 
     public function getErrorLogData(){
-
+        
         $WH = $this->wh;
         $date = $this->date;
         if(!$WH)
@@ -254,10 +260,14 @@ Class ErrorLog_WHTotal
         $sql .= "WHERE ";
         $sql .= $WH;        
         $sql .= "AND ";
-        $sql .= "asrs_error_trans.tran_date_time BETWEEN ";
-        $sql .= "'".$date[1]."' ";
-        $sql .= "AND ";
-        $sql .= "'".$date[0]."' ";
+        if($date[1] != $date[0]){
+            $sql .= "asrs_error_trans.tran_date_time ";
+            $sql .= "BETWEEN '".$date[1]."' AND '".$date[0]."' ";
+        }
+        else {
+            $sql .= "date(asrs_error_trans.tran_date_time) ";
+            $sql .= "= '".$date[0]."' ";
+        }
         $sql .= "GROUP BY wh; ";
 
         $con = connect_database();

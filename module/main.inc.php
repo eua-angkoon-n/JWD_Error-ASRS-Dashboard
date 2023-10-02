@@ -4,11 +4,11 @@ require_once __DIR__ . "/dashboard.class.php";
 
 $card     = new mainBoard();
 $thisCard = $card -> getCard(); 
-$test = $card -> getAllFile();
-echo '<pre>';
-print_r($test);
-echo '</pre>';
-exit;
+$test = $card -> getLastModificationTimesByUniqueName();
+// echo '<pre>';
+// print_r($test);
+// echo '</pre>';
+// exit;
 ?>
 
 <section class="content">

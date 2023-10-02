@@ -119,16 +119,20 @@ class mainBoard {
 
     public function CreateCard() {
         $result = "";
+        $last   = $this->getLastModificationTimesByUniqueName();
         foreach ($this->wh as $wh => $name) {
-            $result .= '<div class="col-lg-2 col-md-2 col-sm-12">
+            $result .= '<div class="col-lg-2 col-md-6 col-sm-12">
                             <div class="col-12 mb-0 pt-1">
                                 <div class="card card-outline card-primary">
                                     <div class="card-header ">
                                         <h2 class="" style="font-size:2rem"><strong>'.$name.'</strong></h2>
                                     </div>
-                                <div class="card-body text-right"> 
+                                <div class="card-body text-right">
                                     <h1 class="d-inline" id="'.$wh.'" style="font-size:4.0rem">0</h1>
-                                    <h2 class="d-inline">&nbsp;Error</h2>
+                                    <h2 class="d-inline">&nbsp;Error</h2><br>
+                                    <h6 class="d-inline"style="font-size:0.8rem">Last Modified </h6><br>
+                                    <h6 class="d-inline" >'.$last[$wh]['time'].'</h6><br>
+                                    <h6 class="d-inline"style="font-size:0.8rem">'.str_replace("/","",$last[$wh]['name']).'</h6>
                                 </div>
                                 </div>
                             </div>
@@ -162,6 +166,59 @@ class mainBoard {
             }
         }
     }
+
+    public function getLastModificationTimesByUniqueName(){
+        $result = [];
+        $this->readAllFilesByUniqueName($this->folderPath, $result);
+        return $result;
+    }
+
+    public function readAllFilesByUniqueName($folderPath, &$resultArray, $currentFolder = '') {
+        $items = glob($folderPath . '/*');
+
+        if ($items === false) {
+            return;
+        }
+
+        foreach ($items as $item) {
+            if (is_file($item)) {
+                $fileName = strtolower(basename($item)); // Convert filename to lowercase
+
+                // Extract the unique name from the filename
+                $matches = [];
+                if (preg_match('/error_history_(.*?)\s/', $fileName, $matches)) {
+                    $uniqueName = $matches[1];
+
+                    // Check if the unique name is in the $Warehouse array
+                    if (array_key_exists($uniqueName, Setting::$Warehouse)) {
+                        // Get the last modification time
+                        $modificationTime = filemtime($item);
+                        $formattedTime = date('d.M.y H:i:s', $modificationTime);
+
+                        // Check if we've already encountered this unique name
+                        if (!isset($resultArray[$uniqueName])) {
+                            
+                            $resultArray[$uniqueName] = [
+                                'name' =>  $currentFolder,
+                                'time' => $formattedTime,
+                            ];
+                        } else {
+                            // If the current time is more recent, update it
+                            if ($modificationTime > strtotime($resultArray[$uniqueName]['time'])) {
+                                $resultArray[$uniqueName]['name'] = $currentFolder;
+                                $resultArray[$uniqueName]['time'] = $formattedTime;
+                            }
+                        }
+                    }
+                }
+            } elseif (is_dir($item)) {
+                // This is a subfolder, so recurse into it with the updated folder name
+                $this->readAllFilesByUniqueName($item, $resultArray, $currentFolder . '/' . basename($item));
+            }
+        }
+    }
+
 }
+
 
 ?>

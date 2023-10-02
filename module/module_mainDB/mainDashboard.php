@@ -57,21 +57,22 @@ Class MainDashboard {
 
         foreach ($Warehouse as $key => $description) {
             $found = false;
-    
-            foreach ($counts as $countItem) {
-                if ($countItem['wh'] === $key) {
-                    $filteredData[$key] = $countItem['count'];
-                    $found = true;
-                    break;
-                }
+            if($counts){
+                foreach ($counts as $countItem) {
+                    if ($countItem['wh'] === $key) {
+                        $filteredData[$key] = $countItem['count'];
+                        $found = true;
+                        break;
+                    }
+                }        
             }
-    
             if (!$found) {
-                $filteredData[$key] = ""; // Set to empty string if the key is not found in counts
+                $filteredData[$key] = 0; // Set to 0 if the key is not found in counts
             }
         }
-    
         return json_encode($filteredData);
     }
 }
 ?>
+
+

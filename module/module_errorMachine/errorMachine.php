@@ -35,8 +35,14 @@ Class ErrorMachine
             $sql .= "asrs_error_trans.Machine = '$machine' ";
         }
         $sql .= "AND ";
-        $sql .= "asrs_error_trans.tran_date_time ";
-        $sql .= "BETWEEN '$start' AND '$end' ";
+        if($start != $end){
+            $sql .= "asrs_error_trans.tran_date_time ";
+            $sql .= "BETWEEN '$start' AND '$end' ";
+        }
+        else {
+            $sql .= "date(asrs_error_trans.tran_date_time) ";
+            $sql .= "= '$start' ";
+        }
         $sql .= "GROUP BY "; 
         $sql .= "Machine, transaction_date, `Error Code`, `Error Name`;";
 
@@ -298,8 +304,14 @@ Class ErrorMachine_Total
         $sql .= "WHERE ";
         $sql .= $WH;        
         $sql .= "AND ";
-        $sql .= "asrs_error_trans.tran_date_time ";
-        $sql .= "BETWEEN '$start' AND '$end' ";
+        if($start != $end){
+            $sql .= "asrs_error_trans.tran_date_time ";
+            $sql .= "BETWEEN '$start' AND '$end' ";
+        }
+        else {
+            $sql .= "date(asrs_error_trans.tran_date_time) ";
+            $sql .= "= '$start' ";
+        }
         $sql .= "GROUP BY `Machine` ";
         $sql .= "ORDER BY count DESC ";
         $sql .= "LIMIT 10";
