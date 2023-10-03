@@ -28,55 +28,52 @@ $CodeNMachine = $SelectBar->getErrorNameNCode();
         <form id="needs-validation" class="addform " name="addform" method="POST" enctype="multipart/form-data"
                 autocomplete="off" novalidate="">
 
-                <div class="row">
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <label>Warehouse:</label>
-                            <select class="form-control col-sm-12 col-md-12 col-xs-12" name="dropdownWH" id="dropdownWH"
-                                style="width:100%; font-size:0.85rem;" required="" onchange="getWH(this)">
-                                <option value='All'>All</option>
-                                <?php echo $siteSelect ?>
-                            </select>
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label class="col-sm-12 col-md-12 col-xs-12">Date:</label>
-                            <button type="button" class="btn btn-default form-control col-sm-12 col-md-12 col-xs-12" id="date" name="date">
-                                <i class="far fa-calendar-alt"></i>
-                                Last 30 Days
-                                <i class="fas fa-caret-down"></i>
-                            </button>
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <button type="button" class="btn btn-block btn-outline-success btn-showData col-sm-12 col-md-4 col-xs-4">Search</button>
-                        </div>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <label>Machine:</label> &nbsp;
-                            <select class="form-control col-sm-12 col-md-12 col-xs-12"
-                                data-placeholder="Select Machine" id="machine" name="machine" onchange="getCode(this)">
-                                <?php echo $machine ?>
-                            </select>
-                        </div>
-                        <!-- /.form-group -->
+                <div class="row d-flex">
+
+                    <div class="form-group col-md-2 col-sm-12">
+                        <label>Warehouse:</label>
+                        <select class="form-control col-sm-12 col-md-12 col-xs-12" name="dropdownWH" id="dropdownWH"
+                            style="width:100%; font-size:0.85rem;" required="" onchange="getWH(this)">
+                            <option value='All'>All</option>
+                            <?php echo $siteSelect ?>
+                        </select>
                     </div>
 
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label>Error Name/Code:</label> &nbsp;
-
-                            <select class="form-control col-sm-12 col-md-12 col-xs-12"
-                                data-placeholder="Select Machine" id="NameCode" name="NameCode">
-                                <?php echo $CodeNMachine ?>
-                            </select>
-
-                        </div>
-                        <!-- /.form-group -->
+                    <div class="form-group col-md-2 col-sm-12">
+                        <label>Machine:</label> &nbsp;
+                        <select class="form-control col-sm-12 col-md-12 col-xs-12" data-placeholder="Select Machine"
+                            id="machine" name="machine" onchange="getCode(this)">
+                            <?php echo $machine ?>
+                        </select>
                     </div>
-                    <!-- /.col -->
+
+                    <div class="form-group col-md-4 col-sm-12">
+                        <label>Error Name/Code:</label> &nbsp;
+                        <select class="form-control col-sm-12 col-md-12 col-xs-12" data-placeholder="Select Machine"
+                            id="NameCode" name="NameCode">
+                            <?php echo $CodeNMachine ?>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="row d-flex align-middle">
+
+                    <div class="form-group col-md-3 col-sm-12">
+                        <label>Date:</label>
+                        <button type="button" class="btn btn-default form-control col-sm-12 col-md-12 col-xs-12"
+                            id="date" name="date">
+                            <i class="far fa-calendar-alt"></i>
+                            Last 30 Days
+                            <i class="fas fa-caret-down"></i>
+                        </button>
+                    </div>
+    
+                    <div class="form-group col-md-2 col-sm-12 ">
+                        <button type="button"
+                            class="btn btn-block btn-outline-success btn-showData col-sm-12 col-md-12 col-xs-12">Search</button>
+                    </div>
+
                 </div>
 
                 <div class="row pt-3 p-2">

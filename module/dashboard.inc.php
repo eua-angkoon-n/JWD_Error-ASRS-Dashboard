@@ -8,6 +8,20 @@ $machine = $SelectBar->getMachine();
 $nameCode = $SelectBar->getErrorNameNCode();
 ?>
 
+<style>
+/* Default styling for the date button */
+.date {
+  display: inline-block; /* Display the date button as inline-block by default */
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .date {
+    display: block; /* Change the display to block for smaller screens, effectively removing d-inline */
+  }
+}
+</style>
+
 <section class="content">
     <div class="card">
         <div class="card-header">
@@ -54,7 +68,7 @@ $nameCode = $SelectBar->getErrorNameNCode();
                                 
                                 <?php } if ($action == "errorMachine") { ?>
                                     <label>Machine:</label> &nbsp;
-                                    <div class="d-inline col-3">
+                                    <div class="d-inline">
                                         <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3"data-placeholder="Select Machine" id="machine" name="machine">
                                            <?php echo $machine ?>
                                         </select> 
@@ -62,7 +76,7 @@ $nameCode = $SelectBar->getErrorNameNCode();
                                                    
                                 <?php } if ($action == "errorCode") { ?>
                                     <label>Name or Code:</label> &nbsp;
-                                    <div class="d-inline col-3">
+                                    <div class="d-inline">
                                         <select class="custom-select col-sm-1 col-md-1 col-xs-12 mr-3"data-placeholder="Select Machine" id="nameCode" name="nameCode">
                                            <?php echo $nameCode ?>
                                         </select> 
@@ -70,7 +84,7 @@ $nameCode = $SelectBar->getErrorNameNCode();
                                 <?php } ?> 
 
                                 <label>Date:</label> &nbsp;
-                                <div class="d-inline">
+                                <div class="date">
                                     <button type="button" class="btn btn-default" id="date" name="date">
                                         <i class="far fa-calendar-alt"></i>
                                         Last 30 Days
