@@ -50,6 +50,7 @@ Class ErrorMachine
         }
         $sql .= "GROUP BY "; 
         $sql .= "`Error Code`, `Error Name`, transaction_date, Machine;";
+        // return $sql;
 
         try{
             $con = connect_database();
@@ -166,12 +167,6 @@ Class ErrorMachine
         return $count;
     }
 
-    public function getColorChart(){
-        $ColorBar = Setting::$ColumnBarColor;
-        $color = formatColorChart($ColorBar);
-        return $color;
-    }
-    
     public function createChart(){
         $nameCode =  $this->nameCode;
         $row = $this->getErrorCodeData();
@@ -192,7 +187,11 @@ Class ErrorMachine
                 $rowData .= "], ";
             }
         }
+      
+
         $rowData .= "]";
+
+        $color = getChartHundred($line,Setting::$HundredColor);
 
         if(!$row)
             $row = "['No Data', 0]";
@@ -211,9 +210,10 @@ Class ErrorMachine
 
           var options = {
             title : 'Error Code: $nameCode',
-            chartArea: { width: '90%', height: '80%' },
+            chartArea: { width: '90%', height: '80%' }, 
             seriesType: 'bars',
             series: {
+                $color
                 ".$line.": {
                     type: 'line',
                     color : 'blue'

@@ -786,4 +786,17 @@ function getLast30Day(){
     return $dateRange;
 }
 
+function getChartHundred($line,$HundredColor){
+    $startIndex = 0;
+    $endIndex = $line - 1;
+    $colorOptions = '';
+    for ($i = $startIndex; $i <= $endIndex && $i < count($HundredColor); $i++) {
+        $colorOptions .= "
+            $i: { 
+                color: '".$HundredColor[$i]."'
+            },";
+    }
+    return $colorOptions;
+}
+
 ?>

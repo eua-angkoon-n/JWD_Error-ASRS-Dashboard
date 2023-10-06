@@ -28,7 +28,7 @@ Class ErrorCode
         if(!$WH || !$date || !$machine)
             return false;
         $getRow = '';
-        $sql  = "SELECT Machine, DATE(tran_date_time) AS transaction_date, `Error Code`, `Error Name`, COUNT(*) AS Count ";
+        $sql  = "SELECT DATE(tran_date_time) AS transaction_date, `Error Code`, `Error Name`, COUNT(*) AS Count ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
         $sql .= $WH;
@@ -48,8 +48,8 @@ Class ErrorCode
             $sql .= "= '$start' ";
         }
         $sql .= "GROUP BY "; 
-        $sql .= "Machine, transaction_date, `Error Code`, `Error Name`;";
-
+        $sql .= "`Error Code`, `Error Name`, transaction_date;";
+// return $sql;
         try{
             $con = connect_database();
             $obj = new CRUD($con);
@@ -210,6 +210,8 @@ Class ErrorCode
         }
         $rowData .= "]";
 
+        $color = getChartHundred($line,Setting::$HundredColor);
+
         if(!$row)
             $row = "['No Data', 0]";
 
@@ -230,11 +232,11 @@ Class ErrorCode
             chartArea: { width: '90%', height: '80%' },
             seriesType: 'bars',
             series: {
+                $color
                 ".$line.": {
                     type: 'line',
                     color : 'blue'
                 },
-              
             },
             pointSize: 5,
             isStacked: true,

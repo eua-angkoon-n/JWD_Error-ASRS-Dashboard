@@ -28,9 +28,13 @@ if (isset($_POST['action'])) {
     );
     switch ($action){
         case 'DashBoard':
+            $result = array();
             $CtResult  = new MainDashboard($newDate);
-            $result    = $CtResult->test();
-            print_r($result);
+            $result['Card']   = $CtResult->getCard();
+            $result['Chart']  = $CtResult->getChart();
+            $result['Bar']    = $CtResult->getBar();
+            // print_r($result['Chart']);
+            print_r(json_encode($result));
             break;
         case 'errorLog':
             $CtResult  = new ErrorLog_WH($wh,$newDate,$arrWH);

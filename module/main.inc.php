@@ -4,11 +4,6 @@ require_once __DIR__ . "/dashboard.class.php";
 
 $card     = new mainBoard();
 $thisCard = $card -> getCard(); 
-$test = $card -> getLastModificationTimesByUniqueName();
-// echo '<pre>';
-// print_r($test);
-// echo '</pre>';
-// exit;
 ?>
 
 <section class="content">
@@ -31,19 +26,19 @@ $test = $card -> getLastModificationTimesByUniqueName();
         <form id="needs-validation" class="addform " name="addform" method="POST" enctype="multipart/form-data"
                 autocomplete="off" novalidate="">
 
-                <div class="card p-0">
+                <div class=" p-0">
                     <div class="card-body p-1">
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-xs-12 ml-1">
-                                <label>Date:</label> &nbsp;
+                                <!-- <label>Date:</label> &nbsp;
                                 <div class="d-inline">
                                     <button type="button" class="btn btn-default" id="date" name="date">
                                         <i class="far fa-calendar-alt"></i>
                                         Last 30 Days
                                         <i class="fas fa-caret-down"></i>
                                     </button>
-                                </div>
-
+                                </div> -->
+                               <h2><i class="fas fa-exclamation-circle"></i><strong> Month Error Log</strong></h2>
                             </div>
                         </div>
                     </div>
@@ -53,6 +48,14 @@ $test = $card -> getLastModificationTimesByUniqueName();
 
             <div class="row">
                 <?php echo $thisCard; ?>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <div id="ColumnChart" class="ColChartMain"></div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div id="BarChart" class="BarChartMain"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -75,17 +78,24 @@ function SendData() {
             "action": action
         },
         success: function (data) {
-            var jsonData = JSON.parse(data);
-
-            for (var key in jsonData) {
-                if (jsonData.hasOwnProperty(key)) {
+            var jsonData  = JSON.parse(data);
+            var CardData  = jsonData.Card;
+            var ChartData = jsonData.Chart; 
+            var BarData   = jsonData.Bar;
+            console.log(BarData[0]['Error Code']);
+            for (var key in CardData) {
+                if (CardData.hasOwnProperty(key)) {
                     // Get the value for the current key
-                    var value = jsonData[key];
-
+                    var value = CardData[key];
+                    
                     // Update the corresponding HTML element with the same ID
                     $("#" + key).text(value);
                 }
             }
+            google.charts.setOnLoadCallback(function () {
+              drawColumnChart(ChartData);
+              drawBarChart(BarData);
+            });
             // console.log(data);
             event.stopPropagation();
         },
@@ -96,6 +106,98 @@ function SendData() {
     });
 }
 
+function drawBarChart(BarData) {
+    var chartDataArray = [['Error Name', {type: 'number', role: 'annotation'},'Error Log', {type: 'string', role: 'annotation'}, { role: 'style' }]];
+    var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?>; 
+    
+    for (var i = 0; i < BarData.length; i++) {
+        var row = BarData[i];
+        if(BarData[i]['Error Name'] == "") {
+            Name = BarData[i]['Error Code'];
+        } else {
+            Name = BarData[i]['Error Name'];
+        }
+        chartDataArray.push([Name, row.Total, row.Total, Name, colorArray[i]]);
+      }
+
+      var options = {
+        title: 'Top 5 Error this Month',
+        titleTextStyle: {
+        fontName: 'Arial',
+        fontSize: 22, 
+        },
+        legend: { position: 'none' },
+        bar: { groupWidth: '85%' },
+        chartArea: { width: '90%', height: '85%' },
+        animation: {
+        duration: 1000,
+        easing: 'in',
+        startup: true
+        },
+        annotations: {
+            textStyle: {
+                fontName: 'Arial',
+                fontSize: 11,
+                color: '#000',
+                auraColor: 'none'
+            }
+        },
+
+      };
+      var data = google.visualization.arrayToDataTable(chartDataArray);
+
+      var chart = new google.visualization.BarChart(document.getElementById('BarChart'));
+      chart.draw(data, options);
+    }
+
+function drawColumnChart(ChartData) {
+
+var chartDataArray = [['Month', 'Error Log', {type: 'number', role: 'annotation'}, { role: 'style' }]];
+
+var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?>; 
+
+for (var i = 0; i < ChartData.length; i++) {
+    var row = ChartData[i];
+    var date = new Date(row.Year, row.Month - 1); // Month is 0-based in JavaScript
+    chartDataArray.push([date, row.TotalValue, row.TotalValue, colorArray[i]]);
+  }
+
+var options = {
+    title: 'Error Log Overview',
+    titleTextStyle: {
+        fontName: 'Arial',
+        fontSize: 22, // Set the desired font size for the title
+    },
+    bar: { groupWidth: '85%' },
+    chartArea: { width: '90%', height: '85%' },
+    fontName: 'Arial',
+    fontSize: '14',
+    hAxis: {
+        format: 'MMM yyyy',
+    },
+    legend: { position: 'none' },
+    animation: {
+        duration: 1000,
+        easing: 'in',
+        startup: true
+    },
+    annotations: {
+        textStyle: {
+            fontName: 'Arial',
+            fontSize: 11,
+            color: '#000',
+            auraColor: 'none'
+        }
+    },
+};
+
+var data = google.visualization.arrayToDataTable(chartDataArray);
+
+var chart = new google.visualization.ColumnChart(
+  document.getElementById('ColumnChart'));
+
+chart.draw(data, options);
+}
 
 $('#date').daterangepicker(
           {
@@ -122,6 +224,7 @@ $('#date').daterangepicker(
     )
 
 $(document).ready(function () {
+    google.charts.load('current', { packages: ['corechart', 'bar'] });
     var startDate = moment().subtract(29, 'days');
     var endDate   = moment();
     $('#selectedDateRange').val(endDate.format('YYYY-MM-DD') + '||//' + startDate.format('YYYY-MM-DD'));

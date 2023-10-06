@@ -148,6 +148,17 @@
     width: 100%;
 }
 
+.ColChartMain{
+    height: 450px;
+    width: 100%;
+}
+
+.BarChartMain{
+    height: 450px;
+    width: 100%;
+}
+
+
 .google-visualization-table-table tr td {
     height: 40px;
     /* Adjust the desired height value */
