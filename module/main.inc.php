@@ -23,7 +23,7 @@ $thisCard = $card -> getCard();
         </div>
 
         <div class="card-body">
-        <form id="needs-validation" class="addform " name="addform" method="POST" enctype="multipart/form-data"
+            <form id="needs-validation" class="addform " name="addform" method="POST" enctype="multipart/form-data"
                 autocomplete="off" novalidate="">
 
                 <div class=" p-0">
@@ -38,23 +38,23 @@ $thisCard = $card -> getCard();
                                         <i class="fas fa-caret-down"></i>
                                     </button>
                                 </div> -->
-                               <h2><i class="fas fa-exclamation-circle"></i><strong> Month Error Log</strong></h2>
+                                <h2><i class="fas fa-exclamation-circle"></i><strong> <?php echo Setting::$arr_mouthEN[date('n')-1] ?> Error Log  </strong></h2>
                             </div>
                         </div>
                     </div>
                 </div>
                 <input type="hidden" id="selectedDateRange" name="selectedDateRange" value="">
-            </form>          
+            </form>
 
             <div class="row">
                 <?php echo $thisCard; ?>
             </div>
             <div class="row">
-                <div class="col-md-8 col-sm-12">
-                    <div id="ColumnChart" class="ColChartMain"></div>
-                </div>
                 <div class="col-md-4 col-sm-12">
                     <div id="BarChart" class="BarChartMain"></div>
+                </div>
+                <div class="col-md-8 col-sm-12">
+                    <div id="ColumnChart" class="ColChartMain"></div>
                 </div>
             </div>
         </div>
@@ -62,10 +62,9 @@ $thisCard = $card -> getCard();
 </section>
 
 <script type="text/javascript">
-$('.select2bs4').select2({
-  theme: 'bootstrap4'
-})
-
+// $('.select2bs4').select2({
+//   theme: 'bootstrap4'
+// })
 function SendData() {
     var frmData = $("form#needs-validation").serialize();
     var action = "<?php echo $action ?>";
@@ -78,25 +77,24 @@ function SendData() {
             "action": action
         },
         success: function (data) {
-            var jsonData  = JSON.parse(data);
-            var CardData  = jsonData.Card;
-            var ChartData = jsonData.Chart; 
-            var BarData   = jsonData.Bar;
-            console.log(BarData[0]['Error Code']);
+            var jsonData = JSON.parse(data);
+            var CardData = jsonData.Card;
+            var ChartData = jsonData.Chart;
+            var BarData = jsonData.Bar;
+            // console.log(BarData[0]['Error Code']);
             for (var key in CardData) {
                 if (CardData.hasOwnProperty(key)) {
                     // Get the value for the current key
                     var value = CardData[key];
-                    
                     // Update the corresponding HTML element with the same ID
                     $("#" + key).text(value);
                 }
             }
+            // console.log(BarData);
             google.charts.setOnLoadCallback(function () {
-              drawColumnChart(ChartData);
-              drawBarChart(BarData);
+                drawColumnChart(ChartData);
+                drawBarChart(BarData);
             });
-            // console.log(data);
             event.stopPropagation();
         },
         error: function (data) {
@@ -107,32 +105,54 @@ function SendData() {
 }
 
 function drawBarChart(BarData) {
-    var chartDataArray = [['Error Name', {type: 'number', role: 'annotation'},'Error Log', {type: 'string', role: 'annotation'}, { role: 'style' }]];
-    var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?>; 
-    
-    for (var i = 0; i < BarData.length; i++) {
-        var row = BarData[i];
-        if(BarData[i]['Error Name'] == "") {
-            Name = BarData[i]['Error Code'];
-        } else {
-            Name = BarData[i]['Error Name'];
-        }
-        chartDataArray.push([Name, row.Total, row.Total, Name, colorArray[i]]);
-      }
+    var chartDataArray = [
+        ['Error Name', 'Error Log', {
+            type: 'string',
+            role: 'annotation'
+        }, {
+            role: 'style'
+        }]
+    ];
+    var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?>;
 
-      var options = {
-        title: 'Top 5 Error this Month',
+    if (!BarData) {
+        chartDataArray.push(["No Error Log", 0, "No Error Log", colorArray[i]]);
+        var max = 100;
+    } else {
+        for (var i = 0; i < BarData.length; i++) {
+            var row = BarData[i];
+            if (BarData[i]['Error Name'] == "") {
+                Name = BarData[i]['Error Code'];
+            } else {
+                Name = BarData[i]['Error Name'];
+            }
+            if (i == 0) {
+                var max = parseInt(row.Total) + 10;
+            }
+            chartDataArray.push([Name, parseInt(row.Total), Name + " - " + row.Total, colorArray[i]]);
+        }
+    }
+
+    var options = {
+        title: '<?php echo Setting::$arr_mouthEN[date('n')-1] ?> Top Error',
         titleTextStyle: {
-        fontName: 'Arial',
-        fontSize: 22, 
+            fontName: 'Arial',
+            fontSize: 22,
         },
-        legend: { position: 'none' },
-        bar: { groupWidth: '85%' },
-        chartArea: { width: '90%', height: '85%' },
+        legend: {
+            position: 'none'
+        },
+        bar: {
+            groupWidth: '85%'
+        },
+        chartArea: {
+            width: '100%',
+            height: '85%'
+        },
         animation: {
-        duration: 1000,
-        easing: 'in',
-        startup: true
+            duration: 1000,
+            easing: 'in',
+            startup: true
         },
         annotations: {
             textStyle: {
@@ -142,106 +162,135 @@ function drawBarChart(BarData) {
                 auraColor: 'none'
             }
         },
+        hAxis: {
+            viewWindow: {
+                min: 0, // Minimum value for the V-axis
+                max: max, // Maximum value for the V-axis
+            },
+            minValue: 0,
+        },
+        vAxis: {
+            textPosition: 'none', // Hide the names of the bars on the X-axis
 
-      };
-      var data = google.visualization.arrayToDataTable(chartDataArray);
+        },
 
-      var chart = new google.visualization.BarChart(document.getElementById('BarChart'));
-      chart.draw(data, options);
-    }
+    };
+    var data = google.visualization.arrayToDataTable(chartDataArray);
+
+    var chart = new google.visualization.BarChart(document.getElementById('BarChart'));
+    chart.draw(data, options);
+}
 
 function drawColumnChart(ChartData) {
 
-var chartDataArray = [['Month', 'Error Log', {type: 'number', role: 'annotation'}, { role: 'style' }]];
+    var chartDataArray = [['Month', 'Error Log', {type: 'number',role: 'annotation'}, {role: 'style'}]];
 
-var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?>; 
-
-for (var i = 0; i < ChartData.length; i++) {
-    var row = ChartData[i];
-    var date = new Date(row.Year, row.Month - 1); // Month is 0-based in JavaScript
-    chartDataArray.push([date, row.TotalValue, row.TotalValue, colorArray[i]]);
-  }
-
-var options = {
-    title: 'Error Log Overview',
-    titleTextStyle: {
-        fontName: 'Arial',
-        fontSize: 22, // Set the desired font size for the title
-    },
-    bar: { groupWidth: '85%' },
-    chartArea: { width: '90%', height: '85%' },
-    fontName: 'Arial',
-    fontSize: '14',
-    hAxis: {
-        format: 'MMM yyyy',
-    },
-    legend: { position: 'none' },
-    animation: {
-        duration: 1000,
-        easing: 'in',
-        startup: true
-    },
-    annotations: {
-        textStyle: {
-            fontName: 'Arial',
-            fontSize: 11,
-            color: '#000',
-            auraColor: 'none'
+    var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?> ;
+    // console.log(ChartData);
+    if (!ChartData) {
+        chartDataArray.push(["No Error Log", 0, 0, colorArray[i]]);
+        var max = 90;
+    } else {
+        var max = parseInt(ChartData[0]["TotalValue"]);
+        for (var i = 0; i < ChartData.length; i++) {
+            var row = ChartData[i];
+            if (parseInt(row.TotalValue) > max) {
+                var max = parseInt(row.TotalValue);
+            }
+            var date = new Date(row.Year, row.Month - 1); // Month is 0-based in JavaScript
+            chartDataArray.push([date, parseInt(row.TotalValue), parseInt(row.TotalValue), colorArray[i]]);
         }
-    },
-};
+    }
+    
+    var options = {
+        title: 'Error Log Overview',
+        titleTextStyle: {
+            fontName: 'Arial',
+            fontSize: 22, // Set the desired font size for the title
+        },
+        bar: {
+            groupWidth: '85%'
+        },
+        chartArea: {
+            width: '90%',
+            height: '85%'
+        },
+        fontName: 'Arial',
+        fontSize: '14',
+        hAxis: {
+            format: 'MMM yyyy',
+        },
+        vAxis: {
+            viewWindow: {
+                min: 0, // Minimum value for the V-axis
+                max: max + 10, // Maximum value for the V-axis
+            },
+        },
+        legend: {
+            position: 'none'
+        },
+        animation: {
+            duration: 1000,
+            easing: 'in',
+            startup: true
+        },
+        annotations: {
+            textStyle: {
+                fontName: 'Arial',
+                fontSize: 11,
+                color: '#000',
+                auraColor: 'none'
+            }
+        },
+    };
+    console.log(chartDataArray);
 
-var data = google.visualization.arrayToDataTable(chartDataArray);
+    var data = google.visualization.arrayToDataTable(chartDataArray);
 
-var chart = new google.visualization.ColumnChart(
-  document.getElementById('ColumnChart'));
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById('ColumnChart'));
 
-chart.draw(data, options);
+    chart.draw(data, options);
 }
 
-$('#date').daterangepicker(
-          {
-            ranges   : {
+$('#date').daterangepicker({
+        ranges: {
             //   'Today'       : [moment(), moment()],
             //   'Yesterday'   : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-              'Last 7 Days' : [moment().subtract(6, 'days'), moment()],
-              'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-              'This Month'  : [moment().startOf('month'), moment().endOf('month')],
-              'Last Month'  : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-            },
-            startDate: moment().subtract(29, 'days'),
-            endDate  : moment()
-          },
-          function (start, end, label) {
-            $('#selectedDateRange').val(end.format('YYYY-MM-DD') + '||//' + start.format('YYYY-MM-DD'));
-            $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
-            if (label === 'Custom Range') {
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+        },
+        startDate: moment().subtract(29, 'days'),
+        endDate: moment()
+    },
+    function (start, end, label) {
+        $('#selectedDateRange').val(end.format('YYYY-MM-DD') + '||//' + start.format('YYYY-MM-DD'));
+        $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'))
+        if (label === 'Custom Range') {
             $('#date').html('<i class="far fa-calendar-alt"></i> ' + start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY') + ' <i class="fas fa-caret-down"></i>');
         } else {
             $('#date').html('<i class="far fa-calendar-alt"></i> ' + label + ' <i class="fas fa-caret-down"></i>');
         }
-          }
-    )
+    }
+)
 
 $(document).ready(function () {
-    google.charts.load('current', { packages: ['corechart', 'bar'] });
-    var startDate = moment().subtract(29, 'days');
-    var endDate   = moment();
-    $('#selectedDateRange').val(endDate.format('YYYY-MM-DD') + '||//' + startDate.format('YYYY-MM-DD'));
-
-     $('#date').on('apply.daterangepicker', function (event, picker) {
-        SendData(); // Trigger SendData when the date range changes
+    google.charts.load('current', {
+        packages: ['corechart', 'bar']
     });
-    // Listen for changes in the form elements (warehouse select, etc.)
-    $("form#needs-validation").on("change", "select, input[type='checkbox'], button", function () {
-        SendData(); // Trigger SendData when form elements change
-    });
-
-    $('.dropdown-menu').on('click', function (e) {
-        e.stopPropagation();
-    });
-
     SendData();
-    
+    // var startDate = moment().subtract(29, 'days');
+    // var endDate = moment();
+    // $('#selectedDateRange').val(endDate.format('YYYY-MM-DD') + '||//' + startDate.format('YYYY-MM-DD'));
+
+    // $('#date').on('apply.daterangepicker', function (event, picker) {
+    //     SendData(); // Trigger SendData when the date range changes
+    // });
+  
+    // $("form#needs-validation").on("change", "select, input[type='checkbox'], button", function () {
+    //     SendData();
+    // });
 });
 </script>
