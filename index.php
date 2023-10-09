@@ -114,15 +114,15 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="?module=errorMachine" class="nav-link <?PHP echo $active_errorMachine;?>">
-                                <i class="nav-icon fas fa-truck-loading"></i> 
-                                <p>Machine</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="?module=errorCode" class="nav-link <?PHP echo $active_errorCode;?>">
                                 <i class="nav-icon fas fa-exclamation"></i> 
                                 <p>Error Name/Code</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?module=errorMachine" class="nav-link <?PHP echo $active_errorMachine;?>">
+                                <i class="nav-icon fas fa-truck-loading"></i> 
+                                <p>Machine</p>
                             </a>
                         </li>
                         <li class="nav-item">
