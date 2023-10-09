@@ -1,0 +1,315 @@
+﻿Error History (10/04/2023 00:00-10/04/2023 22:59 Area:AS/RS)
+Date/Time, Control WCS, Control CELL, Machine, Position, Transport Data Total, Error Code, Error Name, Transfer Equipment #, Cycle, Destination, Development #, Image Index #, Additional Info 1, Additional Info 2, Additional Info 3, Transport ID, Transport ID Details 1, Transport ID Details 2, Request ID, Data Type, Transport Type, Source Location, Source Transport Details, Source Display Info, Source Merge Info, Destination Location, Sub-Destination Location, Destination Transport Details, Destination Display Info, Destination Divert Info, Destination Load Forced Removal Permission, Final Destination Location, Transport Direction, Group #, Group Control Key, Load Size Info (Height), Load Size Info (Width), Load Size Info (Length), Load Size Info (Other), Weight, Barcode Data, Operation #, Control Info, Current Position Device #, Transport Key, Scheduled Location (Primary), Scheduled Location (Secondary), Determined Location #, Secondary Determined Location # 1, Secondary Determined Location # 2, Secondary Determined Location # 3, Secondary Determined Location # 4, Destination Location #, Determined Destination Outcome, Load Status, Final Load Status, Transport Starting Location, Transport Start Date/Time, Control Load Height, Pulse Value, Development #, Load Width, Load Length, Load Height, Load Weight, Barcode Sorting Outcome, Transport Data Control Info, Load Size Check Flag, Divert Control Info, Barcode Sorting Info, IJP Print Info, Group #, Load Status 2, Tracking Control Info Index, WCS Operation Management #1, WCS Operation Management #2, Operation Type, BCR # (for DB), Divert Control Info (for DB)
+10/04/2023 22:28:54,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476723,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004342,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 20:56:02,AGCA01,-,SSA001,10305,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Pickup,A01014,-,-,-,-,-,476612,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000013382,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 19:13:30,AGCA01,-,A01006,,1,1032016,Load presence error when releasing,--,Transport Request,,-,-,-,-,-,476426,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000016932,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 19:05:14,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476472,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019227,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 19:04:33,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476472,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019227,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:59:47,AGCA01,-,A01004,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476479,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014323,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:59:27,AGCA01,-,A01004,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476479,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014323,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:57:06,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-,476472,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019227,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:57:06,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 18:57:06,AGCA01,-,A01010,,1,1217771,Protrusion detection error,--,Transport Request,,-,-,-,-,-,476474,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014688,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:57:06,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Release Off,,-,-,-,-,-
+10/04/2023 18:57:06,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 18:57:06,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 18:56:38,AGCA01,-,A01013,,1,1217771,Protrusion detection error,--,Release On,,-,-,-,-,-,476472,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019227,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:56:38,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 18:56:38,AGCA01,-,A01022,,1,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-,476472,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019227,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:56:38,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Waiting for Pickup Completion,,-,-,-,-,-,476470,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000011658,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:56:38,AGCA01,-,A01010,,1,1217771,Protrusion detection error,--,Transport Request,,-,-,-,-,-,476474,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014688,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:56:38,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 18:55:16,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476470,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000011658,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:53:48,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476470,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000011658,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:51:19,AGCA01,-,AA0101,,1,1217765,Approach Detection Sensor Error,--,Transport Request,,-,-,-,-,-,476420,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008481,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:50:33,AGCA01,-,A01020,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 18:50:33,AGCA01,-,SRMA001,102,1,1030011,External emergency stop 1,Fork 1,Deposit,AA0101,-,-,-,-,-,476423,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000009727,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:49:46,AGCA01,-,AA0101,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,476420,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008481,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:48:58,AGCA01,-,SRMA001,103,1,1114201,TRNS1 Location occupied: P/D station,Fork 1,Deposit,AA0101,-,-,-,-,-,476423,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000009727,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:48:16,AGCA01,-,SRMA001,103,1,1114201,TRNS1 Location occupied: P/D station,Fork 1,Deposit,AA0101,-,-,-,-,-,476423,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000009727,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:47:30,AGCA01,-,AA0101,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,476420,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008481,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:46:27,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476451,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000010281,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:45:13,AGCA01,-,AA0101,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,476420,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008481,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:43:41,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476417,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004904,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:43:21,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476417,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004904,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:42:53,AGCA01,-,AA0101,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,476420,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008481,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:40:20,AGCA01,-,AA0101,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,476420,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008481,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:37:00,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476415,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000009446,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:34:38,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476415,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000009446,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:28:25,AGCA01,-,AA0101,,1,1217765,Approach Detection Sensor Error,--,Transport Request,,-,-,-,-,-,476421,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000013326,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:27:51,AGCA01,-,AA0202,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 18:27:51,AGCA01,-,A01017,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 18:27:34,AGCA01,-,A01020,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 18:27:34,AGCA01,-,SRMA001,104,1,1030011,External emergency stop 1,Fork 1,Deposit,AA0101,-,-,-,-,-,476422,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000018573,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:12:02,AGCA01,-,A01001,,1,1032005,Load presence error 2,--,Release On,,-,-,-,-,-,476461,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:04:49,AGCA01,-,AA0101,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,476421,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000013326,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 18:04:32,AGCA01,-,SRMA001,103,1,1114201,TRNS1 Location occupied: P/D station,Fork 1,Deposit,AA0101,-,-,-,-,-,476422,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000018573,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 17:28:52,AGCA01,-,SSA002,18681,1,1540163,Interval MON lack of distance (following in OP),Fork 1,Deposit,A01009,-,-,-,-,-,476368,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004564,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 17:12:44,AGCA01,-,SRMA001,102,1,1116873,Pick-up OK ON time-out: Right P/D,Fork 1,Pickup,AA0102,-,-,-,-,-,476351,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000009467,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 17:10:58,AGCA01,-,SSA001,29735,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Deposit,A01019,-,-,-,-,-,476353,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000007549,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 16:57:20,AGCA01,-,SRMA001,633,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,R-SRA001-002-079-008,-,-,-,-,-,476303,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000018847,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 16:56:24,AGCA01,-,A01020,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 16:56:24,AGCA01,-,SRMA001,633,1,1030011,External emergency stop 1,Fork 1,Pickup,R-SRA001-002-079-008,-,-,-,-,-,476303,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000018847,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 16:56:24,AGCA01,-,AA0101,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 16:44:41,AGCA01,-,SRMA001,633,1,1030019,HP-side maintenance door 1,Fork 1,Pickup,R-SRA001-002-079-008,-,-,-,-,-,476303,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000018847,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 16:32:14,AGCA01,-,SRMA001,103,1,1116878,Deposit OK ON time-out: Left P/D,Fork 1,Deposit,AA0101,-,-,-,-,-,476298,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000007636,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 16:28:49,AGCA01,-,AA0101,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,476292,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004867,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 15:37:28,AGCA01,-,AA0102,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 15:27:15,AGCA01,-,SRMA001,101,0,1030011,External emergency stop 1,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:26:45,AGCA01,-,SRMA001,101,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:25:53,AGCA01,-,SRMA001,77028,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:24:17,AGCA01,-,SRMA001,134182,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:23:31,AGCA01,-,SRMA003,97,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,AA0302,-,-,-,-,-,476170,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000002112,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 15:21:33,AGCA01,-,SRMA001,112183,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:17:56,AGCA01,-,SRMA001,109446,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:16:36,AGCA01,-,AA0202,,1,1032005,Load presence error 2,--,Waiting for Pickup Completion,,-,-,-,-,-,476152,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000005511,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 15:16:26,AGCA01,-,SRMA001,109447,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:14:43,AGCA01,-,SRMA002,97,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,AA0202,-,-,-,-,-,476152,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000005511,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 15:14:03,AGCA01,-,SRMA001,107974,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:11:06,AGCA01,-,SRMA001,94210,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:09:04,AGCA01,-,SRMA001,84651,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:08:13,AGCA01,-,SRMA001,83193,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:03:38,AGCA01,-,SRMA001,83194,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 15:02:06,AGCA01,-,SRMA001,80405,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:59:50,AGCA01,-,SRMA001,79107,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:57:22,AGCA01,-,A01005,,1,1032005,Load presence error 2,--,Transport Arrival,,-,-,-,-,-,476124,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000003125,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 14:56:02,AGCA01,-,SRMA001,73594,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:54:18,AGCA01,-,SRMA001,70838,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:53:20,AGCA01,-,SRMA001,72349,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:52:51,AGCA01,-,SRMA001,72144,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:50:35,AGCA01,-,SRMA001,72145,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:50:08,AGCA01,-,SRMA001,72145,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:48:10,AGCA01,-,SRMA001,69368,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:47:28,AGCA01,-,SRMA001,63876,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:44:44,AGCA01,-,SRMA001,50139,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:42:14,AGCA01,-,SRMA001,33611,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:40:04,AGCA01,-,SRMA001,32307,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:38:39,AGCA01,-,SRMA001,22605,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:38:05,AGCA01,-,SRMA001,22605,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:35:12,AGCA01,-,SRMA001,14329,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:33:36,AGCA01,-,SRMA001,11585,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:32:56,AGCA01,-,SRMA001,13044,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:29:53,AGCA01,-,SRMA001,8797,0,1115021,TRNS1: Excess load height,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:28:50,AGCA01,-,SRMA001,10258,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:26:13,AGCA01,-,SRMA001,10259,0,1115004,Load profile error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:26:09,AGCA01,-,A01014,,1,1030072,No alternative transport destination,--,Waiting for Pickup Completion,,-,-,-,-,-,476104,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014831,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 14:22:11,AGCA01,-,SRMA001,102,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:21:19,AGCA01,-,SRMA001,101,0,1115102,TRNS1 load protrusion error: Stopped,--,No Cycle,,-,-,-,-,-
+10/04/2023 14:02:17,AGCA01,-,A01014,,1,1217300,Load Presence Undetected When Lifted 1,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 14:02:17,AGCA01,-,A01022,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:17,AGCA01,-,A01012,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:17,AGCA01,-,A01010,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:17,AGCA01,-,A01011,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:17,AGCA01,-,A01013,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:16,AGCA01,-,A01014,,1,1217300,Load Presence Undetected When Lifted 1,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 14:02:16,AGCA01,-,A01022,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:16,AGCA01,-,A01012,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:16,AGCA01,-,A01010,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:16,AGCA01,-,A01013,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:16,AGCA01,-,A01011,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:08,AGCA01,-,A01014,,1,1217300,Load Presence Undetected When Lifted 1,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 14:02:08,AGCA01,-,A01022,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:08,AGCA01,-,A01011,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:08,AGCA01,-,A01013,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:08,AGCA01,-,A01012,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:02:08,AGCA01,-,A01010,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 14:00:26,AGCA01,-,SRMA001,543,0,1030019,HP-side maintenance door 1,--,No Cycle,,-,-,-,-,-
+10/04/2023 13:59:49,AGCA01,-,SRMA001,544,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+10/04/2023 13:59:44,AGCA01,-,A01014,,1,1217300,Load Presence Undetected When Lifted 1,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:59:44,AGCA01,-,A01013,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 13:59:44,AGCA01,-,A01022,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 13:59:44,AGCA01,-,A01010,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 13:59:44,AGCA01,-,A01011,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 13:59:44,AGCA01,-,A01012,,0,1217300,Load Presence Undetected When Lifted 1,--,Standby,,-,-,-,-,-
+10/04/2023 13:58:54,AGCA01,-,SSA002,6307,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Deposit,A01009,-,-,-,-,-,475970,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000006620,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:58:50,AGCA01,-,A01014,,1,1217002,Emergency Stop,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:58:50,AGCA01,-,A01022,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:58:50,AGCA01,-,A01013,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:58:50,AGCA01,-,A01010,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:58:50,AGCA01,-,A01011,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:58:50,AGCA01,-,A01012,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:57:42,AGCA01,-,A01008,,1,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:57:42,AGCA01,-,A01009,,0,1217765,Approach Detection Sensor Error,--,Release Off,,-,-,-,-,-
+10/04/2023 13:57:42,AGCA01,-,A01021,,1,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:57:42,AGCA01,-,A01007,,1,1217765,Approach Detection Sensor Error,--,Transport Request,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:57:42,AGCA01,-,A01005,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 13:57:42,AGCA01,-,A01006,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:30,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:56:30,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:30,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:30,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:30,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:30,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:02,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:56:02,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:02,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:02,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:02,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:56:02,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:55:04,AGCA01,-,A01007,,1,1217120,Transport 1 time-out,--,Transport Request,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:55:04,AGCA01,-,A01006,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:55:04,AGCA01,-,A01009,,0,1217120,Transport 1 time-out,--,Release Off,,-,-,-,-,-
+10/04/2023 13:55:04,AGCA01,-,A01021,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:55:04,AGCA01,-,A01008,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:55:04,AGCA01,-,A01005,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:54:33,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:54:33,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:54:33,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:54:33,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:54:33,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:54:33,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:54:20,AGCA01,-,SSA002,6307,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Deposit,A01009,-,-,-,-,-,475970,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000006620,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:53:47,AGCA01,-,A01014,,1,1217002,Emergency Stop,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:53:47,AGCA01,-,A01013,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:53:47,AGCA01,-,A01022,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:53:47,AGCA01,-,A01012,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:53:47,AGCA01,-,A01011,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:53:47,AGCA01,-,A01010,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:53:43,AGCA01,-,A01008,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:53:43,AGCA01,-,A01009,,0,1217120,Transport 1 time-out,--,Release Off,,-,-,-,-,-
+10/04/2023 13:53:43,AGCA01,-,A01021,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:53:43,AGCA01,-,A01007,,1,1217120,Transport 1 time-out,--,Transport Request,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:53:43,AGCA01,-,A01006,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:53:43,AGCA01,-,A01005,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:52:25,AGCA01,-,A01008,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:52:25,AGCA01,-,A01009,,0,1217120,Transport 1 time-out,--,Release Off,,-,-,-,-,-
+10/04/2023 13:52:25,AGCA01,-,A01021,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:52:25,AGCA01,-,A01007,,1,1217120,Transport 1 time-out,--,Transport Request,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:52:25,AGCA01,-,A01005,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:52:25,AGCA01,-,A01006,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:54,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:51:54,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:54,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:54,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Destination Request,,-,-,-,-,-
+10/04/2023 13:51:54,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:54,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:10,AGCA01,-,A01014,,1,1217002,Emergency Stop,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:51:10,AGCA01,-,A01010,,0,1217002,Emergency Stop,--,Destination Request,,-,-,-,-,-
+10/04/2023 13:51:10,AGCA01,-,A01011,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:10,AGCA01,-,A01013,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:10,AGCA01,-,A01012,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:51:10,AGCA01,-,A01022,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 13:50:28,AGCA01,-,A01007,,1,1217120,Transport 1 time-out,--,Transport Request,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:50:28,AGCA01,-,A01006,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:50:28,AGCA01,-,A01009,,0,1217120,Transport 1 time-out,--,Release Off,,-,-,-,-,-
+10/04/2023 13:50:28,AGCA01,-,A01021,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:50:28,AGCA01,-,A01008,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:50:28,AGCA01,-,A01005,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:49:54,AGCA01,-,A01014,,1,1217765,Approach Detection Sensor Error,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:49:54,AGCA01,-,A01022,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 13:49:54,AGCA01,-,A01013,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 13:49:54,AGCA01,-,A01010,,0,1217765,Approach Detection Sensor Error,--,Destination Request,,-,-,-,-,-
+10/04/2023 13:49:54,AGCA01,-,A01011,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 13:49:54,AGCA01,-,A01012,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 13:46:44,AGCA01,-,SSA002,6307,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Deposit,A01009,-,-,-,-,-,475970,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000006620,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:46:40,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Waiting for Pickup Completion,,-,-,-,-,-,476056,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014013,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:46:40,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:46:40,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:46:40,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:46:40,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Destination Request,,-,-,-,-,-
+10/04/2023 13:46:40,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 13:43:11,AGCA01,-,A01007,,1,1217120,Transport 1 time-out,--,Transport Request,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:43:11,AGCA01,-,A01009,,0,1217120,Transport 1 time-out,--,Release Off,,-,-,-,-,-
+10/04/2023 13:43:11,AGCA01,-,A01021,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:43:11,AGCA01,-,A01008,,1,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:43:11,AGCA01,-,A01005,,1,1217120,Transport 1 time-out,--,Transport Arrival,,-,-,-,-,-,475966,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000005397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:43:11,AGCA01,-,A01006,,0,1217120,Transport 1 time-out,--,Standby,,-,-,-,-,-
+10/04/2023 13:40:32,AGCA01,-,A01008,,1,1217765,Approach Detection Sensor Error,--,Release On,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:32,AGCA01,-,A01021,,1,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:32,AGCA01,-,A01009,,1,1217765,Approach Detection Sensor Error,--,Release On,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:32,AGCA01,-,A01005,,1,1217765,Approach Detection Sensor Error,--,Transport Arrival,,-,-,-,-,-,475968,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000002867,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:32,AGCA01,-,A01007,,0,1217765,Approach Detection Sensor Error,--,Release Off,,-,-,-,-,-
+10/04/2023 13:40:32,AGCA01,-,A01006,,1,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-,475966,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000005397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:15,AGCA01,-,A01006,,1,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-,475966,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000005397,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:15,AGCA01,-,A01007,,0,1217765,Approach Detection Sensor Error,--,Release Off,,-,-,-,-,-
+10/04/2023 13:40:15,AGCA01,-,A01021,,1,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:15,AGCA01,-,A01009,,1,1217765,Approach Detection Sensor Error,--,Release On,,-,-,-,-,-,475964,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008109,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:15,AGCA01,-,A01008,,1,1217765,Approach Detection Sensor Error,--,Release On,,-,-,-,-,-,475969,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000004199,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:40:15,AGCA01,-,A01005,,1,1217765,Approach Detection Sensor Error,--,Transport Arrival,,-,-,-,-,-,475968,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000002867,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:21:31,AGCA01,-,AA0302,,1,1032005,Load presence error 2,--,Waiting for Pickup Completion,,-,-,-,-,-,476015,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000003910,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 13:19:37,AGCA01,-,SRMA003,95,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,AA0302,-,-,-,-,-,476015,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000003910,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 12:13:04,AGCA01,-,A01018,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 12:13:04,AGCA01,-,AA0201,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 12:13:02,AGCA01,-,SRMA003,519,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+10/04/2023 12:12:37,AGCA01,-,SRMA003,519,0,1030070,Main unit communication error,--,No Cycle,,-,-,-,-,-
+10/04/2023 11:31:46,AGCA01,-,AA0202,,1,1032005,Load presence error 2,--,Waiting for Pickup Completion,,-,-,-,-,-,475889,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019423,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 11:29:53,AGCA01,-,SRMA002,100,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,AA0202,-,-,-,-,-,475889,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000019423,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 10:56:08,AGCA01,-,AA0301,,1,1032005,Load presence error 2,--,Transport Request,,-,-,-,-,-,475859,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000011983,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 10:03:56,AGCA01,-,AA0301,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 10:03:56,AGCA01,-,A01016,,0,1217765,Approach Detection Sensor Error,--,Standby,,-,-,-,-,-
+10/04/2023 10:03:56,AGCA01,-,SRMA003,96,1,1030011,External emergency stop 1,Fork 1,Pickup,AA0302,-,-,-,-,-,475777,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000010321,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 09:58:50,AGCA01,-,AA0302,,1,1032005,Load presence error 2,--,Waiting for Pickup Completion,,-,-,-,-,-,475777,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000010321,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 09:56:56,AGCA01,-,SRMA003,97,1,1115102,TRNS1 load protrusion error: Stopped,Fork 1,Pickup,AA0302,-,-,-,-,-,475777,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000010321,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 08:31:45,AGCA01,-,SRMA001,-8,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+10/04/2023 08:31:08,AGCA01,-,SRMA001,-8,0,1030002,Key switch off error,--,No Cycle,,-,-,-,-,-
+10/04/2023 08:30:53,AGCA01,-,A01014,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 08:30:53,AGCA01,-,A01013,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 08:30:53,AGCA01,-,A01022,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 08:30:53,AGCA01,-,A01012,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 08:30:53,AGCA01,-,A01011,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 08:30:53,AGCA01,-,A01010,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 08:13:03,AGCA01,-,SRMA001,544,0,1113014,Optical data transmission level dropped,--,No Cycle,,-,-,-,-,-
+10/04/2023 06:01:55,AGCA01,-,A01021,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 06:01:55,AGCA01,-,A01009,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 06:01:55,AGCA01,-,A01008,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 06:01:55,AGCA01,-,A01007,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 06:01:55,AGCA01,-,A01006,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 06:01:55,AGCA01,-,A01005,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:46:14,AGCA01,-,A01008,,0,1032002,Load presence error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:41:46,AGCA01,-,A01008,,1,1032002,Load presence error 1,--,Standby,,-,-,-,-,-,475667,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000002509,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 05:38:27,AGCA01,-,A01021,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 05:38:27,AGCA01,-,A01005,,0,1217002,Emergency Stop,--,Release Off,,-,-,-,-,-
+10/04/2023 05:38:27,AGCA01,-,A01009,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 05:38:27,AGCA01,-,A01007,,0,1217002,Emergency Stop,--,Standby,,-,-,-,-,-
+10/04/2023 05:38:27,AGCA01,-,A01008,,0,1032002,Load presence error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:38:27,AGCA01,-,A01006,,1,1032002,Load presence error 1,--,Standby,,-,-,-,-,-,475707,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 05:33:52,AGCA01,-,A01008,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:52,AGCA01,-,A01009,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:52,AGCA01,-,A01021,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:52,AGCA01,-,A01007,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:52,AGCA01,-,A01006,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:52,AGCA01,-,A01005,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:37,AGCA01,-,A01009,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:37,AGCA01,-,A01021,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:37,AGCA01,-,A01008,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:37,AGCA01,-,A01007,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:37,AGCA01,-,A01005,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 05:33:37,AGCA01,-,A01006,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 03:09:49,AGCA01,-,A01022,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 03:09:49,AGCA01,-,A01013,,0,1217530,Rotating Device Protrusion Error 1,--,Release Off,,-,-,-,-,-
+10/04/2023 03:09:49,AGCA01,-,A01014,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 03:09:49,AGCA01,-,A01011,,1,1217530,Rotating Device Protrusion Error 1,--,Transport Request,,-,-,-,-,-,475554,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000003639,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 03:09:49,AGCA01,-,A01010,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 03:09:49,AGCA01,-,A01012,,1,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-,475568,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000002351,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 03:09:05,AGCA01,-,A01012,,1,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-,475568,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000002351,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 03:09:05,AGCA01,-,A01014,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 03:09:05,AGCA01,-,A01013,,0,1217530,Rotating Device Protrusion Error 1,--,Release Off,,-,-,-,-,-
+10/04/2023 03:09:05,AGCA01,-,A01022,,0,1217530,Rotating Device Protrusion Error 1,--,Standby,,-,-,-,-,-
+10/04/2023 03:09:05,AGCA01,-,A01010,,1,1217530,Rotating Device Protrusion Error 1,--,Transport Arrival,,-,-,-,-,-,475552,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000002113,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 03:09:05,AGCA01,-,A01011,,1,1217530,Rotating Device Protrusion Error 1,--,Transport Request,,-,-,-,-,-,475554,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000003639,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 02:53:59,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:53:59,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:53:59,AGCA01,-,A01014,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:53:59,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:53:59,AGCA01,-,A01010,,1,1217771,Protrusion detection error,--,Transport Arrival,,-,-,-,-,-,475548,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000010171,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 02:53:59,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:48:25,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-,475545,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008019,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 02:48:25,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:48:25,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:48:25,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:48:25,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:48:25,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:47:57,AGCA01,-,A01014,,1,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-,475545,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000008019,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 02:47:57,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:47:57,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:47:57,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:47:57,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:47:57,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:46:23,AGCA01,-,A01022,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:46:23,AGCA01,-,A01013,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:46:23,AGCA01,-,A01014,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:46:23,AGCA01,-,A01012,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:46:23,AGCA01,-,A01011,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:46:23,AGCA01,-,A01010,,0,1217771,Protrusion detection error,--,Standby,,-,-,-,-,-
+10/04/2023 02:19:22,AGCA01,-,SSA002,6307,1,1035509,Transfer retry count exceeded: Main unit,Fork 1,Deposit,A01009,-,-,-,-,-,475524,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000018818,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+10/04/2023 02:15:35,AGCA01,-,A01005,,1,1032005,Load presence error 2,--,Transport Arrival,,-,-,-,-,-,475523,1,,,Online Data,,,,,,,,,,,,,,0,,0 ,0 ,0 ,0    ,0.000,P000014964,,,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
