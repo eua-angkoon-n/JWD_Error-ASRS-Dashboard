@@ -39,7 +39,7 @@ switch ($module) {
     case "errorLog" :
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorLog";
-        $module == "errorLog" || $module == "" ? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
+        $module == "errorLog"? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
       break;
     default:
         $include_module = __DIR__ . "/module/main.inc.php";

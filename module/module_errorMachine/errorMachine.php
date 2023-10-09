@@ -304,7 +304,7 @@ Class ErrorMachine_Total
         }
         $sql .= "GROUP BY `Machine` ";
         $sql .= "ORDER BY count DESC ";
-        $sql .= "LIMIT 10";
+        $sql .= "LIMIT 7";
         
         $con  = connect_database();
         $obj  = new CRUD($con);
@@ -373,7 +373,7 @@ Class ErrorMachine_Total
             
             
                 var options = {
-                    title: 'Top 10 Error Machine',
+                    title: 'Top 7 Error Machine',
                     bar: { groupWidth: '85%' },
                     chartArea: { width: '90%', height: '80%' },
                     fontName: 'Arial',

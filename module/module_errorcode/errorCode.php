@@ -325,7 +325,7 @@ Class ErrorCode_Total
         }
         $sql .= "GROUP BY `Error Name`, `Error Code` ";
         $sql .= "ORDER BY count DESC ";
-        $sql .= "LIMIT 5";
+        $sql .= "LIMIT 7";
 
         $con = connect_database();
         $obj = new CRUD($con);
@@ -361,7 +361,7 @@ Class ErrorCode_Total
         }
         $this->errorCode = $errorCode;
         return $addRow;
-    } 
+    }
     public function barWidth(){
         $wh = $this->errorCode;
         if ($wh < 2)
@@ -384,9 +384,8 @@ Class ErrorCode_Total
                       $row
                       ]);
             
-            
                 var options = {
-                    title: 'Total Error Code/Name',
+                    title: 'Top 7 Error Code/Name',
                     bar: { groupWidth: '85%' },
                     chartArea: { width: '90%', height: '80%' },
                     fontName: 'Arial',
