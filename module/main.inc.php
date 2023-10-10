@@ -9,7 +9,7 @@ $thisCard = $card -> getCard();
 <section class="content">
     <div class="card">
         <div class="card-header">
-            <h6 class="display-8 d-inline-block font-weight-bold"><i class="fas fa-chart-bar"></i>
+            <h6 class="display-8 d-inline-block font-weight-bold"><i class="fas fa-chalkboard"></i>
                 <?PHP echo $title_act; ?>
             </h6>
             <div class="card-tools">
