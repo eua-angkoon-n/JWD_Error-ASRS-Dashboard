@@ -5,8 +5,11 @@ class Setting
     public static $DefaultProvinceTH = 'สมุทรสาคร';
     public static $DefaultProvince = 'Samut Sakhon';
     public static $SiteList = array('PCS', 'JPK', 'JPAC', 'PACM', 'PLP', 'PACS', 'PACA', 'PACT');
+    public static $classArr = array(0=> "ไม่พบข้อมูล", 1 => "ผู้ใช้ระบบ", 2 => "ช่างซ่อม", 3 => "หัวหน้าช่าง", 4=>"ผู้บริหาร", 5=>"ผู้จัดการระบบ");	
+    public static $keygen = 'Pcs@'; //sha1+password
     public static $title_site = array
     (
+        "login" => "Error ASRS Login",
         "DashBoard" => "Error ASRS Dashboard",
         "errorLog" => "Warehouse Error ASRS", 
         "errorMachine" => "Error ASRS | Error Machine",

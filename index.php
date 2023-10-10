@@ -10,6 +10,13 @@ require_once __DIR__ . '/include/timer.inc.php';
 
 header('Content-Type: text/html; charset=utf-8');
 date_default_timezone_set(Setting::$AppTimeZone);
+
+if(empty($_SESSION['sess_id_user'])){ 
+    $_SESSION = []; //empty array. 
+    session_destroy(); 
+    die(include('login.php')); 
+}
+
 $Time = new Processing;
 $start = $Time->Start_Time();
 
@@ -40,6 +47,9 @@ switch ($module) {
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorLog";
         $module == "errorLog"? $active_errorlog = "active" : $active_errorlog = ""; #ไฮไลท์เมนูด้านซ้าย
+      break;
+    case 'logout':
+        include('logout.php');
       break;
     default:
         $include_module = __DIR__ . "/module/main.inc.php";
@@ -83,19 +93,19 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
             <!-- Sidebar -->
             <div class="sidebar"><br><br>
                 <!-- Sidebar user panel (optional) -->
-                <!-- <div class="user-panel mt-3 pb-1 mb-3 d-flex">
+                <div class="user-panel mt-3 pb-1 mb-3 d-flex">
                     <div class="image">
                         <img src="dist/img/user2-160x160.png" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">
-                            <?PHP echo "ยังไม่เสร็จ _SESSION['sess_fullname']"; ?></a>
+                            <?PHP echo $_SESSION['sess_fullname']; ?></a>
                         <span class="text-white">ระดับ:
-                            <?PHP echo "ยังไม่เสร็จ classArr[_SESSION['sess_class_user']];" ?> /
-                            <?PHP echo "ยังไม่เสร็จ _SESSION['sess_dept_initialname'];" ?></span>
-                        <a href="?module=profile" class="d-block text-yellow">[แก้ไขข้อมูลส่วนตัว]</a>
+                            <?PHP echo Setting::$classArr[$_SESSION['sess_class_user']]; ?> /
+                            <?PHP echo $_SESSION['sess_dept_initialname']; ?></span>
+                        <!-- <a href="?module=profile" class="d-block text-yellow">[แก้ไขข้อมูลส่วนตัว]</a> -->
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Sidebar Menu active-->
                 <nav class="mt-3">
@@ -131,12 +141,12 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                                 <p>Error Log Details</p>
                             </a>
                         </li>
-                        <!-- <li class="nav-item">
+                        <li class="nav-item">
                             <a href="?module=logout" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
                                 <p>Logout</p>
                             </a>
-                        </li> -->
+                        </li>
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>
                         <li>&nbsp;</li>

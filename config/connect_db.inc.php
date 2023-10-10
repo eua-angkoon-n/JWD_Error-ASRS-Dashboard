@@ -1,21 +1,27 @@
 <?php
 require_once __DIR__. '/../config/mysecret.php';
 
-function connect_database()
+function connect_database($DBMode = "")
 {
   $con = MySecret::$conNow;
   switch($con){
     case 'db':
+      if($DBMode == "login")
+        $database = MySecret::$dbDatabaseLogin;
+      else
+        $database = MySecret::$dbDatabase;
       $user = MySecret::$dbUser;
       $password =  MySecret::$dbPass;
-      $database = MySecret::$dbDatabase;
       $host = MySecret::$dbHost;
       $port = MySecret::$dbPort;
       break;
     case 'local';
+      if($DBMode == "login")
+        $database = MySecret::$dbDatabaseLogin;
+      else
+        $database = MySecret::$LocalDatabase;
       $user = MySecret::$LocalUser;
       $password =  MySecret::$LocalPass;
-      $database = MySecret::$LocalDatabase;
       $host = MySecret::$LocalHost;
       $port = MySecret::$LocalPort;
       break;
