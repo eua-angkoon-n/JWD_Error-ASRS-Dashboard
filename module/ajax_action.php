@@ -5,6 +5,8 @@ require_once __DIR__ . "/module_errorMachine/errorMachine.php";
 require_once __DIR__ . "/module_errorMachine/errorMachine.php";
 require_once __DIR__ . "/module_mainDB/mainDashboard.php";
 
+require_once __DIR__ . "/../login.class.php";
+
 require_once __DIR__ . "/../config/connect_db.inc.php";
 require_once __DIR__ . "/../include/class_crud.inc.php";
 
@@ -17,15 +19,17 @@ if (isset($_POST['action'])) {
         echo $result; exit;
     }
     // Check the value of the "action" parameter
-    $getAction = new getAction($_POST['data']);
-    $getAction->getData(
-        $wh,
-        $date,
-        $newDate,
-        $arrWH,
-        $machine,
-        $nameCode
-    );
+    if($action != "register_user"){
+        $getAction = new getAction($_POST['data']);
+        $getAction->getData(
+            $wh,
+            $date,
+            $newDate,
+            $arrWH,
+            $machine,
+            $nameCode
+        );
+    }
     switch ($action){
         case 'DashBoard':
             $result = array();
@@ -56,6 +60,11 @@ if (isset($_POST['action'])) {
             $Ct2Result = new ErrorMachine($wh,$newDate,$machine);
             $result   .= $Ct2Result->getChart();
             print_r($result);
+            break;
+        case "register_user":
+            $Call = new Register($_POST['data']);
+            $result = $Call->getIDRegister();
+            print_r($result);            
             break;
         case 'errorDetails':
             

@@ -7,6 +7,7 @@ require_once (__DIR__ . '/login.class.php');
 
 $Call = new Login();
 $Site = $Call->getSite();
+$Dept = $Call->getDept();
 ?>
 
 <!DOCTYPE html>
@@ -75,7 +76,7 @@ $Site = $Call->getSite();
                                 <label for="slt_regis_dept">แผนกของคุณ:</label><br />
                                 <select class="custom-select" id="slt_regis_dept" name="slt_regis_dept" required>
                                     <option value="0">เลือกแผนก</option>
-                                    <?PHP  ?>
+                                    <?PHP echo $Dept; ?>
                                 </select>
                             </div>
 
@@ -105,19 +106,19 @@ $Site = $Call->getSite();
                             </div>
 
                             <div class="form-group">
-                                <label for="slt_manage_site">Site Location:</label> <br />
+                                <label for="slt_manage_site">ไซต์ที่งาน:</label> <br />
                                 <select class="custom-select custom-select-md rounded-3" id="slt_manage_site"
                                     name="slt_manage_site" style="width:260px;">
-                                    <option value="0">Select Site</option>
+                                    <option value="0">เลือกไซต์งาน</option>
                                     <?PHP echo $Site; ?>
                                 </select>
                             </div>
 
                             <div class="form-group m-0">
-                                <button type="submit" class="btn btn-primary btn-block" id="chk_login">Sign In</button>
+                                <button type="submit" class="btn btn-primary btn-block" id="chk_login">เข้าระบบ</button>
                             </div>
                             <div class="mt-4 text-center"><a href="#" class="btn-register text-pimary"><i
-                                        class="fas fa-user-plus"></i> Sign Up</a></div>
+                                        class="fas fa-user-plus"></i>คลิกที่นี่เพื่อลงทะเบียนใช้งาน</a></div>
                         </form>
                     </div>
                 </div>
@@ -178,7 +179,7 @@ $(document).ready(function () { //When the page has loaded
     }else{
         var frmData = $("form#frm_register").serialize();
         $.ajax({
-        url: "module/module_user/ajax_action.php",
+        url: "module/ajax_action.php",
         type: "POST",
         data: {'action':'register_user', data:frmData},
         success: function (data) {

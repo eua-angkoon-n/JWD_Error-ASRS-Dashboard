@@ -47,6 +47,4 @@ function connect_database($DBMode = "")
     die();
   }
 }
-
-
 ?>    
