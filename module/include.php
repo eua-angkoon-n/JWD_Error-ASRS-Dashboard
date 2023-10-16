@@ -12,6 +12,7 @@
 <!-- HTML2 Canvas -->
 <script src="plugins/html2canvas/html2canvas.js"></script>
 <script src="plugins/html2canvas/html2canvas.min.js"></script>
+
 <script src="plugins/autoNumeric/autoNumeric.js"></script>
 
 <!-- InputMask -->

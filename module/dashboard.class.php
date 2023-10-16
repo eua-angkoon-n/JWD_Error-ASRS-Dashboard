@@ -1,4 +1,6 @@
 <?php 
+require_once __DIR__ . "/../config/mysecret.php";
+
 require_once __DIR__ . "/../config/connect_db.inc.php";
 require_once __DIR__ . "/../include/class_crud.inc.php";
 require_once __DIR__ . "/../include/function.inc.php";
@@ -127,13 +129,13 @@ class mainBoard {
                                     <div class="card-header ">
                                         <h2 style="font-size:2rem"><strong>'.$name.'</strong></h2>
                                     </div>
-                                <div class="card-body text-right">
-                                    <h1 class="d-inline" id="'.$wh.'" style="font-size:3.5rem">0</h1>
-                                    <h3 class="d-inline">&nbsp;Error</h3><br>
-                                    <h6 class="d-inline"style="font-size:0.8rem">Last Modified </h6><br>
-                                    <h6 class="d-inline" >'.$last[$wh]['time'].'</h6><br>
-                                    <h6 class="d-inline"style="font-size:0.8rem">'.str_replace("/","",$last[$wh]['name']).'</h6>
-                                </div>
+                                    <div class="card-body text-right">
+                                        <h1 class="d-inline" id="'.$wh.'" style="font-size:3.5rem">0</h1>
+                                        <h3 class="d-inline">&nbsp;Error</h3><br>
+                                        <h6 class="d-inline"style="font-size:0.8rem">Last Modified </h6><br>
+                                        <h6 class="d-inline" >'.$last[$wh]['time'].'</h6><br>
+                                        <h6 class="d-inline"style="font-size:0.8rem">'.str_replace("/","",$last[$wh]['name']).'</h6>
+                                    </div>
                                 </div>
                             </div>
                         </div>';
@@ -217,9 +219,6 @@ class mainBoard {
             }
         }
     }
-
-
 }
-
 
 ?>

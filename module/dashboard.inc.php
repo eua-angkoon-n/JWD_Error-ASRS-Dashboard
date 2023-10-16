@@ -84,13 +84,18 @@ $nameCode = $SelectBar->getErrorNameNCode();
                                 <?php } ?> 
 
                                 <label>Date:</label> &nbsp;
-                                <div class="date">
+                                <div class="date mr-2">
                                     <button type="button" class="btn btn-default" id="date" name="date">
                                         <i class="far fa-calendar-alt"></i>
                                         Last 30 Days
                                         <i class="fas fa-caret-down"></i>
                                     </button>
                                 </div>
+                                <button
+                                    class="btn btn-sm btn-secondary buttons-excel buttons-html5 btn-export mt-1 mb-1"
+                                    type="button">
+                                    <i class="fas fa-download"></i> Export PNG
+                                </button>
 
                             </div>
                         </div>
@@ -101,7 +106,7 @@ $nameCode = $SelectBar->getErrorNameNCode();
 
             <div id="chart_script"></div>
 
-            <div class="row">
+            <div class="row" id="dashboard-content">
                 <div class="col p-0 pt-3">
                 <div class="ChartSize" id="Chart1"></div>
                 <div class="ChartSize" id="Chart2"></div>
@@ -189,6 +194,36 @@ $('#date').daterangepicker(
         }
           }
     )
+
+$(document).on("click", ".btn-export", function (event) {
+
+var dashboardElement = document.getElementById("dashboard-content");
+
+dashboardElement.classList.add("no-box-shadow");
+// สร้างองค์ประกอบแคนวาส
+var canvas = document.createElement("canvas");
+canvas.width = dashboardElement.offsetWidth;
+canvas.height = dashboardElement.offsetHeight;
+
+
+// แสดงผลลัพธ์ขององค์ประกอบ "dashboard" บนแคนวาส
+html2canvas(dashboardElement, {
+    background: '#ffffff',
+    scale: 2
+}).then(function (canvas) {
+    // แปลงแคนวาสเป็นรูปภาพ PNG
+    var imageData = canvas.toDataURL("image/png");
+
+    // สร้างองค์ประกอบลิงก์ชั่วคราว
+    var link = document.createElement("a");
+    link.href = imageData;
+    link.download = Date.now() + ".png";
+    link.target = "_blank";
+
+    // เรียกใช้การดาวน์โหลด
+    link.click();
+});
+});
 
 $(document).ready(function () {
     var startDate = moment().subtract(29, 'days');
