@@ -112,7 +112,7 @@ class mainBoard {
 
     public function __construct(){
         $this->wh = Setting::$Warehouse;
-        $this->folderPath = __DIR__ . '/..' . Setting::$ErrorFilePath;
+        $this->folderPath = __DIR__ . '/../..' . Setting::$ErrorFilePath;
     }
 
     public function getCard(){

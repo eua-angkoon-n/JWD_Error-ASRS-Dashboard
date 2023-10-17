@@ -127,7 +127,7 @@ class Setting
         "pact" => "PACT"
     );
 
-    public static $ErrorFilePath = '/var/www/temp/bot/jaibot/gr/เก็บข้อมูล Error ASRS';
+    public static $ErrorFilePath = '/temp/bot/jaibot/gr/เก็บข้อมูล Error ASRS';
 
     public static $HundredColor = array (
         '#0054FF', '#FF0000', '#00FF00', '#0000FF', '#FF00FF', '#FFFF00', '#00FFFF', '#FFA500', '#800080', '#008000',
