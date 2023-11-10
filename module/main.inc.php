@@ -81,6 +81,7 @@ function SendData() {
             var CardData = jsonData.Card;
             var ChartData = jsonData.Chart;
             var BarData = jsonData.Bar;
+            // console.log(CardData);
             // console.log(BarData[0]['Error Code']);
             for (var key in CardData) {
                 if (CardData.hasOwnProperty(key)) {
@@ -243,7 +244,7 @@ function drawColumnChart(ChartData) {
             }
         },
     };
-    console.log(chartDataArray);
+    // console.log(chartDataArray);
 
     var data = google.visualization.arrayToDataTable(chartDataArray);
 

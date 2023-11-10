@@ -30,21 +30,19 @@ Class MainDashboard {
     public function SQLQuery(){
         $date = $this->date;
 
-        $sql  = "SELECT wh,count(*) as count ";
-        $sql .= "FROM asrs_error_trans ";
-        $sql .= "WHERE ";
-        $sql .= "MONTH(asrs_error_trans.tran_date_time) = MONTH(CURRENT_DATE) ";
-        // if($date[0] == $date[1])
-        //     $sql .= "date(asrs_error_trans.tran_date_time) = '".$date[1]."'";
-        // else
-        //     $sql .= "tran_date_time BETWEEN '". $date[1] ."' AND '". $date[0] ."' ";
-        $sql .= "GROUP BY wh";
+        $paca1 = $this->getSQLQuery(Setting::$pacaVain[1]);
+        $paca2 = $this->getSQLQuery(Setting::$pacaVain[2]);
+        $sql   = $this->getSQLQuery('');
 
         $con  = connect_database();
         $obj  = new CRUD($con);
 
         try{
-            $fetchRow = $obj->fetchRows($sql);
+            $A1Row = $obj->fetchRows($paca1);
+            $A2Row = $obj->fetchRows($paca2);
+            $fHRow = $obj->fetchRows($sql);
+
+            $fetchRow = array_merge($A1Row, $A2Row, $fHRow);
 
             if(empty($fetchRow))
                 return false;
@@ -56,6 +54,41 @@ Class MainDashboard {
         } finally {
             $con = null;
         }
+    }
+
+    public function getSQLQuery($needle) {
+        
+        $vain = $needle;
+        if($needle == strtolower(Setting::$pacaVain[1]) || $needle == strtolower(Setting::$pacaVain[2])){
+            if($needle == strtolower(Setting::$pacaVain[1]))
+                $key = 3;
+            if($needle == strtolower(Setting::$pacaVain[2]))
+                $key = 4;
+            $Rm    = Setting::$PACARoom[Setting::$pacaVain[$key]];    
+            
+            $sql  = "SELECT CASE ";
+            $sql .= "WHEN asrs_error_trans.wh = 'paca' THEN '$vain' ";
+            $sql .= "ELSE asrs_error_trans.wh ";
+            $sql .= "END AS wh, ";
+            $sql .= "count(*) as count ";
+            $sql .= "FROM asrs_error_trans ";
+            $sql .= "WHERE ";
+            $sql .= "asrs_error_trans.wh = 'paca' ";
+            $sql .= "AND ";
+            $sql .= "(asrs_error_trans.`Transfer Equipment #` IN ( ";
+            $sql .= implode(', ', $Rm);
+            $sql .= " )) ";  
+        } else {
+            $sql  = "SELECT wh,count(*) as count ";
+            $sql .= "FROM asrs_error_trans ";
+            $sql .= "WHERE ";
+            $sql .= "asrs_error_trans.wh <> 'paca' ";
+        }
+        $sql .= "AND ";
+        $sql .= "MONTH(asrs_error_trans.tran_date_time) = MONTH(CURRENT_DATE) ";
+        $sql .= "GROUP BY wh";
+
+        return $sql;
     }
 
     public function createArrError(){

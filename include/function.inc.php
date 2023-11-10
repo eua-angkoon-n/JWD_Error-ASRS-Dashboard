@@ -799,4 +799,53 @@ function getChartHundred($line,$HundredColor){
     return $colorOptions;
 }
 
+function chkPACA($arr,&$paca1,&$paca2){
+    $paca1 = $arr[1];
+    $paca2 = $arr[2];
+}
+
+function createDateRangeArray($datestart, $dateend, $wh, $count) {
+    $dateRangeArray = array();
+    if($datestart && $dateend){
+        $currentDate = new DateTime($datestart);
+        $endDate = new DateTime($dateend);
+    
+        while ($currentDate <= $endDate) {
+            $dateRangeArray[] = array(
+                'wh' => $wh,
+                'day' => $currentDate->format('Y-m-d'),
+                'count' => $count,
+            );
+            $currentDate->modify('+1 day');
+        }
+
+    } else {
+        $dateRangeArray[] = array(
+            'wh' => $wh,
+            'count' => $count,
+        );
+    }
+
+    return $dateRangeArray;
+}
+
+function chkSite($needle){
+    $vain = $needle;
+    if($needle == strtolower(Setting::$pacaVain[1]) || $needle == strtolower(Setting::$pacaVain[2])){
+        if($needle == strtolower(Setting::$pacaVain[1]))
+            $key = 3;
+        if($needle == strtolower(Setting::$pacaVain[2]))
+            $key = 4;
+        $Rm    = Setting::$PACARoom[Setting::$pacaVain[$key]];    
+        
+        $vain  = "asrs_error_trans.wh = 'paca' ";
+        $vain .= "AND ";
+        $vain .= "(asrs_error_trans.`Transfer Equipment #` IN ( ";
+        $vain .= implode(', ', $Rm);
+        $vain .= " )) ";  
+    } else {
+        $vain = "asrs_error_trans.wh = '$vain' ";
+    }
+    return $vain;
+}
 ?>

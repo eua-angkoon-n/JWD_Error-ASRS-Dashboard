@@ -17,7 +17,7 @@ function connect_database($DBMode = "")
       break;
     case 'local';
       if($DBMode == "login")
-        $database = MySecret::$dbDatabaseLogin;
+        $database = MySecret::$LocalDatabaseLogin;
       else
         $database = MySecret::$LocalDatabase;
       $user = MySecret::$LocalUser;

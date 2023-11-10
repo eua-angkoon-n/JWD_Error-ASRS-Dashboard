@@ -21,7 +21,8 @@ Class ErrorCode
         return $this->createChart();
     }
     public function getErrorCodeData(){
-        $WH = $this->wh;
+        $getWH = $this->wh;
+        $WH   = chkSite($getWH);
         $DATE = $this->date;
         $machine =  $this->machine;
         $date  = getDateDay($DATE,$start,$end);
@@ -304,7 +305,8 @@ Class ErrorCode_Total
     }
     public function getErrorLogData(){
 
-        $WH    = $this->wh;
+        $getWH = $this->wh;
+        $WH   = chkSite($getWH);
         $DATE  = $this->date;
         $date  = getDateDay($DATE,$start,$end);
         if(!$WH || !$date)

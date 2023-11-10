@@ -180,7 +180,8 @@ Class DataTable extends TableProcessing {
     }
 
     public function getSQL(bool $OrderBY){
-        $wh        = $this->wh;
+        $getWH = $this->wh;
+        $wh   = chkSite($getWH);
         $machine   = $this->machine;
         $errorName = $this->errorName;
         $date      = $this->date;
@@ -192,7 +193,7 @@ Class DataTable extends TableProcessing {
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE 1=1 ";
         if(!isAll($wh))
-            $sql .= "AND wh = '".strtolower($wh)."' ";
+            $sql .= "AND $wh ";
         if(!isAll($machine))
             $sql .= "AND Machine = '$machine' ";
         if(!isAll($errorName))

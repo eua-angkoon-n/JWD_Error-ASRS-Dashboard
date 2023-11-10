@@ -23,7 +23,8 @@ Class ErrorMachine
     }
 
     public function getErrorCodeData(){
-        $WH = $this->wh;
+        $getWH = $this->wh;
+        $WH   = chkSite($getWH);
         $DATE = $this->date;
         $nameCode =  $this->nameCode;
         $date  = getDateDay($DATE,$start,$end);
@@ -50,7 +51,6 @@ Class ErrorMachine
         }
         $sql .= "GROUP BY "; 
         $sql .= "`Error Code`, `Error Name`, transaction_date, Machine;";
-        // return $sql;
 
         try{
             $con = connect_database();
@@ -283,7 +283,9 @@ Class ErrorMachine_Total
 
     public function getErrorLogData(){
 
-        $WH    = $this->wh;
+        $getWH = $this->wh;
+        $WH    = chkSite($getWH);
+
         $DATE  = $this->date;
         $date  = getDateDay($DATE,$start,$end);
         if(!$WH || !$date)

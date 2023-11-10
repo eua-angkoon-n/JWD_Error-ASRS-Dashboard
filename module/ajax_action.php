@@ -9,6 +9,7 @@ require_once __DIR__ . "/../login.class.php";
 
 require_once __DIR__ . "/../config/connect_db.inc.php";
 require_once __DIR__ . "/../include/class_crud.inc.php";
+require_once __DIR__ . "/../include/setting.inc.php";
 
 if (isset($_POST['action'])) {
     $action = $_POST['action'];
@@ -27,9 +28,11 @@ if (isset($_POST['action'])) {
             $newDate,
             $arrWH,
             $machine,
-            $nameCode
+            $nameCode,
+            $pacaRm
         );
     }
+
     switch ($action){
         case 'DashBoard':
             $result = array();
@@ -41,23 +44,25 @@ if (isset($_POST['action'])) {
             print_r(json_encode($result));
             break;
         case 'errorLog':
-            $CtResult  = new ErrorLog_WH($wh,$newDate,$arrWH);
-            $CtResult2 = new ErrorLog_WHTotal($wh,$newDate,$arrWH);
-            $result    = $CtResult->getChart(); 
+            $CtResult  = new ErrorLog_WH($wh,$newDate,$arrWH,$pacaRm);
+            $CtResult2 = new ErrorLog_WHTotal($wh,$newDate,$arrWH,$pacaRm);
+            $result    = $CtResult->getChart();
             $result   .= $CtResult2->getChart();
+            // echo '<pre>';
             print_r($result);
+            // echo '</pre>';
             break;
         case 'errorCode':
-            $CtResult  = new ErrorCode_Total($wh,$newDate);
+            $CtResult  = new ErrorCode_Total($arrWH,$newDate);
             $result    = $CtResult->getChart();
-            $Ct2Result = new ErrorCode($wh,$newDate,$nameCode);
+            $Ct2Result = new ErrorCode($arrWH,$newDate,$nameCode);
             $result   .= $Ct2Result->getChart();
             print_r($result);
             break;
         case 'errorMachine':
-            $CtResult  = new ErrorMachine_Total($wh,$newDate);
+            $CtResult  = new ErrorMachine_Total($arrWH,$newDate);
             $result    = $CtResult->getChart();
-            $Ct2Result = new ErrorMachine($wh,$newDate,$machine);
+            $Ct2Result = new ErrorMachine($arrWH,$newDate,$machine);
             $result   .= $Ct2Result->getChart();
             print_r($result);
             break;
@@ -86,14 +91,17 @@ Class getAction
     private $date;
     private $machine;
     private $nameCode;
+    private $pacaRm;
     public function __construct($formData)
     {
         parse_str($formData, $data);
-  
+        
         $this->wh = $data['dropdownWH'] ?? NULL;
         $this->machine = $data['machine'] ?? NULL;
         $this->date = $data['selectedDateRange'] ?? NULL;
         $this->nameCode = $data['nameCode'] ?? NULL;
+        
+        $this->pacaRm = array(1=>false,2=>false);
     }
 
     public function getDate(){
@@ -108,26 +116,32 @@ Class getAction
         &$newDate,
         &$arrWH,
         &$machine,
-        &$nameCode
+        &$nameCode,
+        &$pacaRm
     ) {
         $wh_query = $this->getWH();
         $date     = $this->date;
         $newDate  = $this->getDate();
         $arrWH    = $this->wh;
         $machine  = $this->machine;
-        $nameCode  = $this->nameCode;
-
+        $nameCode = $this->nameCode;
+        $pacaRm   = $this->pacaRm;
     }
 
     public function getWH(){
         $wh = $this->wh;
         if($wh == NULL)
             return false;
-        $wh_query =' ';
+        $wh_query ='';
         if(!is_array($wh))
             return " asrs_error_trans.wh = '$wh' ";
        
         foreach ($wh as $key => $value) {
+            if($value == "paca1" || $value == "paca2"){
+                $this->chkPACA($value);
+                continue;
+            }
+
             $wh_query .= count($wh) > 1 && $key == 0 ? ' ( ' : ' ';
         
             $wh_query .= count($wh) > 1 && $key == 0 ? ' asrs_error_trans.wh = "' .$value. '" ' : ' OR asrs_error_trans.wh = "' .$value. '" ';
@@ -135,8 +149,34 @@ Class getAction
             $wh_query .= count($wh) > 1 && array_key_last($wh) == $key ? ') ' : '';
         }
         count($wh) == 1 ? $wh_query = str_replace('OR', '', $wh_query) : $wh_query;
+        if($wh_query == ''){
+            return false;
+        }
         
         return $wh_query;
+    }
+
+    public function chkPACA($value){
+        $pacaRm = $this->pacaRm;
+        if($value == "paca1"){
+            $this->pacaRm[1] = true;
+        }
+        if($value == "paca2"){
+            $this->pacaRm[2] = true;
+        }
+    }
+
+    public function getBlock($wh) {
+        $Room = Setting::$PACARoom[$wh];
+        $blockQ = '(';
+        foreach ($Room as $index => $no) {
+             $blockQ .= " `Transfer Equipment #`='$no'  ";
+             if ($index < count($Room) - 1) {
+                $blockQ .= ' OR ';
+            }
+        }
+        $blockQ .= ' ) ';
+        return $blockQ;
     }
 }
 
@@ -230,6 +270,9 @@ Class getMachine
 
     public function SqlMcNError(bool $isMachine,bool $all){
         $wh = $this->wh;
+        if($wh == 'paca1' || $wh == 'paca2'){
+            $wh = 'paca';
+        }
         if($isMachine){
             $sql  = "SELECT DISTINCT(Machine),wh "; 
             $sql .= "FROM asrs_error_trans ";
@@ -255,6 +298,9 @@ Class getMachine
 
     public function SqlOnlyError(){
         $wh = $this->wh;
+        if($wh == 'paca1' || $wh == 'paca2'){
+            $wh = 'paca';
+        }
         $mc   = $this->machine;
             $sql  = "SELECT `Error Code`,`Error Name` ";
             $sql .= "FROM asrs_error_trans ";

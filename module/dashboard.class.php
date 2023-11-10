@@ -22,35 +22,31 @@ class DashBoard {
     }
 
     public function siteSelect(){
-       $action = $this->action;
-       try {
-           $con = connect_database();
-           $obj = new CRUD($con);
-           $fetchSite = $obj -> fetchRows("SELECT * FROM asrs_error_wh WHERE 1=1 ORDER BY site_name ASC");
-           $siteSelect = '';
-           foreach($fetchSite as $key => $value){
-               $s = false;
-               if($action == "errorLog"){
-                   $siteSelect.= '<li><label><input type="checkbox" name="dropdownWH[]" value="' . $value['site_name'] . '" checked> ' . $value['site_name'] . '</label></li>';
-                   continue;
-               }
-               if ($value['id'] == 1){
-                   $this->SiteName = $value['site_name'];
-                   $s = true; 
-               }
-               $siteSelect.= "<option value='".$value['site_name']."' ".( $s ? 'selected' : '').">".$value['site_name']."</option>";
-           }
-           return $siteSelect;
-       } catch (PDOException $e){
-           return "Database connection failed: " . $e->getMessage();
-       } catch (Exception $e) {
-           return "An error occurred: " . $e->getMessage();
-       } finally {
-           $con = null;
-       }
+        $action = $this->action;
+        $wh = Setting::$Warehouse;
+        $siteSelect = '';
+        if($action == "errorLog"){
+            foreach ($wh as $key => $value) {
+                $siteSelect.= '<li><label><input type="checkbox" name="dropdownWH[]" value="' . $key . '" checked> ' . $value . '</label></li>';
+            }
+            return $siteSelect;
+        }else {
+            foreach ($wh as $key => $value) {
+                $s = false;
+                if ($key == 'b8'){
+                    $this->SiteName = $key;
+                    $s = true; 
+                }
+                $siteSelect.= "<option value='".$key."' ".( $s ? 'selected' : '').">".$value."</option>";
+            }
+            return $siteSelect;
+        }
     }
+
+ 
     public function Machine(){
        $SiteName    = $this->SiteName;
+    
        $currentDate = new DateTime();
        $currentDate->sub(new DateInterval('P30D'));
        $thirtyDaysAgo = $currentDate->format('Y-m-d');
@@ -79,6 +75,9 @@ class DashBoard {
     }
     public function NameNCode(){
         $SiteName    = $this->SiteName;
+        if($SiteName == 'paca1' || $SiteName == 'paca2'){
+            $SiteName = 'paca';
+        }
         $sql  = "SELECT `Error Code`,`Error Name` ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE wh = '$SiteName' ";
@@ -123,7 +122,7 @@ class mainBoard {
         $result = "";
         $last   = $this->getLastModificationTimesByUniqueName();
         foreach ($this->wh as $wh => $name) {
-            $result .= '<div class="col-lg-2 col-md-6 col-sm-12">
+            $result .= '<div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="col-12 mb-0 pt-1">
                                 <div class="card card-outline card-primary">
                                     <div class="card-header ">
