@@ -120,7 +120,7 @@ class mainBoard {
 
     public function CreateCard() {
         $result = "";
-        $last   = $this->getLastModificationTimesByUniqueName();
+        // $last   = $this->getLastModificationTimesByUniqueName();
         foreach ($this->wh as $wh => $name) {
             $result .= '<div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="col-12 mb-0 pt-1">
@@ -130,15 +130,15 @@ class mainBoard {
                                     </div>
                                     <div class="card-body text-right">
                                         <h1 class="d-inline" id="'.$wh.'" style="font-size:3.5rem">0</h1>
-                                        <h3 class="d-inline">&nbsp;Error</h3><br>
-                                        <h6 class="d-inline"style="font-size:0.8rem">Last Modified </h6><br>
-                                        <h6 class="d-inline" >'.$last[$wh]['time'].'</h6><br>
-                                        <h6 class="d-inline"style="font-size:0.8rem">'.str_replace("/","",$last[$wh]['name']).'</h6>
+                                        <h3 class="d-inline">&nbsp;Error</h3><br>                                        
                                     </div>
                                 </div>
                             </div>
                         </div>';
         }
+        // <h6 class="d-inline"style="font-size:0.8rem">Last Modified </h6><br>
+        // <h6 class="d-inline" >'.$last[$wh]['time'].'</h6><br>
+        // <h6 class="d-inline"style="font-size:0.8rem">'.str_replace("/","",$last[$wh]['name']).'</h6>
         return $result;
     }
     public function getAllFile(){
