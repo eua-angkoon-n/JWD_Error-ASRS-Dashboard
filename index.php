@@ -180,6 +180,9 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
             $total = $Time->Total_Time($start, $end);
             $Time->show_msg($total);
             echo print_mem();
+            $con = connect_database();
+            $obj = new CRUD($con);
+            echo $obj->countAll("SELECT * FROM asrs_error_trans WHERE 1=1");
             ?>
             <div class="float-right d-none d-sm-inline-block">
                 <b>Phase 1 / Version</b> 1.0
