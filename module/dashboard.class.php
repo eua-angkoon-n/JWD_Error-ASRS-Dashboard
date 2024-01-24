@@ -78,11 +78,11 @@ class DashBoard {
         if($SiteName == 'paca1' || $SiteName == 'paca2'){
             $SiteName = 'paca';
         }
-        $sql  = "SELECT `Error Code`,`Error Name` ";
+        $sql  = "SELECT `Error_Code`,`Error_Name` ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE wh = '$SiteName' ";
-        $sql .= "GROUP BY `Error Name`, `Error Code` ";
-        $sql .= "ORDER BY `Error Name` ASC";
+        $sql .= "GROUP BY `Error_Name`, `Error_Code` ";
+        $sql .= "ORDER BY `Error_Name` ASC";
 
         try {
             $con = connect_database();
@@ -91,9 +91,9 @@ class DashBoard {
             $fetch    = $obj->fetchRows($sql);
             $options  = "<option value='All' selected>All</option>";
             foreach ($fetch as $key => $value){
-                $v = $value['Error Name'];
+                $v = $value['Error_Name'];
                 if (IsNullOrEmptyString($v)){
-                    $v = $value['Error Code'];
+                    $v = $value['Error_Code'];
                 }
                 $options .=  "<option value='$v'>$v</option>";
             }

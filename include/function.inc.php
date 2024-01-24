@@ -840,7 +840,7 @@ function chkSite($needle){
         
         $vain  = "asrs_error_trans.wh = 'paca' ";
         $vain .= "AND ";
-        $vain .= "(asrs_error_trans.`Transfer Equipment #` IN ( ";
+        $vain .= "(asrs_error_trans.`Transfer_Equipment` IN ( ";
         $vain .= implode(', ', $Rm);
         $vain .= " )) ";  
     } else {

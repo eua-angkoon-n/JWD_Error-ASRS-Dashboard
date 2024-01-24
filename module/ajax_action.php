@@ -170,7 +170,7 @@ Class getAction
         $Room = Setting::$PACARoom[$wh];
         $blockQ = '(';
         foreach ($Room as $index => $no) {
-             $blockQ .= " `Transfer Equipment #`='$no'  ";
+             $blockQ .= " `Transfer_Equipment`='$no'  ";
              if ($index < count($Room) - 1) {
                 $blockQ .= ' OR ';
             }
@@ -242,9 +242,9 @@ Class getMachine
                 if ($isMachine){
                     $options .=  "<option value='".$value['Machine']."'>".$value['Machine']."</option>";
                 } else {
-                    $v = $value['Error Name'];
+                    $v = $value['Error_Name'];
                     if (IsNullOrEmptyString($v)){
-                        $v = $value['Error Code'];
+                        $v = $value['Error_Code'];
                     }
                     $options .=  "<option value='$v'>$v</option>";
                 }
@@ -283,15 +283,15 @@ Class getMachine
                 $sql .= "wh = '".strtolower($wh)."' ";
             $sql .= "ORDER BY Machine ASC";  
         } else {
-            $sql  = "SELECT `Error Code`,`Error Name` ";
+            $sql  = "SELECT `Error_Code`,`Error_Name` ";
             $sql .= "FROM asrs_error_trans ";
             $sql .= "WHERE ";
             if($all)
                 $sql .= "1=1 ";
             else
                 $sql .= "wh = '".strtolower($wh)."' ";
-            $sql .= "GROUP BY `Error Name`, `Error Code` ";
-            $sql .= "ORDER BY `Error Name` ASC";
+            $sql .= "GROUP BY `Error_Name`, `Error_Code` ";
+            $sql .= "ORDER BY `Error_Name` ASC";
         }
         return $sql;
     }
@@ -302,7 +302,7 @@ Class getMachine
             $wh = 'paca';
         }
         $mc   = $this->machine;
-            $sql  = "SELECT `Error Code`,`Error Name` ";
+            $sql  = "SELECT `Error_Code`,`Error_Name` ";
             $sql .= "FROM asrs_error_trans ";
             $sql .= "WHERE ";
             if($wh == 'All') 
@@ -313,8 +313,8 @@ Class getMachine
                 $sql .= "AND ";
                 $sql .= "Machine = '$mc' ";
             }
-            $sql .= "GROUP BY `Error Name`, `Error Code` ";
-            $sql .= "ORDER BY `Error Name` ASC";
+            $sql .= "GROUP BY `Error_Name`, `Error_Code` ";
+            $sql .= "ORDER BY `Error_Name` ASC";
 
         return $sql;
     }

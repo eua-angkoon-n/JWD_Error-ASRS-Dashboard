@@ -82,7 +82,7 @@ Class ErrorLog_WH
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE asrs_error_trans.wh = 'paca' ";
         $sql .= "AND ";
-        $sql .= "(asrs_error_trans.`Transfer Equipment #` IN ( ";
+        $sql .= "(asrs_error_trans.`Transfer_Equipment` IN ( ";
         $sql .= implode(', ', $Room);
         $sql .= " )) ";
         if($start != $end){
@@ -414,7 +414,7 @@ Class ErrorLog_WHTotal
         $sql .= "COUNT(*) as count ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
-        $sql .= "(asrs_error_trans.`Transfer Equipment #` IN ( ";
+        $sql .= "(asrs_error_trans.`Transfer_Equipment` IN ( ";
         $sql .= implode(', ', $quotedRoom);
         $sql .= " )) ";      
         $sql .= "AND ";

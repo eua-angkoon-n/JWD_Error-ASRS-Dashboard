@@ -75,7 +75,7 @@ Class MainDashboard {
             $sql .= "WHERE ";
             $sql .= "asrs_error_trans.wh = 'paca' ";
             $sql .= "AND ";
-            $sql .= "(asrs_error_trans.`Transfer Equipment #` IN ( ";
+            $sql .= "(asrs_error_trans.`Transfer_Equipment` IN ( ";
             $sql .= implode(', ', $Rm);
             $sql .= " )) ";  
         } else {
@@ -145,10 +145,10 @@ Class MainDashboard {
     }
 
     public function barQuery(){
-        $sql  = "SELECT count(id) as Total, `Error Code`, `Error Name` ";
+        $sql  = "SELECT count(id) as Total, `Error_Code`, `Error_Name` ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE month(tran_date_time) = month(CURRENT_DATE) ";
-        $sql .= "GROUP BY `Error Code`, `Error Name` ";
+        $sql .= "GROUP BY `Error_Code`, `Error_Name` ";
         $sql .= "ORDER BY Total DESC "; 
         $sql .= "LIMIT 5";
 

@@ -197,7 +197,7 @@ Class DataTable extends TableProcessing {
         if(!isAll($machine))
             $sql .= "AND Machine = '$machine' ";
         if(!isAll($errorName))
-            $sql .= "AND (`Error Code` = '$errorName' OR `Error Name` = '$errorName') ";
+            $sql .= "AND (`Error_Code` = '$errorName' OR `Error_Name` = '$errorName') ";
         if(!empty($date)) {
             $sql .= "AND ";
             if($date[1] != $date[0]){
@@ -239,23 +239,23 @@ Class DataTable extends TableProcessing {
               
                 $dataRow[] = ($fetchRow[$key]['wh']                         == '' ? '-' : strtoupper($fetchRow[$key]['wh']));
                 $dataRow[] = ($fetchRow[$key]['tran_date_time']             == '' ? '-' : date("d/m/Y H:i:s", strtotime($fetchRow[$key]['tran_date_time'])));
-                $dataRow[] = ($fetchRow[$key]['Control WCS']                == '' ? '-' : $fetchRow[$key]['Control WCS']);
-                $dataRow[] = ($fetchRow[$key]['Control CELL']               == '' ? '-' : $fetchRow[$key]['Control CELL']);
+                $dataRow[] = ($fetchRow[$key]['Control_WCS']                == '' ? '-' : $fetchRow[$key]['Control_WCS']);
+                $dataRow[] = ($fetchRow[$key]['Control_CELL']               == '' ? '-' : $fetchRow[$key]['Control_CELL']);
                 $dataRow[] = ($fetchRow[$key]['Machine']                    == '' ? '-' : $fetchRow[$key]['Machine']);
                 $dataRow[] = ($fetchRow[$key]['Position']                   == '' ? '-' : $fetchRow[$key]['Position']);
-                $dataRow[] = ($fetchRow[$key]['Transport Data Total']       == '' ? '-' : $fetchRow[$key]['Transport Data Total']);
-                $dataRow[] = ($fetchRow[$key]['Error Code']                 == '' ? '-' : $fetchRow[$key]['Error Code']);
-                $dataRow[] = ($fetchRow[$key]['Error Name']                 == '' ? '-' : $fetchRow[$key]['Error Name']);
-                $dataRow[] = ($fetchRow[$key]['Transfer Equipment #']       == '' ? '-' : $fetchRow[$key]['Transfer Equipment #']);
+                $dataRow[] = ($fetchRow[$key]['Transport_Data_Total']       == '' ? '-' : $fetchRow[$key]['Transport_Data_Total']);
+                $dataRow[] = ($fetchRow[$key]['Error_Code']                 == '' ? '-' : $fetchRow[$key]['Error_Code']);
+                $dataRow[] = ($fetchRow[$key]['Error_Name']                 == '' ? '-' : $fetchRow[$key]['Error_Name']);
+                $dataRow[] = ($fetchRow[$key]['Transfer_Equipment']       == '' ? '-' : $fetchRow[$key]['Transfer_Equipment']);
                 $dataRow[] = ($fetchRow[$key]['Cycle']                      == '' ? '-' : $fetchRow[$key]['Cycle']);
                 $dataRow[] = ($fetchRow[$key]['Destination']                == '' ? '-' : $fetchRow[$key]['Destination']);
-                $dataRow[] = ($fetchRow[$key]['Final Destination Location'] == '' ? '-' : $fetchRow[$key]['Final Destination Location']);
-                $dataRow[] = ($fetchRow[$key]['Load Size Info (Height)']    == '' ? '-' : $fetchRow[$key]['Load Size Info (Height)']);
-                $dataRow[] = ($fetchRow[$key]['Load Size Info (Width)']     == '' ? '-' : $fetchRow[$key]['Load Size Info (Width)']);
-                $dataRow[] = ($fetchRow[$key]['Load Size Info (Length)']    == '' ? '-' : $fetchRow[$key]['Load Size Info (Length)']);
-                $dataRow[] = ($fetchRow[$key]['Load Size Info (Other)']     == '' ? '-' : $fetchRow[$key]['Load Size Info (Other)']);
+                $dataRow[] = ($fetchRow[$key]['Final_Destination_Location'] == '' ? '-' : $fetchRow[$key]['Final_Destination_Location']);
+                $dataRow[] = ($fetchRow[$key]['Load_Size_Info_Height']    == '' ? '-' : $fetchRow[$key]['Load_Size_Info_Height']);
+                $dataRow[] = ($fetchRow[$key]['Load_Size_Info_Width']     == '' ? '-' : $fetchRow[$key]['Load_Size_Info_Width']);
+                $dataRow[] = ($fetchRow[$key]['Load_Size_Info_Length']    == '' ? '-' : $fetchRow[$key]['Load_Size_Info_Length']);
+                $dataRow[] = ($fetchRow[$key]['Load_Size_Info_Other']     == '' ? '-' : $fetchRow[$key]['Load_Size_Info_Other']);
                 $dataRow[] = ($fetchRow[$key]['Weight']                     == '' ? '-' : $fetchRow[$key]['Weight']);
-                $dataRow[] = ($fetchRow[$key]['Barcode Data']               == '' ? '-' : $fetchRow[$key]['Barcode Data']);
+                $dataRow[] = ($fetchRow[$key]['Barcode_Data']               == '' ? '-' : $fetchRow[$key]['Barcode_Data']);
                 
  
               

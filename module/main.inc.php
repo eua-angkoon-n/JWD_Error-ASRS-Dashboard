@@ -122,10 +122,10 @@ function drawBarChart(BarData) {
     } else {
         for (var i = 0; i < BarData.length; i++) {
             var row = BarData[i];
-            if (BarData[i]['Error Name'] == "") {
-                Name = BarData[i]['Error Code'];
+            if (BarData[i]['Error_Name'] == "") {
+                Name = BarData[i]['Error_Code'];
             } else {
-                Name = BarData[i]['Error Name'];
+                Name = BarData[i]['Error_Name'];
             }
             if (i == 0) {
                 var max = parseInt(row.Total) + 10;

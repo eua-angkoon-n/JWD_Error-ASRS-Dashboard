@@ -29,14 +29,14 @@ Class ErrorCode
         if(!$WH || !$date || !$machine)
             return false;
         $getRow = '';
-        $sql  = "SELECT DATE(tran_date_time) AS transaction_date, `Error Code`, `Error Name`, COUNT(*) AS Count ";
+        $sql  = "SELECT DATE(tran_date_time) AS transaction_date, Error_Code, Error_Name, COUNT(*) AS Count ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
         $sql .= $WH;
         if ($machine != 'All'){
             $sql .= "AND ";
-            $sql .= "(asrs_error_trans.`Error Code` = '$machine' ";
-            $sql .= "OR asrs_error_trans.`Error Name` = '$machine') ";
+            $sql .= "(asrs_error_trans.Error_Code = '$machine' ";
+            $sql .= "OR asrs_error_trans.Error_Name = '$machine') ";
             $this->itAll = false;
         }
         $sql .= "AND ";
@@ -49,7 +49,7 @@ Class ErrorCode
             $sql .= "= '$start' ";
         }
         $sql .= "GROUP BY "; 
-        $sql .= "`Error Code`, `Error Name`, transaction_date;";
+        $sql .= "Error_Code, Error_Name, transaction_date;";
 // return $sql;
         try{
             $con = connect_database();
@@ -118,8 +118,8 @@ Class ErrorCode
         // Find unique error names to create columns for each error.
         $errorNames = [];
         foreach ($originalData as $entry) {
-            $errorName = $entry['Error Name'];
-            $errorCode = $entry['Error Code'];
+            $errorName = $entry['Error_Name'];
+            $errorCode = $entry['Error_Code'];
 
             if (!empty($errorName) && !in_array($errorName, $errorNames)) {
                 $errorNames[] = $errorName;
@@ -136,8 +136,8 @@ Class ErrorCode
         // Loop through the original data to populate the associative array.
         foreach ($originalData as $entry) {
             $date = $entry['transaction_date'];
-            $errorName = $entry['Error Name'];
-            $errorCode = $entry['Error Code'];
+            $errorName = $entry['Error_Name'];
+            $errorCode = $entry['Error_Code'];
             $count = (int)$entry['Count'];
     
             $entryDateObj = new DateTime($date);
@@ -312,7 +312,7 @@ Class ErrorCode_Total
         if(!$WH || !$date)
             return false;
         
-        $sql  = "SELECT `Error Name`, `Error Code`, COUNT(*) as count ";
+        $sql  = "SELECT `Error_Name`, `Error_Code`, COUNT(*) as count ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
         $sql .= $WH;        
@@ -325,7 +325,7 @@ Class ErrorCode_Total
             $sql .= "date(asrs_error_trans.tran_date_time) ";
             $sql .= "= '$start' ";
         }
-        $sql .= "GROUP BY `Error Name`, `Error Code` ";
+        $sql .= "GROUP BY `Error_Name`, `Error_Code` ";
         $sql .= "ORDER BY count DESC ";
         $sql .= "LIMIT 7";
 
@@ -355,11 +355,11 @@ Class ErrorCode_Total
         $ColumnBarColor = Setting::$ColumnBarColor;
         $i = 0;
         foreach ($data as $key => $value) {
-            $addRow .= "['" . (IsNullOrEmptyString($value['Error Name']) ? $value['Error Code'] : $value['Error Name']) . "', " . $value['count'] . ", ". $value['count'] .", '" . $ColumnBarColor[$i] . "'],";
+            $addRow .= "['" . (IsNullOrEmptyString($value['Error_Name']) ? $value['Error_Code'] : $value['Error_Name']) . "', " . $value['count'] . ", ". $value['count'] .", '" . $ColumnBarColor[$i] . "'],";
             $i++;
             $errorCode[] = array(
-                'Error Name' => $value['Error Name'],
-                'Error Code' => $value['Error Code']); 
+                'Error_Name' => $value['Error_Name'],
+                'Error_Code' => $value['Error_Code']); 
         }
         $this->errorCode = $errorCode;
         return $addRow;

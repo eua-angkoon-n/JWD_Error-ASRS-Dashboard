@@ -31,7 +31,7 @@ Class ErrorMachine
         if(!$WH || !$date || !$nameCode)
             return false;
         $getRow = '';
-        $sql  = "SELECT `Error Code`, `Error Name`, DATE(tran_date_time) AS transaction_date, Machine, COUNT(*) AS Count ";
+        $sql  = "SELECT `Error_Code`, `Error_Name`, DATE(tran_date_time) AS transaction_date, Machine, COUNT(*) AS Count ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE ";
         $sql .= "$WH ";
@@ -50,7 +50,7 @@ Class ErrorMachine
             $sql .= "= '$start' ";
         }
         $sql .= "GROUP BY "; 
-        $sql .= "`Error Code`, `Error Name`, transaction_date, Machine;";
+        $sql .= "`Error_Code`, `Error_Name`, transaction_date, Machine;";
 
         try{
             $con = connect_database();

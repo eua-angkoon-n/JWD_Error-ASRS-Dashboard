@@ -114,8 +114,8 @@ class Setting
     );
     public static $DataTableSearch = array(
         "wh",
-        "Error Name",
-        "Error Code"
+        "Error_Name",
+        "Error_Code"
     );
 
     public static $Warehouse = array(
