@@ -15,6 +15,13 @@ class Setting
         "errorMachine" => "Error ASRS | Error Machine",
         "errorCode" => "Error ASRS | Error Name/Code",
         "errorDetails" => "Error ASRS | Details",
+        "pcsb8" => "PCS Warehouse 8",
+        "pcsb9" => "PCS Warehouse 9",
+        "paca1" => "PACA Frozen Room",
+        "paca2" => "PACA Temp Control Room",
+        "pacm" => "PACM",
+        "pacs" => "PACS",
+        "pact" => "PACT",
     );
     public static $title_act = array
     (
@@ -23,6 +30,13 @@ class Setting
         "errorMachine" => "ASRS Machine Error Log",
         "errorCode" => "ASRS Name/Code Error",
         "errorDetails" => "ASRS Error Log Details",
+        "pcsb8" => "PCS Warehouse 8",
+        "pcsb9" => "PCS Warehouse 9",
+        "paca1" => "PACA Frozen Room",
+        "paca2" => "PACA Temp Control Room",
+        "pacm" => "PACM",
+        "pacs" => "PACS",
+        "pact" => "PACT",
     );
     public static $breadcrumb_txt = array
     (
@@ -31,6 +45,13 @@ class Setting
         "errorMachine" => "Error Machine",
         "errorCode" => "Error Name,Code", 
         "errorDetails" => "Error Details",
+        "pcsb8" => "PCS Warehouse 8",
+        "pcsb9" => "PCS Warehouse 9",
+        "paca1" => "PACA Frozen Room",
+        "paca2" => "PACA Temp Control Room",
+        "pacm" => "PACM",
+        "pacs" => "PACS",
+        "pact" => "PACT",
     );
     public static $noreply_mail = "no-reply@cc.pcs-plp.com";
     public static $pass_mail = "Pcs@1234";
@@ -88,6 +109,31 @@ class Setting
         "#003C87",  // Navy Blue
         "#022a5c"
     );
+
+    public static $AdditionalBlueColors = array(
+        "#3459B8", "#5077C6", "#6D94D4", "#89B2E2", "#A6CFF0",
+        "#C4ECFF", "#7BA3CC", "#5389B4", "#306FA0", "#0D559C",
+        "#003C87", "#022a5c", "#365a8c", "#5278aa", "#6f96c8",
+        "#8bb4e6", "#a8d2f4", "#c5efff", "#7ca4cd", "#549abd",
+        "#3172ad", "#0e58a7", "#00408e", "#032a62", "#26507f",
+        "#406b9c", "#5c87b9", "#77a3d6", "#93bfe3", "#afdceb",
+        "#cbeaf3", "#82b5da", "#5a9bc9", "#3281b9", "#0a67a8",
+        "#004d98", "#003474", "#02204a", "#264270", "#405d8c",
+        "#5c79a8", "#7785c4", "#9391e0", "#afaefb", "#cbd9ff",
+        "#85b6e4", "#5da2d4", "#349ec4", "#0c8ab4", "#0061a3",
+        "#00478f", "#003065", "#02173b", "#243661", "#3e5280",
+        "#59609e", "#736abe", "#8e84de", "#aa9efa", "#c6b6ff",
+        "#90b9f5", "#67a6e5", "#3d93d5", "#1480c5", "#006cb5",
+        "#00528f", "#003766", "#011e3c", "#23325a", "#3e4977",
+        "#595594", "#7350b2", "#8e6cdb", "#aa88f9", "#c6a6ff",
+        "#9abfff", "#71acff", "#4888ff", "#1f74ff", "#0050ff",
+        "#0035e5", "#001bba", "#000291", "#000069", "#000045",
+        "#000022", "#131c2e", "#28344d", "#3d4b6d", "#52618c",
+        "#6768ac", "#7c7fcc", "#9186eb", "#a696ff", "#bda7ff",
+        "#d2b7ff", "#ead7ff", "#b4a2da", "#8d7ec2", "#664ba9",
+        "#3f2890", "#1a0077", "#0d0050", "#060027", "#08010a"
+    );
+    
     public static $SQLSET = "SET sql_mode=(SELECT REPLACE(@@sql_mode,'ONLY_FULL_GROUP_BY',''));";
     public static $DataTableCol = array( 
         0 => "asrs_error_trans.id",

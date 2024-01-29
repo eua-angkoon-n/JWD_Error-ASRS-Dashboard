@@ -848,4 +848,16 @@ function chkSite($needle){
     }
     return $vain;
 }
+
+function CustomDate($value, $from, $to){
+    $s  = DateTime::createFromFormat($from , $value);
+
+    if ($s) {
+        // Format the date according to the desired output format
+        $formattedDate = $s->format($to);
+        return $formattedDate;
+    } else {
+        return "Invalid date format provided!". $s;
+    }
+}
 ?>

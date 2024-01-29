@@ -23,6 +23,26 @@ $start = $Time->Start_Time();
 isset($_REQUEST['module']) ? $module = $_REQUEST['module'] : $module = '';
 
 switch ($module) {
+    case "pcsb8" :
+        $include_module = __DIR__ . "/module/module_pcsb8/view.php";
+        $action = "pcsb8";
+        $module == "pcsb8" ? $active_pcsb8 = "active" : $active_pcsb8 = "";
+        break;
+    case "pcsb9" :
+        $include_module = __DIR__ . "/module/module_pcsb9/view.php";
+        $action = "pcsb9";
+        $module == "pcsb9" ? $active_pcsb9 = "active" : $active_pcsb9 = "";
+        break;
+    case "paca1" :
+        $include_module = __DIR__ . "/module/module_paca1/view.php";
+        $action = "paca1";
+        $module == "paca1" ? $active_paca1 = "active" : $active_paca1 = "";
+        break;
+    case "paca2" :
+        $include_module = __DIR__ . "/module/module_paca2/view.php";
+        $action = "paca2";
+        $module == "paca2" ? $active_paca2 = "active" : $active_paca2 = "";
+        break;
     case "errorCode" :
         $include_module = __DIR__ . "/module/dashboard.inc.php";
         $action = "errorCode";
@@ -117,30 +137,101 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                                 <p>Dashboard</p>
                             </a>
                         </li>
+
+                        
+                        <li class='nav-item menu-open'>
+                            <a href='#' class='nav-link'><i class='nav-icon fas fa-warehouse'></i>
+                                <p>PCS<i class='right fas fa-angle-left'></i></p>
+                            </a>
+                            <ul class='nav nav-treeview ml-2'>
+                                <li class="nav-item">
+                                    <a href="?module=pcsb8" class="nav-link <?PHP echo $active_pcsb8; ?>">
+                                        <i class="nav-icon fas fa-caret-right"></i>
+                                        <p>Building 8</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?module=pcsb9" class="nav-link <?PHP echo $active_pcsb9;?>">
+                                        <i class="nav-icon fas fa-caret-right"></i> 
+                                        <p>Building 9</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class='nav-item menu-open'>
+                            <a href='#' class='nav-link'><i class='nav-icon fas fa-warehouse'></i>
+                                <p>PACA<i class='right fas fa-angle-left'></i></p>
+                            </a>
+                            <ul class='nav nav-treeview ml-2'>
+                                <li class="nav-item">
+                                    <a href="?module=paca1" class="nav-link <?PHP echo $active_paca1; ?>">
+                                        <i class="nav-icon fas fa-caret-right"></i>
+                                        <p>Frozen Room</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?module=paca2" class="nav-link <?PHP echo $active_paca2;?>">
+                                        <i class="nav-icon fas fa-caret-right"></i> 
+                                        <p>Temp Control Room</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <li class="nav-item">
-                            <a href="?module=errorLog" class="nav-link <?PHP echo $active_errorlog; ?>">
+                            <a href="./" class="nav-link <?PHP echo $active_DashBoard; ?>">
                                 <i class="nav-icon fas fa-warehouse"></i>
-                                <p>Warehouse</p>
+                                <p>PACM</p>
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="?module=errorCode" class="nav-link <?PHP echo $active_errorCode;?>">
-                                <i class="nav-icon fas fa-exclamation"></i> 
-                                <p>Error Name/Code</p>
+                            <a href="./" class="nav-link <?PHP echo $active_DashBoard; ?>">
+                                <i class="nav-icon fas fa-warehouse"></i>
+                                <p>PACS</p>
                             </a>
                         </li>
+
                         <li class="nav-item">
-                            <a href="?module=errorMachine" class="nav-link <?PHP echo $active_errorMachine;?>">
-                                <i class="nav-icon fas fa-truck-loading"></i> 
-                                <p>Machine</p>
+                            <a href="./" class="nav-link <?PHP echo $active_DashBoard; ?>">
+                                <i class="nav-icon fas fa-warehouse"></i>
+                                <p>PACT</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="?module=errorDetails" class="nav-link <?PHP echo $active_errorDetails;?>">
-                                <i class="nav-icon fas fa-table"></i> 
-                                <p>Error Log Details</p>
+
+                        <li class='nav-item'>
+                            <a href='#' class='nav-link'><i class='nav-icon fas fa-poll'></i>
+                                <p>Other<i class='right fas fa-angle-left'></i></p>
                             </a>
+                            <ul class='nav nav-treeview ml-2'>
+                                <li class="nav-item">
+                                    <a href="?module=errorLog" class="nav-link <?PHP echo $active_errorlog; ?>">
+                                        <i class="nav-icon fas fa-warehouse"></i>
+                                        <p>Warehouse</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?module=errorCode" class="nav-link <?PHP echo $active_errorCode;?>">
+                                        <i class="nav-icon fas fa-exclamation"></i> 
+                                        <p>Error Name/Code</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?module=errorMachine" class="nav-link <?PHP echo $active_errorMachine;?>">
+                                        <i class="nav-icon fas fa-truck-loading"></i> 
+                                        <p>Machine</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="?module=errorDetails" class="nav-link <?PHP echo $active_errorDetails;?>">
+                                        <i class="nav-icon fas fa-table"></i> 
+                                        <p>Error Log Details</p>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
+
                         <li class="nav-item">
                             <a href="?module=logout" class="nav-link">
                                 <i class="nav-icon fas fa-sign-out-alt"></i>
@@ -180,9 +271,6 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
             $total = $Time->Total_Time($start, $end);
             $Time->show_msg($total);
             echo print_mem();
-            $con = connect_database();
-            $obj = new CRUD($con);
-            echo $obj->countAll("SELECT * FROM asrs_error_trans WHERE 1=1");
             ?>
             <div class="float-right d-none d-sm-inline-block">
                 <b>Phase 1 / Version</b> 1.0
