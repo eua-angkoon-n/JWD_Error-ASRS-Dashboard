@@ -33,15 +33,30 @@ switch ($module) {
         $action = "pcsb9";
         $module == "pcsb9" ? $active_pcsb9 = "active" : $active_pcsb9 = "";
         break;
-    case "paca1" :
-        $include_module = __DIR__ . "/module/module_paca1/view.php";
-        $action = "paca1";
-        $module == "paca1" ? $active_paca1 = "active" : $active_paca1 = "";
+    case "pacaFrozen" :
+        $include_module = __DIR__ . "/module/module_pacaFrozen/view.php";
+        $action = "pacaFrozen";
+        $module == "pacaFrozen" ? $active_paca1 = "active" : $active_paca1 = "";
         break;
-    case "paca2" :
-        $include_module = __DIR__ . "/module/module_paca2/view.php";
-        $action = "paca2";
-        $module == "paca2" ? $active_paca2 = "active" : $active_paca2 = "";
+    case "pacaTemp" :
+        $include_module = __DIR__ . "/module/module_pacaTemp/view.php";
+        $action = "pacaTemp";
+        $module == "pacaTemp" ? $active_paca2 = "active" : $active_paca2 = "";
+        break;
+    case "pacm" :
+        $include_module = __DIR__ . "/module/module_pacm/view.php";
+        $action = "pacm";
+        $module == "pacm" ? $active_pacm = "active" : $active_pacm = "";
+        break;
+    case "pacs" :
+        $include_module = __DIR__ . "/module/module_pacs/view.php";
+        $action = "pacs";
+        $module == "pacs" ? $active_pacs = "active" : $active_pacs = "";
+        break;
+    case "pact" :
+        $include_module = __DIR__ . "/module/module_pact/view.php";
+        $action = "pact";
+        $module == "pact" ? $active_pact = "active" : $active_pact = "";
         break;
     case "errorCode" :
         $include_module = __DIR__ . "/module/dashboard.inc.php";
@@ -165,13 +180,13 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                             </a>
                             <ul class='nav nav-treeview ml-2'>
                                 <li class="nav-item">
-                                    <a href="?module=paca1" class="nav-link <?PHP echo $active_paca1; ?>">
+                                    <a href="?module=pacaFrozen" class="nav-link <?PHP echo $active_paca1; ?>">
                                         <i class="nav-icon fas fa-caret-right"></i>
                                         <p>Frozen Room</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="?module=paca2" class="nav-link <?PHP echo $active_paca2;?>">
+                                    <a href="?module=pacaTemp" class="nav-link <?PHP echo $active_paca2;?>">
                                         <i class="nav-icon fas fa-caret-right"></i> 
                                         <p>Temp Control Room</p>
                                     </a>
@@ -180,21 +195,21 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                         </li>
 
                         <li class="nav-item">
-                            <a href="./" class="nav-link <?PHP echo $active_DashBoard; ?>">
+                            <a href="?module=pacm" class="nav-link <?PHP echo $active_pacm; ?>">
                                 <i class="nav-icon fas fa-warehouse"></i>
                                 <p>PACM</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="./" class="nav-link <?PHP echo $active_DashBoard; ?>">
+                            <a href="?module=pacs" class="nav-link <?PHP echo $active_pacs; ?>">
                                 <i class="nav-icon fas fa-warehouse"></i>
                                 <p>PACS</p>
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a href="./" class="nav-link <?PHP echo $active_DashBoard; ?>">
+                            <a href="?module=pact" class="nav-link <?PHP echo $active_pact; ?>">
                                 <i class="nav-icon fas fa-warehouse"></i>
                                 <p>PACT</p>
                             </a>

@@ -17,8 +17,8 @@ class Setting
         "errorDetails" => "Error ASRS | Details",
         "pcsb8" => "PCS Warehouse 8",
         "pcsb9" => "PCS Warehouse 9",
-        "paca1" => "PACA Frozen Room",
-        "paca2" => "PACA Temp Control Room",
+        "pacaFrozen" => "PACA Frozen Room",
+        "pacaTemp" => "PACA Temp Control Room",
         "pacm" => "PACM",
         "pacs" => "PACS",
         "pact" => "PACT",
@@ -32,8 +32,8 @@ class Setting
         "errorDetails" => "ASRS Error Log Details",
         "pcsb8" => "PCS Warehouse 8",
         "pcsb9" => "PCS Warehouse 9",
-        "paca1" => "PACA Frozen Room",
-        "paca2" => "PACA Temp Control Room",
+        "pacaFrozen" => "PACA Frozen Room",
+        "pacaTemp" => "PACA Temp Control Room",
         "pacm" => "PACM",
         "pacs" => "PACS",
         "pact" => "PACT",
@@ -47,8 +47,8 @@ class Setting
         "errorDetails" => "Error Details",
         "pcsb8" => "PCS Warehouse 8",
         "pcsb9" => "PCS Warehouse 9",
-        "paca1" => "PACA Frozen Room",
-        "paca2" => "PACA Temp Control Room",
+        "pacaFrozen" => "PACA Frozen Room",
+        "pacaTemp" => "PACA Temp Control Room",
         "pacm" => "PACM",
         "pacs" => "PACS",
         "pact" => "PACT",
@@ -188,6 +188,12 @@ class Setting
         '#FF4500', '#00FF7F', '#48D1CC', '#87CEEB', '#00FA9A', '#98FB98', '#FF00FF', '#FF69B4', '#7B68EE', '#0000CD',
         '#8A2BE2', '#D2691E', '#FFD700', '#FF4500', '#DB7093', '#20B2AA', '#7FFF00', '#00FFFF', '#F5F5F5', '#FFFAF0',
         '#D8BFD8', '#DEB887', '#40E0D0', '#6A5ACD', '#00CED1', '#FF00FF', '#FF6A6A', '#00FFFF', '#20B2AA', '#E9967A'
+    );
+
+    public static $PACAChart = array(
+        'crane' => "#1c3379",
+        'conveyor' => "#dc3545",
+        'melsec' => "#aaaaaa"
     );
     
     public static $PACARoom = array(

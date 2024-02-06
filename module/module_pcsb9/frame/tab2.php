@@ -56,6 +56,11 @@
                                                 <th scope="col" style="width:2%">Transfer Equipment</th>
                                                 <th scope="col" style="width:8%">Cycle</th>
                                                 <th scope="col" style="width:8%">Destination</th>
+                                                <th scope="col" style="width:8%">Load Size Info Height</th>
+                                                <th scope="col" style="width:8%">Load Size Info Width</th>
+                                                <th scope="col" style="width:8%">Load Size Info Length</th>
+                                                <th scope="col" style="width:8%">Load Size Info Other</th>
+                                                <th scope="col" style="width:8%">Weight</th>
                                                 <th scope="col" style="width:8%">Barcode Data</th>
                                             </tr>
                                         </thead>

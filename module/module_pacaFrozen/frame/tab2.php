@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "/../function/f-tab2.php"; ?>
+<?php include (__DIR__ . "/../function/f-tab2.php"); ?>
 <form id="tab2" class="addform " name="addform" method="POST" enctype="multipart/form-data" autocomplete="off" novalidate="">
 <div class="row">
 
@@ -51,12 +51,8 @@
                                                 <th scope="col" style="width:2%">Tran Date</th>
                                                 <th scope="col" style="width:4%">Machine</th>
                                                 <th scope="col" style="width:5%">Error Name</th>
-                                                <th scope="col" style="width:5%">Error Code</th>
                                                 <th scope="col" style="width:2%">Control WCS</th>
                                                 <th scope="col" style="width:2%">Transfer Equipment</th>
-                                                <th scope="col" style="width:8%">Cycle</th>
-                                                <th scope="col" style="width:8%">Destination</th>
-                                                <th scope="col" style="width:8%">Barcode Data</th>
                                             </tr>
                                         </thead>
                                         <tbody>
