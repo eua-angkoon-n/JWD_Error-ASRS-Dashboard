@@ -41,7 +41,7 @@
                     <div class="inner">
                         <h3 id="err_log">0</h3>
 
-                        <p>Error Log</p>
+                        <p>Error Log Total</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-exclamation-circle"></i>

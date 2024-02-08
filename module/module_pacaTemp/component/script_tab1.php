@@ -174,7 +174,7 @@ function drawBar(arrData) {
     var colorArray = <?php echo json_encode(Setting::$AdditionalBlueColors); ?>;
     var max = 0;
     for (var i = 0; i < arrData.length; i++) {
-        dataArray.push([arrData[i].Error_Name, parseInt(arrData[i].total), arrData[i].Error_Name + " - " + arrData[i].total, colorArray[i]]);
+        dataArray.push([arrData[i].Error_Name, parseInt(arrData[i].total), arrData[i].Error_Name + " - " + arrData[i].total, arrData.color]);
         if (parseInt(arrData[i].total) > max) {
             max = parseInt(arrData[i].total);
         }

@@ -98,7 +98,7 @@ Class Dashboard {
     }
 
     private function err_chart(){
-        $sql  = "SELECT Error_Name, count(*) as total ";
+        $sql  = "SELECT Error_Name, Machine, count(*) as total ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE wh = 'paca' ";
         $sql .= "AND Transfer_Equipment IN (".implode(",", array_map(function($value) {return "'" . $value . "'";}, Setting::$PACARoom['PACA Temp Control'])).") ";
@@ -115,7 +115,16 @@ Class Dashboard {
 
             if(empty($r))
                 return array('No Data', 0);
-            return $r;
+            $arr = array();
+            foreach($r as $k => $v){
+                $color   = $v['Machine'] == "01:Crane" ? Setting::$PACAChart['crane'] : Setting::$PACAChart['conveyor']; 
+                $arr[] = [
+                    "Error_Name" => $v['Error_Name'],
+                    "total"      => $v['total'],
+                    "color"      => $color
+                ];
+            } 
+            return $arr;
 
         } catch (PDOException $e){
             return "Database Error : " . $e->getMessage();
