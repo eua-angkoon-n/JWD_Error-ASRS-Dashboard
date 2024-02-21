@@ -2,7 +2,7 @@
 <form id="tab2" class="addform " name="addform" method="POST" enctype="multipart/form-data" autocomplete="off" novalidate="">
 <div class="row">
 
-    <div class="col-sm-12 col-md-4">
+    <div class="col-sm-12 col-md-3">
         <div class="form-group">
             <label>Date:</label>
             <div class="input-group">
@@ -13,7 +13,15 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-12 col-md-4">
+    <div class="col-sm-12 col-md-3">
+        <div class="form-group">
+            <label>Machine Type:</label>
+            <select class="select2" multiple="multiple" data-placeholder="Select Machine Type" style="width: 100%;" id="type" name="type[]">
+              <?php echo $type; ?>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-3">
         <div class="form-group">
             <label>Machine:</label>
             <select class="select2" multiple="multiple" data-placeholder="Select Machine" style="width: 100%;" id="machine" name="machine[]">
@@ -21,7 +29,7 @@
             </select>
         </div>
     </div>
-    <div class="col-sm-12 col-md-4">
+    <div class="col-sm-12 col-md-3">
         <div class="form-group">
             <label>Error Name:</label>
             <select class="select2" multiple="multiple" data-placeholder="Select a Error Name" style="width: 100%;" id="errorName" name="errorName[]">

@@ -3,6 +3,7 @@
 $call    = new tab2_List();
 $machine = $call->getMachine();
 $errName = $call->getErrorName();
+$type = $call->getType();
 
 class tab2_List {
     public function getMachine(){
@@ -64,6 +65,15 @@ class tab2_List {
 
         foreach ($row as $k => $v){
             $r .= "<option value='".$v[$t]."'>".$v[$t]."</option>";
+        }
+        return $r;
+    }
+    
+    public function getType(){
+        $machine = Setting::$PACMMachine;
+        $r  = "";
+        foreach($machine as $k => $v){
+            $r .= "<option value='".$v."'>".strtoupper($k)."</option>";
         }
         return $r;
     }

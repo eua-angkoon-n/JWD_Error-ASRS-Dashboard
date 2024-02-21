@@ -28,79 +28,44 @@ Class Dashboard {
     private $start;
     private $end;
     private $interval;
+    private $crane;
+    private $conveyor;
+    private $stv;
     public function __construct($date, $interval){
         $d = explode("||//", $date);
         $this->start    = $d[0]." 00:00:00";
         $this->end      = $d[1]." 23:59:59";
         $this->interval = $interval;
+        $this->crane    = Setting::$PACMMachine['crane'];
+        $this->conveyor = Setting::$PACMMachine['conveyor'];
+        $this->stv      = Setting::$PACMMachine['stv'];
     }
 
     public function getData(){
         $a = array(
-          'total_machine' => $this->total_machine(),
-          'err_log' => $this->err_log(),
-          'err_machine' => $this->err_machine(),
-          'err_chart' => $this->err_chart(),
-          'last_tran' => $this->last_tran(),
-          'last_update' => $this->last_update(),
-          'interval_chart' => $this->interval_chart()
+            'err_total' => $this->err_count(false),
+            'err_crane' => $this->err_count($this->crane),
+            'err_conveyor' => $this->err_count($this->conveyor),
+            'err_stv' => $this->err_count($this->stv),
+
+            'interval_chart' => $this->interval_chart(),
+            'err_chart' => $this->err_chart(),
+
+            'last_tran' => $this->last_tran(),
+            'last_update' => $this->last_update()
         );
         return $a;
     }
 
-    private function total_machine(){
-        $sql  = "SELECT Machine ";
-        $sql .= "FROM asrs_error_trans ";
-        $sql .= "WHERE wh = 'pacm' ";
-        $sql .= "GROUP BY Machine ";
-
-        try{
-            $con = connect_database();
-            $obj = new CRUD($con);
-
-            $r   = $obj->countAll($sql);
-
-            return $r;
-
-        } catch (PDOException $e){
-            return "Database Error : " . $e->getMessage();
-        } catch (Exception $e){
-            return "Error : " . $e->getMessage();
-        } finally {
-            $con = NULL;
-        }
-    }
-
-    private function err_log(){
-        $sql  = "SELECT id ";
-        $sql .= "FROM asrs_error_trans ";
-        $sql .= "WHERE wh = 'pacm' ";
-        $sql .= "AND tran_date_time BETWEEN '$this->start' AND '$this->end' ";
-
-        try{
-            $con = connect_database();
-            $obj = new CRUD($con);
-
-            $r   = $obj->countAll($sql);
-
-            return $r;
-
-        } catch (PDOException $e){
-            return "Database Error : " . $e->getMessage();
-        } catch (Exception $e){
-            return "Error : " . $e->getMessage();
-        } finally {
-            $con = NULL;
-        }
-    }
-
-    private function err_machine(){
+ 
+    private function err_count($q){
         $sql  = "SELECT Machine ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE wh = 'pacm' ";
         $sql .= "AND tran_date_time BETWEEN '$this->start' AND '$this->end' ";
-        $sql .= "GROUP BY Machine ";
-
+        if($q)
+            $sql .= "AND Machine LIKE '$q%'";
+        // return $sql ;
         try{
             $con = connect_database();
             $obj = new CRUD($con);
@@ -119,22 +84,48 @@ Class Dashboard {
     }
 
     private function err_chart(){
-        $sql  = "SELECT Error_Name, count(*) as total ";
+        $sql  = "SELECT Error_Name, count(*) as total, ";
+        $sql .= "CASE ";
+        $sql .= "    WHEN Machine LIKE '$this->crane%' THEN 'crane' ";
+        $sql .= "    WHEN Machine LIKE '$this->conveyor%' THEN 'conveyor' ";
+        $sql .= "    WHEN Machine LIKE '$this->stv%' THEN 'STV' ";
+        $sql .= "END AS type ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE wh = 'pacm' ";
         $sql .= "AND tran_date_time BETWEEN '$this->start' AND '$this->end' ";
-        $sql .= "GROUP BY Error_Name ";
+        $sql .= "GROUP BY Error_Name, type ";
         $sql .= "ORDER BY total DESC ";
+        $sql .= "LIMIT 15";
 
         try{
             $con = connect_database();
             $obj = new CRUD($con);
 
+            $obj->fetchRows(Setting::$SQLSET);
             $r   = $obj->fetchRows($sql);
 
             if(empty($r))
                 return array('No Data', 0);
-            return $r;
+                $arr = array();
+            foreach($r as $k => $v){
+                $machine = $v['type'];
+                $color = '';
+
+                if ($machine == "crane") {
+                    $color = Setting::$PACAChart['crane'];
+                } elseif ($machine == "conveyor") {
+                    $color = Setting::$PACAChart['conveyor'];
+                } elseif ($machine == "STV") {
+                    $color = Setting::$PACAChart['stv'];
+                }
+                
+                $arr[] = [
+                    "Error_Name" => $v['Error_Name'],
+                    "total"      => $v['total'],
+                    "color"      => $color
+                ];
+            } 
+            return $arr;
 
         } catch (PDOException $e){
             return "Database Error : " . $e->getMessage();
@@ -230,14 +221,20 @@ Class Dashboard {
     private function getIntervalQuery(){
         switch($this->interval){
             case 'hour':
-                $sql  = "SELECT DATE_FORMAT(tran_date_time, '%Y-%m-%d %H:00:00') AS time_interval, COUNT(id) AS count ";
+                $sql  = "SELECT DATE_FORMAT(tran_date_time, '%Y-%m-%d %H:00:00') AS time_interval, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->crane%' THEN 1 ELSE NULL END) AS crane, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->conveyor%' THEN 1 ELSE NULL END) AS conveyor, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->stv%' THEN 1 ELSE NULL END) AS stv ";
                 $sql .= "FROM asrs_error_trans ";
                 $sql .= "WHERE wh = 'pacm' ";
                 $sql .= "AND tran_date_time BETWEEN '$this->start' AND '$this->end' ";
                 $sql .= "GROUP BY DATE_FORMAT(tran_date_time, '%Y-%m-%d %H:00:00') ";
             break;
             case 'day':
-                $sql  = "SELECT DATE(tran_date_time) AS time_interval, COUNT(id) AS count ";
+                $sql  = "SELECT DATE(tran_date_time) AS time_interval, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->crane%' THEN 1 ELSE NULL END) AS crane, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->conveyor%' THEN 1 ELSE NULL END) AS conveyor, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->stv%' THEN 1 ELSE NULL END) AS stv ";
                 $sql .= "FROM asrs_error_trans ";
                 $sql .= "WHERE wh = 'pacm' ";
                 $sql .= "AND tran_date_time BETWEEN '$this->start' AND '$this->end' ";
@@ -253,7 +250,9 @@ Class Dashboard {
                                 WHEN DAY(tran_date_time) BETWEEN 22 AND 28 THEN 4
                                 ELSE 5
                             END) AS time_interval, 
-                            COUNT(id) AS count 
+                            COUNT(CASE WHEN Machine LIKE '$this->crane%' THEN 1 ELSE NULL END) AS crane, 
+                            COUNT(CASE WHEN Machine LIKE '$this->conveyor%' THEN 1 ELSE NULL END) AS conveyor,
+                            COUNT(CASE WHEN Machine LIKE '$this->stv%' THEN 1 ELSE NULL END) AS stv
                          FROM asrs_error_trans 
                          WHERE wh = 'pacm' 
                          AND tran_date_time BETWEEN '$this->start' AND '$this->end' 
@@ -268,14 +267,20 @@ Class Dashboard {
                             END)";
                 break;
             case 'month':
-                $sql  = "SELECT DATE_FORMAT(tran_date_time, '%Y-%m') AS time_interval, COUNT(id) AS count ";
+                $sql  = "SELECT DATE_FORMAT(tran_date_time, '%Y-%m') AS time_interval, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->crane%' THEN 1 ELSE NULL END) AS crane, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->conveyor%' THEN 1 ELSE NULL END) AS conveyor, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->stv%' THEN 1 ELSE NULL END) AS stv ";
                 $sql .= "FROM asrs_error_trans ";
                 $sql .= "WHERE wh = 'pacm' ";
                 $sql .= "AND tran_date_time BETWEEN '$this->start' AND '$this->end' ";
                 $sql .= "GROUP BY DATE_FORMAT(tran_date_time, '%Y-%m')";
                 break;    
             case 'year':
-                $sql  = "SELECT DATE_FORMAT(tran_date_time, '%Y') AS time_interval, COUNT(id) AS count ";
+                $sql  = "SELECT DATE_FORMAT(tran_date_time, '%Y') AS time_interval, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->crane%' THEN 1 ELSE NULL END) AS crane, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->conveyor%' THEN 1 ELSE NULL END) AS conveyor, ";
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$this->stv%' THEN 1 ELSE NULL END) AS stv ";
                 $sql .= "FROM asrs_error_trans ";
                 $sql .= "WHERE wh = 'pacm' ";
                 $sql .= "GROUP BY DATE_FORMAT(tran_date_time, '%Y')";
@@ -289,7 +294,11 @@ Class Dashboard {
     
         // เตรียม array ที่มีข้อมูลทั้งหมดที่ได้จากการ query
         foreach ($r as $row) {
-            $arrChart[$row['time_interval']] = intval($row['count']);
+            $arrChart[$row['time_interval']] = [
+                'crane' => intval($row['crane']),
+                'conveyor' => intval($row['conveyor']),
+                'stv' => intval($row['stv']),
+            ];
         }
     
         // สร้าง array ที่เต็มเป็นชั่วโมงและมีค่าเป็น 0 สำหรับช่วงเวลาที่ไม่มีข้อมูล
@@ -324,13 +333,6 @@ Class Dashboard {
                     break;
             }
             
-            // เช็คว่าสัปดาห์นี้อยู่ในช่วง $this->start ถึง $this->end หรือไม่
-            if (!isset($arrChart[$Time]) && $this->interval === 'week') {
-                
-            }
-            elseif (!isset($arrChart[$Time])) {
-                $arrChart[$Time] = 0; // กำหนดค่าเป็น 0 สำหรับช่วงเวลาที่ไม่มีข้อมูล
-            }
         }
     
         // เรียงลำดับ array ตามวันและเวลา
@@ -342,9 +344,13 @@ Class Dashboard {
         foreach ($arrChart as $Time => $value) {
             $formattedArrChart[] = [
                 'date' => $Time, // แปลงเป็น object DateTime
-                'value' => $value,
+                'crane' => $value['crane'],
+                'conveyor' => $value['conveyor'],
+                'stv' => $value['stv'],
                 'interval' => $this->interval,
-                'color' => Setting::$AdditionalBlueColors[0]
+                'color1' => Setting::$PACAChart['crane'],
+                'color2' => Setting::$PACAChart['conveyor'],
+                'color3' => Setting::$PACAChart['stv'],
             ];
             $i++;
         }
