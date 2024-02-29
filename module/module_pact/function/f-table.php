@@ -15,6 +15,7 @@ Class DataTable extends TableProcessing {
     public $start;
     public $end;
     public $machine;
+    public $type;
     public $name;
     
     public function __construct($TableSET, $data){
@@ -28,9 +29,11 @@ Class DataTable extends TableProcessing {
         $this->machine = $v['machine'];
         $this->machine = isset($v['machine']) ? $v['machine'] : false;
         $this->name    = isset($v['errorName']) ? $v['errorName'] : false;
+    
+        $this->type    = isset($v['type']) ? $v['type'] : false;
     }
     public function getTable(){
-        // return $this->name;
+        // return $this->type;
         return $this->SqlQuery();
     }
 
@@ -75,6 +78,7 @@ Class DataTable extends TableProcessing {
         $sql .= "AND tran_date_time BETWEEN '$this->start' AND '$this->end' ";
         $sql .= $this->Select($this->machine,'Machine');
         $sql .= $this->Select($this->name,'Error_name');
+        $sql .= $this->Type();
 
         $sql .= "$this->query_search ";
         if($OrderBY) {
@@ -85,6 +89,27 @@ Class DataTable extends TableProcessing {
         }
 
         return $sql;
+    }
+
+    private function Type(){
+        $data = $this->type;
+
+        if(!$data)
+            return "";
+
+        if (($key = array_search("conveyor", $data)) !== false) {
+            unset($array[$key]);
+            foreach(Setting::$PACTMachine['conveyor'] as $v){
+                $data[] = $v;
+            }
+        }
+            
+        $likeClauses = array_map(function($data) {
+            return "Machine LIKE '{$data}%'";
+        }, $data);
+    
+        $query = implode(' OR ', $likeClauses);
+        return "AND (".$query.") ";
     }
 
     private function Select($data, $type){

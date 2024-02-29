@@ -34,41 +34,53 @@
 </div>
 
 <div class="row">
-    <div class="col-sm-12 col-md-9 mb-1" id="dashboard-content">
+<div class="col-sm-12 col-md-9 mb-1" id="dashboard-content">
         <div class="row pt-1 pb-1">
-            <div class="col-sm-12 col-md-4">
-                <div class="small-box bg-primary">
+            <div class="col-sm-12 col-md-3">
+                <div class="small-box bg-info">
                     <div class="inner">
-                        <h3 id="total_machine">0</h3>
+                        <h3 id="err_total">0</h3>
 
-                        <p>Total Machine</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fas fa-pallet"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="small-box bg-danger">
-                    <div class="inner">
-                        <h3 id="err_log">0</h3>
-
-                        <p>Error Log</p>
+                        <p>Error Log Total</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-exclamation-circle"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-12 col-md-4">
-                <div class="small-box bg-warning">
+            <div class="col-sm-12 col-md-3">
+                <div class="small-box bg-primary">
                     <div class="inner">
-                        <h3 id="err_machine">0</h3>
+                        <h3 id="err_crane">0</h3>
 
-                        <p>Machine have Error Log</p>
+                        <p>Crane Error Log</p>
                     </div>
                     <div class="icon">
                         <i class="fas fa-truck-loading"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="small-box bg-danger">
+                    <div class="inner">
+                        <h3 id="err_conveyor">0</h3>
+
+                        <p>Conveyor Error Log</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-3">
+                <div class="small-box bg-warning">
+                    <div class="inner">
+                        <h3 id="err_stv">0</h3>
+
+                        <p>STV Error Log</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-pallet"></i> 
                     </div>
                 </div>
             </div>

@@ -239,7 +239,7 @@ function drawColumn(arrData) {
 
     switch(interval){
         case 'hour':
-            data.addColumn('datetime', 'Time');
+            data.addColumn('string', 'Time');
             data.addColumn('number', 'Crane');
             data.addColumn({type: 'number', role: 'annotation'});
             data.addColumn({type: 'string', role: 'style'});
@@ -266,7 +266,8 @@ function drawColumn(arrData) {
                     max = item.stv;
                 }
             });
-            case 'day':
+        break;
+        case 'day':
             data.addColumn('datetime', 'Date');
             data.addColumn('number', 'Crane');
             data.addColumn({type: 'number', role: 'annotation'});
@@ -492,5 +493,25 @@ function formatDate(dateString, type) {
     
 
     return r;
+}
+
+function formatHourDate(dateStr){
+    var dateObj = new Date(dateStr);
+
+    // ดึงข้อมูลวันที่และเวลา
+    var day = dateObj.getDate();
+    var monthIndex = dateObj.getMonth();
+    var year = dateObj.getFullYear();
+    var hours = dateObj.getHours();
+    var minutes = dateObj.getMinutes();
+
+    // กำหนดรูปแบบของเดือน
+    var monthNames = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+
+    // จัดรูปแบบวันที่ตามที่ต้องการ
+    var formattedDate = ('0' + day).slice(-2) + '/' + monthNames[monthIndex] + ' ' + ('0' + hours).slice(-2) + '.' + ('0' + minutes).slice(-2);
+    return formattedDate;
 }
 </script>

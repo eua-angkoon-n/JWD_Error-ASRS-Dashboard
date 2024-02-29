@@ -136,12 +136,13 @@ function getDashboard() {
         beforeSend: function () {},
         success: function (data) {
             var js = JSON.parse(data);
-            // console.log(js.interval_chart);
+            // console.log(js);
             // return false;
 
-            $('#total_machine').html(js.total_machine);
-            $('#err_log').html(js.err_log);
-            $('#err_machine').html(js.err_machine);
+            $('#err_total').html(js.err_total);
+            $('#err_crane').html(js.err_crane);
+            $('#err_conveyor').html(js.err_conveyor);
+            $('#err_stv').html(js.err_stv);
 
             google.charts.load('current', {
                 packages: ['corechart', 'bar']
@@ -171,10 +172,10 @@ function drawBar(arrData) {
         }]
     ];
 
-    var colorArray = <?php echo json_encode(Setting::$AdditionalBlueColors); ?>;
+    var colorArray = <?php echo json_encode(Setting::$PACAChart); ?>;
     var max = 0;
     for (var i = 0; i < arrData.length; i++) {
-        dataArray.push([arrData[i].Error_Name, parseInt(arrData[i].total), arrData[i].Error_Name + " - " + arrData[i].total, colorArray[i]]);
+        dataArray.push([arrData[i].Error_Name, parseInt(arrData[i].total), arrData[i].Error_Name + " - " + arrData[i].total, arrData[i].color]);
         if (parseInt(arrData[i].total) > max) {
             max = parseInt(arrData[i].total);
         }
@@ -235,73 +236,156 @@ function drawColumn(arrData) {
     var max = 0;
     var date;
     var data = new google.visualization.DataTable();
-
+    // console.log(interval);
     switch(interval){
         case 'hour':
-            data.addColumn('datetime', 'Time of Day');
-            data.addColumn('number', 'Error Log');
+            data.addColumn('string', 'Time');
+            data.addColumn('number', 'Crane');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'Conveyor');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'STV');
             data.addColumn({type: 'number', role: 'annotation'});
             data.addColumn({type: 'string', role: 'style'});
             arrData.forEach(function(item) {
-                date = new Date(item.date);
-                data.addRow([date, item.value, item.value, item.color]);
-                if(item.value > max){
-                    max = item.value;
+                date = formatHourDate(item.date);
+                data.addRow([
+                    ''+date, item.crane, item.crane, item.color1,
+                    item.conveyor, item.conveyor, item.color2,
+                    item.stv, item.stv, item.color3,
+            ]);
+                if(item.crane > max){
+                    max = item.crane;
+                }
+                if(item.conveyor > max){
+                    max = item.conveyor;
+                }
+                if(item.stv > max){
+                    max = item.stv;
                 }
             });
-            break;
+        break;
         case 'day':
-            data.addColumn('datetime', 'Time of Day');
-            data.addColumn('number', 'Error Log');
+            data.addColumn('datetime', 'Date');
+            data.addColumn('number', 'Crane');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'Conveyor');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'STV');
             data.addColumn({type: 'number', role: 'annotation'});
             data.addColumn({type: 'string', role: 'style'});
             arrData.forEach(function(item) {
                 date = new Date(item.date);
                 fDate = formatDate(item.date, interval);
-                data.addRow([{v:date, f: fDate}, item.value, item.value, item.color]);
-                if(item.value > max){
-                    max = item.value;
+                data.addRow([
+                    {v:date, f: fDate}, 
+                    item.crane, item.crane, item.color1,
+                    item.conveyor, item.conveyor, item.color2,
+                    item.stv, item.stv, item.color3,
+                ]);
+                if(item.crane > max){
+                    max = item.crane;
+                }
+                if(item.conveyor > max){
+                    max = item.conveyor;
+                }
+                if(item.stv > max){
+                    max = item.stv;
                 }
             });
             break;
         case 'week':
             data.addColumn('string', 'Week');
-            data.addColumn('number', 'Error Log');
+            data.addColumn('number', 'Crane');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'Conveyor');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'STV');
             data.addColumn({type: 'number', role: 'annotation'});
             data.addColumn({type: 'string', role: 'style'});
 
             arrData.forEach(function(item) {
                 var weekInfo = formatDateToWeek(item.date);
 
-                data.addRow([weekInfo, item.value, item.value, item.color]);
-
-                if(item.value > max){
-                    max = item.value;
+                data.addRow([
+                    weekInfo, 
+                    item.crane, item.crane, item.color1,
+                    item.conveyor, item.conveyor, item.color2,
+                    item.stv, item.stv, item.color3,
+                ]);
+                if(item.crane > max){
+                    max = item.crane;
+                }
+                if(item.conveyor > max){
+                    max = item.conveyor;
+                }
+                if(item.stv > max){
+                    max = item.stv;
                 }
             });
             break;
         case 'month':
             data.addColumn('string', 'Month');
-            data.addColumn('number', 'Error Log');
+            data.addColumn('number', 'Crane');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'Conveyor');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'STV');
             data.addColumn({type: 'number', role: 'annotation'});
             data.addColumn({type: 'string', role: 'style'});
             arrData.forEach(function(item) {
                 fDate = formatDate(item.date, interval);
-                data.addRow([fDate, item.value, item.value, item.color]);
-                if(item.value > max){
-                    max = item.value;
+                data.addRow([
+                    fDate, 
+                    item.crane, item.crane, item.color1,
+                    item.conveyor, item.conveyor, item.color2,
+                    item.stv, item.stv, item.color3,
+                ]);
+                if(item.crane > max){
+                    max = item.crane;
+                }
+                if(item.conveyor > max){
+                    max = item.conveyor;
+                }
+                if(item.stv > max){
+                    max = item.stv;
                 }
             });
             break;
         case 'year':
             data.addColumn('string', 'Year');
-            data.addColumn('number', 'Error Log');
+            data.addColumn('number', 'Crane');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'Conveyor');
+            data.addColumn({type: 'number', role: 'annotation'});
+            data.addColumn({type: 'string', role: 'style'});
+            data.addColumn('number', 'STV');
             data.addColumn({type: 'number', role: 'annotation'});
             data.addColumn({type: 'string', role: 'style'});
             arrData.forEach(function(item) {
-                data.addRow([""+item.date+"", item.value, item.value, item.color]);
-                if(item.value > max){
-                    max = item.value;
+                data.addRow([
+                    ""+item.date+"", 
+                    item.crane, item.crane, item.color1,
+                    item.conveyor, item.conveyor, item.color2,
+                    item.stv, item.stv, item.color3,
+                ]);
+                if(item.crane > max){
+                    max = item.crane;
+                }
+                if(item.conveyor > max){
+                    max = item.conveyor;
+                }
+                if(item.stv > max){
+                    max = item.stv;
                 }
             });
             break;
@@ -333,11 +417,11 @@ function drawColumn(arrData) {
         vAxis: {
             viewWindow: {
                 min: 0, // Minimum value for the V-axis
-                max: max, // Maximum value for the V-axis
+                max: max +10, // Maximum value for the V-axis
             },
         },
         legend: {
-            position: 'none'
+            position: 'in'
         },
         animation: {
             duration: 1000,
@@ -356,8 +440,7 @@ function drawColumn(arrData) {
 
     var chart = new google.visualization.ColumnChart(
         document.getElementById('column_div'));
-
-    chart.draw(data, options);
+        chart.draw(data, options);
 }
 
 function formatDateToWeek(dateString) {
@@ -409,5 +492,25 @@ function formatDate(dateString, type) {
     
 
     return r;
+}
+
+function formatHourDate(dateStr){
+    var dateObj = new Date(dateStr);
+
+    // ดึงข้อมูลวันที่และเวลา
+    var day = dateObj.getDate();
+    var monthIndex = dateObj.getMonth();
+    var year = dateObj.getFullYear();
+    var hours = dateObj.getHours();
+    var minutes = dateObj.getMinutes();
+
+    // กำหนดรูปแบบของเดือน
+    var monthNames = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+
+    // จัดรูปแบบวันที่ตามที่ต้องการ
+    var formattedDate = ('0' + day).slice(-2) + '/' + monthNames[monthIndex] + ' ' + ('0' + hours).slice(-2) + '.' + ('0' + minutes).slice(-2);
+    return formattedDate;
 }
 </script>
