@@ -109,7 +109,7 @@ function date() {
                 interval = 'custom';
                 break;
         }
-
+        <?php  if($viewMode){ ?>  interval= 'hour' <?php } ?>;
         $('#selectedDateRange').val(interval);
         $('#interval').val(interval);
         $('#reportrange span').html(new Date(start).toLocaleDateString() + ' - ' + new Date(end).toLocaleDateString());
@@ -126,7 +126,7 @@ function getDashboard() {
 
     var dateSelect = $('#daterange-btn').data('daterangepicker').startDate.format('YYYY-MM-DD') + '||//' +
         $('#daterange-btn').data('daterangepicker').endDate.format('YYYY-MM-DD');
-    var intervalSelect = $('#interval').val();
+        var intervalSelect = <?php if($viewMode){ ?>  "hour" <?php }else{?> $('#interval').val() <?php } ?>;
 
     $.ajax({
         url: "module/module_pacaFrozen/function/f-ajax.php",

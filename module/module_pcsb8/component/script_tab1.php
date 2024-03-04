@@ -126,7 +126,7 @@ function getDashboard() {
 
     var dateSelect = $('#daterange-btn').data('daterangepicker').startDate.format('YYYY-MM-DD') + '||//' +
         $('#daterange-btn').data('daterangepicker').endDate.format('YYYY-MM-DD');
-    var intervalSelect = $('#interval').val();
+    var intervalSelect = <?php if($viewMode){ ?>  "hour" <?php }else{?> $('#interval').val() <?php } ?>;
 
     $.ajax({
         url: "module/module_pcsb8/function/f-ajax.php",
