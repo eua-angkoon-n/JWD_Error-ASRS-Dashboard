@@ -49,6 +49,9 @@ $(document).on("click", ".btn-export", function (event) {
 });
 
 function date() {
+    var startDate = <?php  if($viewMode){ ?>  moment().subtract(2, 'days') <?php }else{?> moment().subtract(7, 'days') <?php } ?>;
+    var endDate   = <?php  if($viewMode){ ?>  moment().subtract(2, 'days') <?php }else{?> moment() <?php } ?>;
+    var Intervals = <?php  if($viewMode){ ?>  moment().subtract(1, 'hours') <?php }else{?> moment().subtract(1, 'days') <?php } ?>;
     $('#daterange-btn').daterangepicker({
             ranges: {
                 //   'Today'       : [moment(), moment()],
@@ -58,8 +61,8 @@ function date() {
                 'This Month': [moment().startOf('month'), moment().endOf('month')],
                 'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
             },
-            startDate: moment().subtract(6, 'days'),
-            endDate: moment(),
+            startDate: startDate,
+            endDate: endDate,
             maxDate: moment()
         },
         function (start, end, label) {
@@ -80,7 +83,7 @@ function date() {
             'Monthly values': [moment().subtract(1, 'months'), moment()],
             'Yearly values': [moment().subtract(1, 'years'), moment()]
         },
-        startDate: moment().subtract(1, 'days'), // Default: Last 7 Days
+        startDate: Intervals, // Default: Last 7 Days
         endDate: moment(),
         maxDate: moment(),
         showCustomRangeLabel: false

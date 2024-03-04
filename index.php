@@ -41,12 +41,12 @@ switch ($module) {
         $action = "pcsb9";
         $module == "pcsb9" ? $active_pcsb9 = "active" : $active_pcsb9 = "";
         break;
-    case "pacaFrozen" :
+    case "pacafrozen" :
         $include_module = __DIR__ . "/module/module_pacaFrozen/view.php";
         $action = "pacaFrozen";
         $module == "pacaFrozen" ? $active_paca1 = "active" : $active_paca1 = "";
         break;
-    case "pacaTemp" :
+    case "pacatemp" :
         $include_module = __DIR__ . "/module/module_pacaTemp/view.php";
         $action = "pacaTemp";
         $module == "pacaTemp" ? $active_paca2 = "active" : $active_paca2 = "";
@@ -188,13 +188,13 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
                             </a>
                             <ul class='nav nav-treeview ml-2'>
                                 <li class="nav-item">
-                                    <a href="?module=pacaFrozen" class="nav-link <?PHP echo $active_paca1; ?>">
+                                    <a href="?module=pacafrozen" class="nav-link <?PHP echo $active_paca1; ?>">
                                         <i class="nav-icon fas fa-caret-right"></i>
                                         <p>Frozen Room</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="?module=pacaTemp" class="nav-link <?PHP echo $active_paca2;?>">
+                                    <a href="?module=pacatemp" class="nav-link <?PHP echo $active_paca2;?>">
                                         <i class="nav-icon fas fa-caret-right"></i> 
                                         <p>Temp Control Room</p>
                                     </a>
