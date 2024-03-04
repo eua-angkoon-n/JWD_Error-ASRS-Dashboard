@@ -11,7 +11,15 @@ require_once __DIR__ . '/include/timer.inc.php';
 header('Content-Type: text/html; charset=utf-8');
 date_default_timezone_set(Setting::$AppTimeZone);
 
-if(empty($_SESSION['sess_id_user'])){ 
+if(isset($_REQUEST['view'])){
+    $viewMode = true;  
+    $side = 'sidebar-closed sidebar-collapse';
+} else {
+    $viewMode = false;
+    $side = 'sidebar-mini layout-fixed layout-navbar-fixed';
+    
+}
+if(empty($_SESSION['sess_id_user']) && !$viewMode){ 
     $_SESSION = []; //empty array. 
     session_destroy(); 
     die(include('login.php')); 
@@ -104,7 +112,7 @@ $breadcrumb_txt = Setting::$breadcrumb_txt[$action];
     <?php include( __DIR__ . "/header.php"); ?>
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
+<body class="hold-transition <?php echo $side; ?>">
     <!--sidebar-collapse sidebar-mini layout-fixed layout-navbar-fixed sidebar-closed sidebar-collapse layout-navbar-fixed-->
     <div class="wrapper">
 
