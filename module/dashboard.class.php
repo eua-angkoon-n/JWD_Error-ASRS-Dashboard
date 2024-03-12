@@ -122,15 +122,30 @@ class mainBoard {
         $result = "";
         // $last   = $this->getLastModificationTimesByUniqueName();
         foreach ($this->wh as $wh => $name) {
+            $detail  = $this->getDetailAttachment($wh);
             $result .= '<div class="col-lg-3 col-md-6 col-sm-12">
                             <div class="col-12 mb-0 pt-1">
                                 <div class="card card-outline card-primary">
                                     <div class="card-header ">
                                         <h2 style="font-size:2rem"><strong>'.$name.'</strong></h2>
                                     </div>
-                                    <div class="card-body text-right">
+                                    <div class="card-body text-right pb-0">
                                         <h1 class="d-inline" id="'.$wh.'" style="font-size:3.5rem">0</h1>
-                                        <h3 class="d-inline">&nbsp;Error</h3><br>                                        
+                                        <h3 class="d-inline">&nbsp;Error</h3><br>
+                                    </div>
+                                    <div class="card-footer pt-0">
+                                        <div class="row">
+                                            <div class="col-12 text-right">
+                                                Last Update : <strong>'.$detail['date'].'</strong>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+
+                                        <div class="col-12 text-right">
+                                            By : '.$detail['name'].'
+                                        </div>
+                                    </div>
                                     </div>
                                 </div>
                             </div>
@@ -140,6 +155,30 @@ class mainBoard {
         // <h6 class="d-inline" >'.$last[$wh]['time'].'</h6><br>
         // <h6 class="d-inline"style="font-size:0.8rem">'.str_replace("/","",$last[$wh]['name']).'</h6>
         return $result;
+    }
+
+    private function getDetailAttachment($wh){
+        if(substr($wh, 0, 4) == 'paca')
+            $wh = 'paca';
+        $sql  = "SELECT * ";
+        $sql .= "FROM asrs_error_attachment ";
+        $sql .= "WHERE wh = '$wh'";
+
+        try {
+            $con = connect_database();
+            $obj = new CRUD($con);
+
+            $row  = $obj->customSelect($sql);
+            if(!empty($row))
+                return $row;
+            return array('name' => "-", 'date' => "-");
+        } catch (Exception $e) {
+            return $e->getMessage();
+        } catch (PDOException $e){
+            return $e->getMessage();
+        }finally {
+            $con = NULL;
+        }
     }
     public function getAllFile(){
       $this->ReadAllFile($this->folderPath,$result);

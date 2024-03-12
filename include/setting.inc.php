@@ -233,5 +233,11 @@ class Setting
         'conveyor' => array('1','D-'),
         'stv' => 'SS'
     );
+
+    public static $AllMachine = array(
+        'crane'    => array('SRA','SRMA','RMA','01:Crane'),
+        'conveyor' => array('A','1','D-','02:Conveyor'),
+        'stv' => array('SS','SLA')
+    );
        
 }

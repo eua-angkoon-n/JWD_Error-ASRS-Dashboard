@@ -2,6 +2,7 @@
 require_once __DIR__ . "/../../config/connect_db.inc.php";
 require_once __DIR__ . "/../../include/class_crud.inc.php";
 require_once __DIR__ . "/../../include/function.inc.php";
+require_once __DIR__ . "/../../include/setting.inc.php";
 
 Class MainDashboard {
     private $date;
@@ -119,8 +120,14 @@ Class MainDashboard {
         $sql  = "SELECT "; 
         $sql .= "YEAR(tran_date_time) AS Year, ";
         $sql .= "MONTH(tran_date_time) AS Month, ";
-        $sql .= "count(id) AS TotalValue ";
-        $sql .= "FROM asrs_error_trans ";
+        // $sql .= "count(id) AS TotalValue ";
+        foreach (Setting::$AllMachine as $type => $machines) {
+            foreach ($machines as $machine) {
+                $sql .= "COUNT(CASE WHEN Machine LIKE '$machine%' THEN 1 ELSE NULL END) AS $type, ";
+            }
+        }
+        $sql = rtrim($sql, ", ");
+        $sql .= " FROM asrs_error_trans ";
         $sql .= "WHERE ";
         $sql .= "YEAR(tran_date_time) = YEAR(CURRENT_DATE) ";
         $sql .= "GROUP BY YEAR(tran_date_time), MONTH(tran_date_time) ";
@@ -145,17 +152,24 @@ Class MainDashboard {
     }
 
     public function barQuery(){
-        $sql  = "SELECT count(id) as Total, `Error_Code`, `Error_Name` ";
+        $sql  = "SELECT count(id) as Total, `Error_Code`, `Error_Name`, ";
+        $sql .= "CASE ";
+        foreach (Setting::$AllMachine as $type => $machines) {
+            foreach ($machines as $machine) {
+                $sql .= "    WHEN Machine LIKE '$machine%' THEN '$type' ";
+            }
+        }
+        $sql .= "END AS type ";
         $sql .= "FROM asrs_error_trans ";
         $sql .= "WHERE month(tran_date_time) = month(CURRENT_DATE) ";
         $sql .= "GROUP BY `Error_Code`, `Error_Name` ";
         $sql .= "ORDER BY Total DESC "; 
-        $sql .= "LIMIT 5";
-
+        $sql .= "LIMIT 10";
         $con  = connect_database();
         $obj  = new CRUD($con);
 
         try{
+            $obj->fetchRows(Setting::$SQLSET);
             $fetchRow = $obj->fetchRows($sql);
 
             if(empty($fetchRow))

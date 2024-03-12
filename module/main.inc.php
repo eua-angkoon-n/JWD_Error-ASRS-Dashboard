@@ -50,10 +50,10 @@ $thisCard = $card -> getCard();
                 <?php echo $thisCard; ?>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-12">
+                <div class="col-md-4 col-sm-12 order-2 order-md-1">
                     <div id="BarChart" class="BarChartMain"></div>
                 </div>
-                <div class="col-md-8 col-sm-12">
+                <div class="col-md-8 col-sm-12 order-1 order-md-2">
                     <div id="ColumnChart" class="ColChartMain"></div>
                 </div>
             </div>
@@ -105,34 +105,36 @@ function SendData() {
     });
 }
 
-function drawBarChart(BarData) {
-    var chartDataArray = [
-        ['Error Name', 'Error Log', {
+function drawBarChart(arrData) {
+    var dataArray = [
+        ['Error Name', 'Total', {
             type: 'string',
             role: 'annotation'
         }, {
             role: 'style'
         }]
     ];
-    var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?>;
-
-    if (!BarData) {
-        chartDataArray.push(["No Error Log", 0, "No Error Log", colorArray[i]]);
-        var max = 100;
-    } else {
-        for (var i = 0; i < BarData.length; i++) {
-            var row = BarData[i];
-            if (BarData[i]['Error_Name'] == "") {
-                Name = BarData[i]['Error_Code'];
-            } else {
-                Name = BarData[i]['Error_Name'];
-            }
-            if (i == 0) {
-                var max = parseInt(row.Total) + 10;
-            }
-            chartDataArray.push([Name, parseInt(row.Total), Name + " - " + row.Total, colorArray[i]]);
+    var colorArray = <?php echo json_encode(Setting::$PACAChart); ?>;
+    var max = 0;
+    let name = "";
+    for (var i = 0; i < arrData.length; i++) {
+        if(arrData[i].Error_Name == ""){
+            name = arrData[i].Error_Code;
+        } else {
+            name = arrData[i].Error_Name;
         }
+        dataArray.push([
+            name, 
+            parseInt(arrData[i].Total),
+            name + " - " + arrData[i].Total,
+            colorArray[arrData[i].type]]);
+
+            if (parseInt(arrData[i].Total) > max) {
+                max = parseInt(arrData[i].Total);
+            }
     }
+    console.log(dataArray);
+    var data = google.visualization.arrayToDataTable(dataArray);
 
     var options = {
         title: '<?php echo Setting::$arr_mouthEN[date('n')-1] ?> Top Error',
@@ -166,7 +168,7 @@ function drawBarChart(BarData) {
         hAxis: {
             viewWindow: {
                 min: 0, // Minimum value for the V-axis
-                max: max, // Maximum value for the V-axis
+                max: max
             },
             minValue: 0,
         },
@@ -176,7 +178,7 @@ function drawBarChart(BarData) {
         },
 
     };
-    var data = google.visualization.arrayToDataTable(chartDataArray);
+    var data = google.visualization.arrayToDataTable(dataArray);
 
     var chart = new google.visualization.BarChart(document.getElementById('BarChart'));
     chart.draw(data, options);
@@ -184,22 +186,29 @@ function drawBarChart(BarData) {
 
 function drawColumnChart(ChartData) {
 
-    var chartDataArray = [['Month', 'Error Log', {type: 'number',role: 'annotation'}, {role: 'style'}]];
+    var chartDataArray = [['Month', 
+    'Crane', {type: 'number',role: 'annotation'}, {role: 'style'},
+    'Conveyor', {type: 'number',role: 'annotation'}, {role: 'style'},
+    'STV', {type: 'number',role: 'annotation'}, {role: 'style'}]];
 
-    var colorArray = <?php echo json_encode(Setting::$ColumnBarColor); ?> ;
+    var colorArray = <?php echo json_encode(Setting::$PACAChart); ?> ;
     // console.log(ChartData);
     if (!ChartData) {
-        chartDataArray.push(["No Error Log", 0, 0, colorArray[i]]);
+        chartDataArray.push(["No Error Log", 0, 0, colorArray[i],0, 0, colorArray[i],0, 0, colorArray[i]]);
         var max = 90;
     } else {
-        var max = parseInt(ChartData[0]["TotalValue"]);
+        // var max = 0
         for (var i = 0; i < ChartData.length; i++) {
             var row = ChartData[i];
-            if (parseInt(row.TotalValue) > max) {
-                var max = parseInt(row.TotalValue);
-            }
+            // if (parseInt(row.TotalValue) > max) {
+                // var max = parseInt(row.TotalValue);
+            // }
             var date = new Date(row.Year, row.Month - 1); // Month is 0-based in JavaScript
-            chartDataArray.push([date, parseInt(row.TotalValue), parseInt(row.TotalValue), colorArray[i]]);
+            chartDataArray.push([date, 
+                parseInt(row.crane), parseInt(row.crane), colorArray['crane'],
+                parseInt(row.conveyor), parseInt(row.conveyor), colorArray['conveyor'],
+                parseInt(row.stv), parseInt(row.stv), colorArray['stv']
+            ]);
         }
     }
     
@@ -228,7 +237,8 @@ function drawColumnChart(ChartData) {
             },
         },
         legend: {
-            position: 'none'
+            position: 'in',
+            alignment:'end'
         },
         animation: {
             duration: 1000,
